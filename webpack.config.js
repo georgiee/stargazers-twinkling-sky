@@ -4,7 +4,12 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const devPlugins = [
   new HTMLWebpackPlugin({
     template: 'src/index.html'
-  })
+  }),
+
+  new HTMLWebpackPlugin({
+    template: 'src/index.html'
+  }),
+
 ]
 
 const plugins = [

@@ -1,0 +1,34 @@
+<svg width="960px" height="700px" viewBox="0 0 960 700" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="base" transform="translate(275.000000, 52.000000)" font-weight="bold">
+            <text id="G2V" font-family="Helvetica-Bold, Helvetica" font-size="150">
+                <tspan x="0" y="530" fill="#F5D123">G2</tspan>
+                <tspan x="200.097656" y="530" fill="#5BCFE6">V</tspan>
+            </text>
+            <text id="M2Ia" font-family="Helvetica-Bold, Helvetica" font-size="150">
+                <tspan x="0" y="182" fill="#F5D123">M2</tspan>
+                <tspan x="208.374023" y="182" fill="#5BCFE6">Ia</tspan>
+            </text>
+            <text id="(Sun)" font-family="Helvetica-Bold, Helvetica" font-size="50" fill="#9B9B9B">
+                <tspan x="103" y="584">(Sun)</tspan>
+            </text>
+            <text id="(Betelgeuse)" font-family="Helvetica-BoldOblique, Helvetica" font-size="50" font-style="italic" fill="#9B9B9B">
+                <tspan x="13" y="49">(Betelgeuse)</tspan>
+            </text>
+        </g>
+        <g id="spectral" transform="translate(97.000000, 265.000000)">
+            <text id="Spectral-Class" font-family="Helvetica-Bold, Helvetica" font-size="50" font-weight="bold" fill="#F5D123">
+                <tspan x="0" y="112">Spectral Class</tspan>
+            </text>
+            <path id="Path-6" d="M283,13 L283,76 L279,76 L279,13 L269,13 L269,-11 L293,-11 L293,13 L283,13 Z" fill="#F5A623" fill-rule="nonzero"></path>
+            <path id="Path-6" d="M279,170 L279,120 L283,120 L283,170 L293,170 L293,194 L269,194 L269,170 L279,170 Z" fill="#F5A623" fill-rule="nonzero"></path>
+        </g>
+        <g id="luminosity" transform="translate(500.000000, 265.000000)" fill="#5BCFE6"  class="fragment">
+            <text id="Luminosity-Class" font-family="Helvetica-Bold, Helvetica" font-size="50" font-weight="bold">
+                <tspan x="0" y="112">Luminosity Class</tspan>
+            </text>
+            <path id="Path-6" d="M20,13 L20,76 L16,76 L16,13 L6,13 L6,-11 L30,-11 L30,13 L20,13 Z" fill-rule="nonzero"></path>
+            <path id="Path-6" d="M16,170 L16,120 L20,120 L20,170 L30,170 L30,194 L6,194 L6,170 L16,170 Z" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

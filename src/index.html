@@ -119,9 +119,9 @@
           </section>
 
           <section>
-            <cite>
+            <blockquote>
               A star is a luminous ball of gas. Nuclear fusion reactions produce photons and heat.
-            </cite>
+            </blockquote>
 
           </section>
 
@@ -158,7 +158,7 @@
           </section>
 
           <section>
-            <%= require('html-loader!./svg/test.svg') %>
+            <%= require('html-loader!./svg/star-spectral.svg') %>
           </section>
 
           <section>
@@ -175,6 +175,7 @@
                   <li>Decimal number subdivides range</li>
                   <li><span class="custom-hot">0 hottest </span> <span class="custom-cold">M coldest</span></li>
                   <li>Hotness is the color of the star!</li>
+                  <li>Sun(G2V) is hotter than Betelgeuse(M2Ia)</li>
                 </ul>
               </div>
             </div>
@@ -186,9 +187,9 @@
           <!-- Fact 02-->
           <section>
             <div class="fact">
-              <h2>New Star Fact!</h2>
-              <h1>✨Temperature✨</h1>
-              <p>Interpretation: Circle Color</p>
+              <h2 class="fact__healine">New Star Fact!</h2>
+              <h2 class="fact__title">✨Temperature✨</h2>
+              <p class="fact__interpreation">Interpretation: Circle Color</p>
             </div>
           </section>
 
@@ -197,7 +198,7 @@
               data-width="960"
               data-height="700"
               data-editable="true"
-              data-theme-id="0"
+              data-theme-id="35666"
               data-slug-hash="VqxwPm"
               data-default-tab="html,result"
               data-user="gkey"
@@ -206,28 +207,43 @@
           </section>
 
           <section>
+              <%= require('html-loader!./svg/star-luminosity.svg') %>
+          </section>
+
+          <section>
             <h2>Luminosity Class</h2>
 
             <div class="l-col2">
               <div>
-                <img data-src="images/sun-canis-betel.png"/>
+                <img data-src="images/hertzsprung-russell-diagram.png"/>
               </div>
               <div>
                 <ul>
-                    <li><strong>0 hypergiants</strong></li>
-                    <li><strong>Ia/Iab/Ib supergiants</strong></li>
-                    <li> II bright giants</li>
-                    <li>III normal giants</li>
-                    <li>IV subgiants</li>
-                    <li><strong>V main sequence (dwarfs)</strong></li>
-                    <li>VI subdwarfs</li>
-                    <li>VII white darfs</li>
+                  <li>Roman Numeral 0 - VII</li>
+                  <li>O are Supergiants</li>
+                  <li>VII are white dwarfs</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <div class="l-col2">
+              <div>
+                <img data-src="images/sun-canis-betel.png"/>
+                Sun G2V
+                Betelgeuse M2Ia
+              </div>
+              <div>
+                <ul>
+                    <li><strong>Hypergiants (VY Canis)</strong></li>
+                    <li><strong>Supergiants (Betelgeuse)</strong></li>
+                    <li><strong>Dwars (Sun)</strong></li>
                   </ul>
               </div>
             </div>
             <aside class="notes">
-                So our sun G2V is a dwarf and Betelgeuse (M2Ia) is a supergiant.
-                VY Canis Majoris (M3 Ia+) is a hypergiant and you can see how this compares to the other two stars.
+              To get a felling for the sizes
             </aside>
           </section>
 
@@ -245,13 +261,17 @@
               data-width="960"
               data-height="700"
               data-editable="true"
-              data-theme-id="0"
+              data-theme-id="35666"
               data-slug-hash="oJdNez"
               data-default-tab="html,result"
               data-user="gkey"
               data-pen-title="Chapter 01 - A star">
             </div>
+            <aside class="notes">
+              We can now build single stars in different variations.
+            </aside>
           </section>
+
         </section>
 
         <!-- Chapter 2 (The Sky) -->
@@ -265,7 +285,7 @@
           </section>
 
           <section>
-            <cite>Do we know how many stars are in the universe? 🤔 </cite>
+            <blockquote>Do we know how many stars are in the universe? 🤔 </blockquote>
             <span class="fragment">Yes we do!</span><br>
             <h1 class="fragment">a sextillion</h1>
             <h2 class="fragment">1,000,000,000,000,000,000,000</h2>
@@ -273,7 +293,7 @@
           </section>
 
           <section>
-            <cite>How many stars can we see in the night sky? 🤔 </cite>
+            <blockquote>How many stars can we see in the night sky? 🤔 </blockquote>
             <h1 class="fragment">9096</h1>
             <span class="fragment">Apparent Magnitude of 6.5 or less</span>
           </section>
@@ -371,13 +391,14 @@
 
         <!-- Chapter 3 (Shooting Stars) -->
         <section>
-          <section>
+          <section data-background-image="images/shooting-01.gif">
             <span>Chapter 03 </span>
             <h1>Shooting Stars</h1>
           </section>
 
+
           <section>
-            <h2>Differentiation</h2>
+            <h2>What's a shooting star?</h2>
             <ul>
               <li>Asteroids</li>
               <li>Comets</li>
@@ -388,8 +409,18 @@
           </section>
 
           <section>
+            <img data-src="images/meteor-name-that-rock.jpg">
+            <aside class="notes">
+              Differentiation
+            </aside>
+          </section>
+          <section>
+            <h1>Shooting stars are meteors</h1>
+          </section>
+
+          <section>
             <h2>Meteors</h2>
-            <cite>Meteors are leaving a bright trail as they are heated to incandescence (glowing) by the friction of the atmosphere and they are so small that they entirely burn up and disappear.</cite>
+            <blockquote>Meteors are leaving a bright trail as they are heated to incandescence (glowing) by the friction of the atmosphere and they are so small that they entirely burn up and disappear.</blockquote>
           </section>
 
           <section data-background-image="images/horizon.jpg">

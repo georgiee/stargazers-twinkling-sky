@@ -1,0 +1,69 @@
+/**
+Available CSS Properties:
+--star-animation-delay (time)
+Delay the start of all animations (pulse, glowing)
+
+--star-pulse-duration (time)
+Control the duration of the pulse animation
+
+--star-glowing-duration (time)
+Control the duration of the glow animation.
+
+--star-glow-brightness (opacity)
+The maximum brightness of the star. Set to a value between 0 and 1.
+
+*/
+
+.star {
+  --star-parallax-depth: 1;
+  --star-parallax-intensity: 1;
+
+  --star-pulse-duration: 1000ms;
+  --star-glowing-duration: 10000ms;
+  --star-glowing-brightness: 1;
+}
+
+.star__parallax {
+  --parallaxTranslationY: calc(-1px * var(--star-parallax-translate, 0) * var(--star-parallax-intensity, 200));
+
+  transform: translate(0, calc(var(--parallaxTranslationY) / var(--star-parallax-depth, 1) ));
+  transition: transform 0.1s;
+  will-change: transform;
+}
+
+.star__shape {
+  fill: var(--star-color, red);
+  animation:
+    starPulse var(--star-pulse-duration, 1000ms) infinite backwards,
+    starGlowing var(--star-glowing-duration, 1000ms) infinite alternate backwards;
+  animation-delay: var(--star-animation-delay, 0);
+}
+
+
+@keyframes starPulse {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.2, 1.2, 1.2);
+  }
+
+  70% {
+    transform: scale3d(0.2, 0.2, 0.2);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes starGlowing {
+  0% {
+    opacity: var(--star-glowing-brightness, 1);
+  }
+
+  100% {
+    opacity: calc(var(--star-glowing-brightness, 1) * 0.5);
+  }
+}

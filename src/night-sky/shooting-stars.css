@@ -1,0 +1,61 @@
+
+.shooting-star {
+  --shooting-duration: 5s;
+  /*
+  I want to make it appear very fast and fade out slow
+  see http://cubic-bezier.com/#.06,.51,.44,.44
+   */
+  --shooting-easing: cubic-bezier(.06,.51,.44,.44);
+}
+
+.shooting-star__debug {
+  display: none;
+  opacity: 0.75;
+}
+
+.shooting-star.is-debugging .shooting-star__debug {
+  display: block;
+}
+
+.shooting-star__shape {
+  fill: white;
+  transform-origin: calc(var(--orbit-radius, 500px)) 0;
+  visibility: hidden;
+}
+
+.shooting-star.is-shooting .shooting-star__shape{
+  visibility: visible;
+  animation:
+    cometOrbitAnimation var(--shooting-duration, 5s) 1 var(--shooting-easing, linear) forwards,
+    cometGlow var(--shooting-duration, 5s) 1 var(--shooting-easing, linear)  forwards;
+}
+
+@keyframes cometOrbitAnimation {
+  0% {
+    transform:
+      translate(calc(var(--orbit-radius , 500px)* -1),0)
+      rotate3d(0, 0, 1, calc(var(--orbit-start-angle)* 1deg));
+  }
+  100% {
+    transform:
+      translate(calc(var(--orbit-radius, 500px)* -1),0)
+      rotate3d(0, 0, 1, calc(var(--orbit-end-angle)* 1deg) );
+  }
+}
+
+@keyframes cometGlow {
+  0% {
+    opacity: 0;
+  }
+
+  30%, 80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+

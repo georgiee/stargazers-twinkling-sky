@@ -67,6 +67,15 @@
       width: 960px;
       height: 700px;
     }
+
+    .relative {
+      position: relative;
+    }
+
+    .full-slide-size {
+      width: 960px;
+      height: 700px;
+    }
   </style>
 </head>
 <body>
@@ -90,7 +99,7 @@
         <section>
           <section>
             <span>Chapter 01 </span>
-            <h1>Anatomy of a star</h1>
+            <h2>Anatomy of a star</h2>
             <aside class="notes">
               Let's look from what a star is made of with the goal of
               building a single star by ourselves.
@@ -111,16 +120,17 @@
           </section>
 
           <section>
-              <h1>Betelgeuse</h1>
-              <img width="400" data-src="images/betelgeuse.jpg">
+            <h2>Betelgeuse</h2>
+            <img width="400" data-src="images/betelgeuse.jpg">
             <aside class="notes">
                 Say hello to Betelgeuse (Alpha Orionis)
             </aside>
           </section>
 
           <section>
+            <h2>What's a star ?</h2>
             <blockquote>
-              A star is a luminous ball of gas. Nuclear fusion reactions produce photons and heat.
+              A star is a luminous <strong>ball</strong> of <strong>gas</strong>. Nuclear fusion reactions produce photons and <strong>heat</strong>.
             </blockquote>
 
           </section>
@@ -139,11 +149,11 @@
               data-width="960"
               data-height="700"
               data-editable="true"
-              data-theme-id="35666"
+              data-theme-id="35673"
               data-slug-hash="QzmeRE"
               data-default-tab="html,result"
               data-user="gkey"
-              data-pen-title="Chapter 01 - A star">
+              data-show-tab-bar="no">
             </div>
           </section>
 
@@ -198,7 +208,7 @@
               data-width="960"
               data-height="700"
               data-editable="true"
-              data-theme-id="35666"
+              data-theme-id="35673"
               data-slug-hash="VqxwPm"
               data-default-tab="html,result"
               data-user="gkey"
@@ -215,13 +225,14 @@
 
             <div class="l-col2">
               <div>
-                <img data-src="images/hertzsprung-russell-diagram.png"/>
+                <img data-src="images/hertzsprung-annotated.png"/>
               </div>
               <div>
                 <ul>
                   <li>Roman Numeral 0 - VII</li>
-                  <li>O are Supergiants</li>
-                  <li>VII are white dwarfs</li>
+                  <li>Size (not mass)</li>
+                  <li>Betelgeuse: supergiant</li>
+                  <li>Sun: dwarf</li>
                 </ul>
               </div>
             </div>
@@ -231,8 +242,6 @@
             <div class="l-col2">
               <div>
                 <img data-src="images/sun-canis-betel.png"/>
-                Sun G2V
-                Betelgeuse M2Ia
               </div>
               <div>
                 <ul>
@@ -261,7 +270,7 @@
               data-width="960"
               data-height="700"
               data-editable="true"
-              data-theme-id="35666"
+              data-theme-id="35673"
               data-slug-hash="oJdNez"
               data-default-tab="html,result"
               data-user="gkey"
@@ -295,21 +304,44 @@
           <section>
             <blockquote>How many stars can we see in the night sky? 🤔 </blockquote>
             <h1 class="fragment">9096</h1>
-            <span class="fragment">Apparent Magnitude of 6.5 or less</span>
+            <span class="fragment">Naked Eye Limit: Star Magnitude of 6.5</span>
           </section>
 
           <section>
-            <h3>Apparent vs Absolute Magnitude</h3>
-            <img data-src="images/magnitudes.gif">
-          </section>
-
-          <section>
-            <img data-src="images/nighht-sky.jpg">
+            <h3>Star Magnitude</h3>
             <ul>
-              <li>9096 (4548)</li>
-              <li>900 (450)</li>
-              <li>70 (35)</li>
+              <li>Measure of brightness</li>
+              <li>Ancient Greek System (~2000 years)</li>
+              <li>Logarithmic, can be negative</li>
+              <li>Lower is higher</li>
+              <li>magnitude 1 is exactly 100 times brighter then mag 6</li>
             </ul>
+          </section>
+
+          <section>
+            <h3>Apparent Magnitude</h3>
+            <div class="l-col2">
+              <div>
+                <img data-src="images/magnitudes.gif">
+              </div>
+              <div>
+                <ul>
+                  <li>Apparent: from earth</li>
+                  <li>Absolute: intrinsic</li>
+                  <li>Betelgeuse absolute -5.8</li>
+                  <li>Betelgeuse apparent 0.5</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <div class="full-slide-size relative">
+              <img data-src="images/nighht-sky.jpg">
+              <div class style="position: absolute;top:0;left:0;width: 100%;height:100%">
+                  <%= require('html-loader!./svg/magnitude-overlay.svg') %>
+              </div>
+            </div>
 
             <aside class="notes">
               Light Pollution increases the limit of our naked eye.
@@ -344,11 +376,12 @@
             <h2>Astronomical Scintillation</h2>
           </section>
 
-          <section data-background-image="images/twinkle-sky.gif">
-            <aside class="notes">
-              Back at earth let's look into the night sky again.
-              Ah yes, that looks better. So something between here and the star is causing the twinkle effect. It's not the star itself.
-            </aside>
+          <section
+            data-background-opacity="0.5"
+            data-background-image="images/twinkle-sky.gif">
+            <cite>
+                scintillation is a generic term for variations in <strong>apparent brightness</strong> or position of a <strong>distant luminous object</strong> viewed through a <strong>medium</strong>
+            </cite>
           </section>
 
           <section data-background-image="images/pool.gif">
@@ -356,6 +389,11 @@
               It's more or less the very same effect as you can see here on the ground of the pool.
               There a brighter and fainter areas of light.
             </aside>
+          </section>
+
+          <section>
+            <h2>Only distant objects</h2>
+            <h3>Works not for our planets, moon or sun.</h3>
           </section>
 
           <section data-background-image="images/twinkle-zoomed.gif">
@@ -370,7 +408,7 @@
               <h2>New Star Fact!</h2>
               <h2>✨Twinkling✨</h2>
 
-              <p>Interpreation: Pulsating & Fading animations</p>
+              <p>Interpretation: Pulsating & Fading animations</p>
             </div>
           </section>
 
@@ -396,30 +434,31 @@
             <h1>Shooting Stars</h1>
           </section>
 
-
           <section>
-            <h2>What's a shooting star?</h2>
-            <ul>
-              <li>Asteroids</li>
-              <li>Comets</li>
-              <li>Meteoroids</li>
-              <li>Meteors</li>
-              <li>Meteorites</li>
-            </ul>
-          </section>
-
-          <section>
-            <img data-src="images/meteor-name-that-rock.jpg">
+            <h3>What's a shooting star?</h3>
+            <div class="l-col2">
+              <div>
+                <img data-src="images/meteor-overview.png">
+              </div>
+              <div>
+                  <ul>
+                    <li class="fragment">Comets</li>
+                    <li class="fragment">Asteroid </li>
+                    <li class="fragment">Meteoroid</li>
+                    <li class="fragment">Meteor</li>
+                    <li class="fragment">Meteorite</li>
+                  </ul>
+                  <br>
+                  <span class="fragment">Shooting stars are Meteors! </span>
+              </div>
+            </div>
+            <!-- <img data-src="images/meteor-name-that-rock.jpg"> -->
             <aside class="notes">
               Differentiation
             </aside>
           </section>
-          <section>
-            <h1>Shooting stars are meteors</h1>
-          </section>
 
           <section>
-            <h2>Meteors</h2>
             <blockquote>Meteors are leaving a bright trail as they are heated to incandescence (glowing) by the friction of the atmosphere and they are so small that they entirely burn up and disappear.</blockquote>
           </section>
 
@@ -447,6 +486,22 @@
               data-user="gkey"
               data-pen-title="Chapter 01 - A star">
             </div>
+          </section>
+
+          <section>
+            <h2>How many shooting stars?</h2>
+            <ul>
+              <li class="fragment">4-6 per hours</li>
+              <li class="fragment">Durign dawn twice as many</li>
+              <li class="fragment">We look in direction where Earth is moving!
+                  <img data-src="images/earth-direction-giphy.gif"/>
+              </li>
+            </ul>
+          </section>
+
+          <section data-background-image="images/meteor-shower-tonight.jpg">
+            <h2>Meteor Shower</h2>
+            <p>Up to 200 meteors per hour,</p>
           </section>
 
           <!-- Fact 07 -->
@@ -478,8 +533,8 @@
           </section>
 
           <section>
-            <blockquote>Parallax is a displacement or difference in the apparent position of an object viewed along two different lines of sight.</blockquote>
-            <span> 👉 Look at a near object, alternately close your eyes and you see it in different positions</span>
+            <blockquote>Parallax is a <strong>displacement</strong> or difference in the apparent position of an object viewed along two different lines of sight.</blockquote>
+            <span class="fragment"> 👉 Look at your finger while you close your eyes alternately</span>
 
             <aside class="notes">
               Thanks to this effect our brain can perceive depth with the help of our two eyes each with a different line of sight. The parallax effect comes from the fact that distance objects appear smaller and slower.
@@ -495,29 +550,34 @@
 
           <section>
             <h2>Stellar parallax</h2>
+
             <div class="l-col2">
               <div>
-                <img data-src="images/stellar-parallax.png">
+                <video data-autoplay loop>
+                  <source data-src="videos/parallax.mp4" type="video/webm" />
+                </video>
               </div>
               <div>
                 <ul>
-                  <li>calculate distance to far stars</li>
-                  <li>very small numbers</li>
-                  <li>not visible from single location on earth</li>
+                  <li>calculate distance to near stars</li>
+                  <li>moving your head is not sufficent</li>
                 </ul>
               </div>
             </div>
           </section>
 
           <section>
-            <h2>There is no Star Parallax visible!</h2>
-            <h2>BUT: Creative Joker 👨‍🎨 </h2>
+            <h2>Another Fact!</h2>
+            <h2>✨✨Star Parallax✨✨</h2>
+            <p>Interpretation: Classic Parallax Effect</p>
           </section>
 
           <section>
-            <h2>Star Fact!</h2>
-            <h2>✨✨Parallax✨✨</h2>
-            <p>Interpretation: Classic Parallax Effect</p>
+            <h3>Classic Parallax Effect</h3>
+            <span>Calculate 0-1 depending on the scroll position</span>
+            <span>Save it in CSS Variable</span>
+            <span>Each star gets another depth</span>
+            <span>Calculate offset</span>
           </section>
 
           <section>

@@ -1,0 +1,57 @@
+
+<svg width="100%" height="100%" viewBox="0 0 960 700" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard">
+            <g id="Group">
+                <g id="mag2" transform="translate(696.000000, 467.000000)" fill="#FFFFFF" font-family="Helvetica-Bold, Helvetica" font-size="50" font-weight="bold">
+                    <g id="full" transform="translate(19.000000, 0.000000)">
+                        <text id="9096-copy">
+                            <tspan x="0" y="49">9096</tspan>
+                        </text>
+                    </g>
+                    <g id="half" transform="translate(0.000000, 60.000000)">
+                        <text id="(4548)">
+                            <tspan x="0" y="49">(4548)</tspan>
+                        </text>
+                    </g>
+                </g>
+                <g id="mag2-copy" transform="translate(422.000000, 467.000000)" fill="#FFFFFF" font-family="Helvetica-Bold, Helvetica" font-size="50" font-weight="bold">
+                    <g id="full" transform="translate(19.000000, 0.000000)">
+                        <text id="900">
+                            <tspan x="0" y="49">900</tspan>
+                        </text>
+                    </g>
+                    <g id="half" transform="translate(0.000000, 60.000000)">
+                        <text id="(350)">
+                            <tspan x="0" y="49">(350)</tspan>
+                        </text>
+                    </g>
+                </g>
+                <g id="mag2-copy-2" transform="translate(138.000000, 467.000000)" fill="#FFFFFF" font-family="Helvetica-Bold, Helvetica" font-size="50" font-weight="bold">
+                    <g id="full" transform="translate(19.000000, 0.000000)" opacity="0.800000012">
+                        <text id="70">
+                            <tspan x="0" y="49">70</tspan>
+                        </text>
+                    </g>
+                    <g id="half" transform="translate(0.000000, 60.000000)">
+                        <text id="(35)">
+                            <tspan x="0" y="49">(35)</tspan>
+                        </text>
+                    </g>
+                </g>
+                <text id="+6.5" font-family="Helvetica-Bold, Helvetica" font-size="50" font-weight="bold" fill="#FFFFFF">
+                    <tspan x="719" y="655">+6.5</tspan>
+                </text>
+                <text id="Maximum-Star-Magnitu" font-family="Helvetica-Bold, Helvetica" font-size="30" font-weight="bold" fill="#FFFFFF">
+                    <tspan x="71" y="48">Maximum Star Magnitude we can see with our naked eye:</tspan>
+                </text>
+                <text id="+4" font-family="Helvetica-Bold, Helvetica" font-size="50" font-weight="bold" fill="#FFFFFF">
+                    <tspan x="451" y="655">+4</tspan>
+                </text>
+                <text id="+2" font-family="Helvetica-Bold, Helvetica" font-size="50" font-weight="bold" fill="#FFFFFF">
+                    <tspan x="138" y="655">+2</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

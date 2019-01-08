@@ -95,9 +95,22 @@
           about me
         </section>
 
+
+        <section>
+          A Journey to the stars.
+          <aside class="notes">
+            We want to build a night sky with SVG and some JavaScript. In order to be able to program such a thing we need to collect some facts first. That's why I will take you on a journey to the stars to gather them. When we have found a fact we will interpretate it creatively so we can transfer it into an implementation.
+
+            That way we will build fact by fact our night sky. Let's start the journey.
+
+          </aside>
+        </section>
+
         <!-- Chapter 1 (Star) -->
         <section>
-          <section>
+          <section
+            data-background-opacity="0.5"
+            data-background-image="images3/anatomy-star2.gif">
             <span>Chapter 01 </span>
             <h2>Anatomy of a star</h2>
             <aside class="notes">
@@ -107,180 +120,295 @@
           </section>
 
           <section>
-              <img width="100%" data-src="images/betelgeuse-orion.png">
+            <img data-src="images3/orion-betelgeuse.png"/>
             <aside class="notes">
-                We want to take a closer look to a star. The sun is boring that's why I want to travel to Betelgeuse in the constellation Orion.
+              A night sky consists mostly of little stars and that's where we begin. I want to explore a single star so we know how to build one. I picked a little star that we can see with our naked eye. It's called Betelgeuse and you can see it in the famous Orion constellation.
             </aside>
           </section>
 
           <section data-background-image="images/warp-01.gif">
             <aside class="notes">
-              We accelerate to warp speed to arrive at Betelgeuse which is 642.5 light years away.
+              Betelgeuse is more than 600 light years away. We would travel for 600 years with light speed — with the superpower I can fast forward to save you some time 👊
             </aside>
           </section>
 
           <section>
-            <h2>Betelgeuse</h2>
             <img width="400" data-src="images/betelgeuse.jpg">
             <aside class="notes">
-                Say hello to Betelgeuse (Alpha Orionis)
+              We arrived! Say hello to Betelegeuse and let's ask our first question.
             </aside>
           </section>
 
           <section>
-            <h2>What's a star ?</h2>
-            <blockquote>
-              A star is a luminous <strong>ball</strong> of <strong>gas</strong>. Nuclear fusion reactions produce photons and <strong>heat</strong>.
-            </blockquote>
-
+            <h2>What is a star ?</h2>
+            <cite>A bright ball of gas with a nuclear fusion producing a lot of heat.</cite>
+            <aside class="notes">
+              What is a star ? The answer is [...]. The gas is usually hydrogen and helium and the nuclear fusion is melting those atoms together producing heavier carbon atoms.
+            </aside>
           </section>
 
-          <!-- Fact 01-->
+          <section>
+            <img data-src="images3/gravity-fusion.jpg"/>
+            <aside class="notes">
+                Everything would fall apart because of the heat. It's the gravity that keeps everyhting in balance and shaped as a ball.
+            </aside>
+          </section>
+          <section>
+            <img data-src="images3/jupiter-and-saturn-great-conjunction.jpg"/>
+            <aside class="notes">
+                So is every gas ball a star? No, you really need the nuclear fusion.
+                Just look at Saturn & Jupiter. They are gas giants, giant planets in our solar system. They have no nuclear fusion running, produce no heat and they are no stars for that reason.
+            </aside>
+          </section>
+
+          <!-- Fact -->
           <section>
             <div class="fact">
-              <h2>First Star Fact!</h2>
-              <h2>✨GAS BALL✨</h2>
-              <p>Creative Interpretation: SVG Circle</p>
+              <span>First Star Fact!</span>
+              <h2>✨FUSION GAS BALL✨</h2>
+              <span>Idea: Create a SVG circle</span>
             </div>
+          </section>
+
+          <section>
+            How do we implement it?
+            <pre>
+              <code data-trim>
+                <svg viewBox="-10 -10 20 20" width="100">
+                  <circle r="10" fill="yellow"></circle>
+                </svg>
+              </code>
+            </pre>
+
+            <svg viewBox="-10 -10 20 20" width="100" class="fragment">
+              <circle r="10" fill="green"></circle>
+            </svg>
+
+            <aside class="notes">
+                How do we implement it? We use a SVG circle. The circle is given a radius r and a color with the fill attribute. Once created it will look like a star. Well, a very rough one and the color green seems not right. This brings us directly to our next question.
+            </aside>
+          </section>
+
+          <!-- Question -->
+          <section>
+            <cite>What's the color of a star ?</cite>
+          </section>
+
+          <section>
+            <img data-src="images/sun-animation.gif"/>
+            <aside class="notes">
+                That's our sun burning its fuel. As mentioned before stars produce a lot of heat while they are burning its fuel. They reach million degrees celsius in their cores — but what counts is their surface temperatur.
+            </aside>
+          </section>
+          <section>
+            <div>
+              <img width="300" data-src="images3/sun-shot.jpg"/>
+              <br>
+              <span>Sun 5778K (5505 °C)</span>
+            </div>
+
+            <div>
+              <img width="300" data-src="images/betelgeuse.jpg"/>
+              <br>
+              <span>Betelgeuse 3500K (3227 °C)</span>
+            </div>
+
+            <aside class="notes">
+                The sun has a surface temperatur of 5778K and Betelgeuse is much colder with 3500K. Both stars look reddish. You could think because they are hot. But it's the opposite. In reality the really, really hot stars are blue. They reach surface temperatures  of more than 30.000 Kelvin which equals a deep blue.
+            </aside>
+          </section>
+
+          <section>
+            <img data-src="images3/hottest-stars.png"/>
+            <aside class="notes">
+              In reality the really, really hot stars are blue. They reach surface temperatures of more than 30.000 Kelvin which equals a deep blue.
+            </aside>
+          </section>
+
+          <section>
+            <img data-src="images3/frequencies.jpg"/>
+            <aside class="notes">
+              If you have just wondered why blue is hotter than red, here a quick explanation. You can see the color spectrum in the image center.
+            </aside>
+          </section>
+
+          <!-- Fact -->
+          <section>
+            <div class="fact">
+              <span>New Star Fact!</span>
+              <h2>✨COLOR✨</h2>
+              <span>Idea: Different fill colors</span>
+            </div>
+
+            <aside class="notes">
+              Let's create some colored stars to prove our fact and to show how it looks in code.  We will start with a hot star and go down to a rather cool star.
+            </aside>
+          </section>
+
+          <section>
+            <pre>
+              <code data-trim>
+                  <svg viewbox="-10 -10 100 20" width="100">
+                    <!-- 15000 Kelvin -->
+                    <circle r="10" cx="0"  fill="#B5CDFF"></circle>
+                    <!-- 5000 Kelvin -->
+                    <circle r="10" cx="30" fill="#FFE4CE"></circle>
+                    <!-- 2114 Kelvin -->
+                    <circle r="10" cx="60" fill="#FF6C00"></circle>
+                  </svg>
+              </code>
+            </pre>
+
+            <svg viewbox="-10 -10 100 20" width="300">
+              <!--   15000 Kelvin -->
+              <circle r="10" cx="0"  fill="#B5CDFF"></circle>
+              <!-- 5000 Kelvin -->
+              <circle r="10" cx="30" fill="#FFE4CE"></circle>
+              <!-- 2114 Kelvin -->
+              <circle r="10" cx="60" fill="#FF6C00"></circle>
+            </svg>
+
+            <aside class="notes">
+                Not too bad but all circles have the same size. Let's continue to our next question.
+            </aside>
+          </section>
+
+          <!-- Question -->
+          <section>
+            <cite>How large is a star ?</cite>
+            <aside class="notes">
+                When you think the sun is large watch this.
+                The sun is over 1 Mio kilometer in diameter but
+            </aside>
+          </section>
+
+          <section>
+            Earth > Sun > Eta Carinae<br>
+             > Betelgeuse > VY Canis Majoris
+
+            <video width="960" data-autoplay onended="Reveal.nextFragment();">
+              <source data-src="videos/comparison.mp4" type="video/mp4" />
+            </video>
+          </section>
+
+          <section>
+            <img data-src="images/sun-canis-betel.png"/>
+            <aside class="notes">
+                YC Canis Majoris is the largest ever discovered star in the universe and look how small the sun is compared to it. This already brings us to the next fact!
+            </aside>
+          </section>
+
+          <!-- Fact -->
+          <section>
+            <div class="fact">
+              <span>New Star Fact!</span>
+              <h2>✨SIZE✨</h2>
+              <span>Idea: Different circle radii</span>
+            </div>
+
+            <aside class="notes">
+              Let's plug in some different radii and look at the result.
+            </aside>
+          </section>
+
+          <section>
+            <pre>
+              <code data-trim>
+                <svg viewbox="-480 -350 960 700" width ="500">
+                  <!-- 15000 Kelvin -->
+                  <circle r="1000" cx="-1250"  fill="#B5CDFF"></circle>
+                  <!-- 5000 Kelvin -->
+                  <circle r="200" cx="40" fill="#FFE4CE"></circle>
+                  <!-- 2114 Kelvin -->
+                  <circle r="20" cx="340" fill="#FF6C00"></circle>
+                </svg>
+              </code>
+            </pre>
+
+            <svg viewbox="-480 -350 960 700" width ="400">
+              <!-- 15000 Kelvin -->
+              <circle r="1000" cx="-1250"  fill="#B5CDFF"></circle>
+              <!-- 5000 Kelvin -->
+              <circle r="200" cx="40" fill="#FFE4CE"></circle>
+              <!-- 2114 Kelvin -->
+              <circle r="20" cx="340" fill="#FF6C00"></circle>
+            </svg>
+
+            <aside class="notes">
+                You can see how different we can size the circle by providing a different radius through the attribute r.
+                But we will never create a night sky with circle that I create manual so here is a new idea.
+            </aside>
+          </section>
+
+          <section>
+            <h2>Building Dynamic Stars</h2>
+            <aside class="notes">
+                We looked at Betelgeuse to discover three facts: BALL, COLOR & SIZE
+                and created different stars by assinging color and size to a circle.
+
+                Let's use the power of JavaScript to create a function so we can easily create stars with code.
+            </aside>
+          </section>
+
+          <section>
+            <pre>
+              <code data-trim>
+                  function createStar({size, color, x, y}) {
+                    const starShape = document.createElementNS("http://www.w3.org/2000/svg", 'circle');
+                    starShape.setAttribute('r', size + '');
+                    starShape.setAttribute('fill', color);
+
+                    const star = createSVGElement('g');
+                    star.setAttribute('transform', `translate($ {x} $ {y})`);
+
+                    star.appendChild(starShape);
+                    return star;
+                  }
+              </code>
+              <code data-trim>
+                  createStar({size: 10, color: '#B5CDFF': 0, y: 0})
+              </code>
+              <code data-trim>
+                <g transform="translate(0 0)">
+                  <circle r="10" fill="#B5CDFF"></circle>
+                </g>
+              </code>
+            </pre>
+
+            <aside class="notes">
+              We will use <code>createStar</code> to create a star svg element which we can append to a svg.
+              1. The function receives an object with size, color, x & y which we decompose.
+              2. To create svg elements ee use the rather complex looking document.createElementNS.
+              3. We will quickly switch over to a custom createSVGElement to save us from repeating the required namespace.
+              4. You will recongize that starShape is filled with our circle tag we used so far including the assignments to fill and radius
+              5. In addition I introduce a star element which is a svg group. A group is like a div
+              there is no default visual appearance. We use the group to assign our position.
+              6. We don't want to use the properties cx and cy from the circle as this moves the center of the circle which will affect future transformations of the circle.
+            </aside>
           </section>
 
           <section>
             <div class="codepen codepen-embed"
-              data-width="960"
-              data-height="700"
-              data-editable="true"
-              data-theme-id="35673"
-              data-slug-hash="QzmeRE"
-              data-default-tab="html,result"
-              data-user="gkey"
-              data-show-tab-bar="no">
+                data-width="960"
+                data-height="600"
+                data-editable="true"
+                data-theme-id="0"
+                data-slug-hash="BvPzKL"
+                data-default-tab="js,result"
+                data-user="gkey">
             </div>
-          </section>
 
-          <section>
-            <h2>Star Classification</h2>
-            <ul>
-              <li>Morgan-Keenan System (MK)</li>
-              <li>Letter & Number plus Roman numeral</li>
-              <li>Two meanings encoded</li>
-              <li>Example: G2V, M2Ia</li>
-            </ul>
-          </section>
-
-          <section>
-            <%= require('html-loader!./svg/star-spectral.svg') %>
-          </section>
-
-          <section>
-            <h2>Spectral Class</h2>
-            <div class="l-col2">
-              <div>
-                  <img data-src="images/spectral-class-overview-annotated.png"/>
-              </div>
-
-              <div>
-                <ul>
-                  <li>About Surface Hotness</li>
-                  <li>O, B, A, F, G, K, and M</li>
-                  <li>Decimal number subdivides range</li>
-                  <li><span class="custom-hot">0 hottest </span> <span class="custom-cold">M coldest</span></li>
-                  <li>Hotness is the color of the star!</li>
-                  <li>Sun(G2V) is hotter than Betelgeuse(M2Ia)</li>
-                </ul>
-              </div>
-            </div>
             <aside class="notes">
-              C=  K - 273.15
+                The result looks like this and I can show you how easy I can add more stars now.
+                We can now build endless amount of stars which means we are ready to build our night sky.
+
+                To get a better image of what we are building let's travel back to earth first.
             </aside>
           </section>
 
-          <!-- Fact 02-->
-          <section>
-            <div class="fact">
-              <h2 class="fact__healine">New Star Fact!</h2>
-              <h2 class="fact__title">✨Temperature✨</h2>
-              <p class="fact__interpreation">Interpretation: Circle Color</p>
-            </div>
+          <section data-background-image="images/warp-speed-back.gif">
+
           </section>
-
-          <section>
-            <div class="codepen codepen-embed"
-              data-width="960"
-              data-height="700"
-              data-editable="true"
-              data-theme-id="35673"
-              data-slug-hash="VqxwPm"
-              data-default-tab="html,result"
-              data-user="gkey"
-              data-pen-title="Chapter 01 - A star">
-            </div>
-          </section>
-
-          <section>
-              <%= require('html-loader!./svg/star-luminosity.svg') %>
-          </section>
-
-          <section>
-            <h2>Luminosity Class</h2>
-
-            <div class="l-col2">
-              <div>
-                <img data-src="images/hertzsprung-annotated.png"/>
-              </div>
-              <div>
-                <ul>
-                  <li>Roman Numeral 0 - VII</li>
-                  <li>Size (not mass)</li>
-                  <li>Betelgeuse: supergiant</li>
-                  <li>Sun: dwarf</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          <section>
-            <div class="l-col2">
-              <div>
-                <img data-src="images/sun-canis-betel.png"/>
-              </div>
-              <div>
-                <ul>
-                    <li><strong>Hypergiants (VY Canis)</strong></li>
-                    <li><strong>Supergiants (Betelgeuse)</strong></li>
-                    <li><strong>Dwars (Sun)</strong></li>
-                  </ul>
-              </div>
-            </div>
-            <aside class="notes">
-              To get a felling for the sizes
-            </aside>
-          </section>
-
-          <!-- Fact 03 -->
-          <section>
-            <div class="fact">
-              <h2>New Star Fact!</h2>
-              <h1>✨Size✨</h1>
-              <p>Interpretation: Circle Radius</p>
-            </div>
-          </section>
-
-          <section>
-            <div class="codepen codepen-embed"
-              data-width="960"
-              data-height="700"
-              data-editable="true"
-              data-theme-id="35673"
-              data-slug-hash="oJdNez"
-              data-default-tab="html,result"
-              data-user="gkey"
-              data-pen-title="Chapter 01 - A star">
-            </div>
-            <aside class="notes">
-              We can now build single stars in different variations.
-            </aside>
-          </section>
-
         </section>
 
         <!-- Chapter 2 (The Sky) -->
@@ -289,239 +417,166 @@
             <span>Chapter 02 </span>
             <h1>Starry Night</h1>
             <aside class="notes">
-                We need many more stars for a night sky! I mean the milky way alone looks like this and our night sky should loook like this later.
+                Arriving at the earth we can see the beautiful night sky and one question of a romantic stargazer is inevitable.
             </aside>
           </section>
 
           <section>
-            <blockquote>Do we know how many stars are in the universe? 🤔 </blockquote>
-            <span class="fragment">Yes we do!</span><br>
-            <h1 class="fragment">a sextillion</h1>
-            <h2 class="fragment">1,000,000,000,000,000,000,000</h2>
-            <small></small>
+            <h2>How many stars are in the universe?</h2>
+            <p class="fragment">More stars than the earth has sand grains!</p>
+            <p class="fragment">10<sup>22</sup> - 10<sup>24</sup></p>
+
+            <aside class="notes">
+                That sounds nice but I need hard facts. Unfortunately science won't give us any exact number to work with. Sometimes they say 10<sup>22</sup> and sometimes 10<sup>24</sup>. That's not satisfying. So let's rephrase our question.
+            </aside>
           </section>
 
           <section>
-            <blockquote>How many stars can we see in the night sky? 🤔 </blockquote>
-            <h1 class="fragment">9096</h1>
-            <span class="fragment">Naked Eye Limit: Star Magnitude of 6.5</span>
+            <h3>How many stars can we see in the night sky?</h3>
+            <h2 class="fragment" data-fragment-index="1">
+              9096 <span class="fragment" data-fragment-index="4">(4548)</span>
+            </h2>
+            <span class="fragment" data-fragment-index="2">in a pitch black night</span>
+
+            <aside class="notes">
+                The answer is 9096. No more, no less. It's the number of stars we can see with our naked eye in a ptich black night. Actually the number is only half of it, as we can't see the sky of the other half of the earth. That cound get even worse when you think of light pollution.
+            </aside>
+          </section>
+
+          <section
+            data-background-size="contain"
+            data-background-image="images3/night-sky-munich.png">
+            <aside class="notes">
+                Look at that image. It shows different night skies polluted by light from cities.
+
+                More and more stars disappear from right to left. The poor souls who are living in Munich downtown can only see 25 stars in any given night. It gets slightly better if you move out to the suburbs. There you can see up to 250 stars. The milky way is almost not visible in this sky. You have to travel far from here to get a glimpse of a perfect night sky. It's somewhere in nowhere near Berlin as you can see in that map.
+
+                Numbers are the Bortle scale (https://en.wikipedia.org/wiki/Bortle_scale)
+            </aside>
           </section>
 
           <section>
-            <h3>Star Magnitude</h3>
-            <ul>
-              <li>Measure of brightness</li>
-              <li>Ancient Greek System (~2000 years)</li>
-              <li>Logarithmic, can be negative</li>
-              <li>Lower is higher</li>
-              <li>magnitude 1 is exactly 100 times brighter then mag 6</li>
-            </ul>
+            <img width="600" data-src="images3/darksitefinder_com2.png"/>
+            darksitefinder.com
+
+            <aside class="notes">
+              You can see that dark spot here in the map from darksitefinder.com. And you can see how red are the large cities in Germany and also the mentioned good spot in East Germany (blue) north west of Berlin.
+            </aside>
           </section>
 
+          <!-- Fact -->
           <section>
-            <h3>Apparent Magnitude</h3>
-            <div class="l-col2">
-              <div>
-                <img data-src="images/magnitudes.gif">
-              </div>
-              <div>
-                <ul>
-                  <li>Apparent: from earth</li>
-                  <li>Absolute: intrinsic</li>
-                  <li>Betelgeuse absolute -5.8</li>
-                  <li>Betelgeuse apparent 0.5</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          <section>
-            <div class="full-slide-size relative">
-              <img data-src="images/nighht-sky.jpg">
-              <div class style="position: absolute;top:0;left:0;width: 100%;height:100%">
-                  <%= require('html-loader!./svg/magnitude-overlay.svg') %>
-              </div>
+            <div class="fact">
+              <span>New Star Fact!</span>
+              <h2>✨STAR COUNT✨</h2>
+              <span>Idea: Create 350 random stars.</span>
             </div>
 
             <aside class="notes">
-              Light Pollution increases the limit of our naked eye.
-              From 6.5 in a pitch black night to only stars with a magnitude of 2 or less (brighter)
+              Anyway we got a new fact! Star Count. Let's create a lot of stars.
+              We can do this with our function `createStar` and we call it inside a for loop.
             </aside>
           </section>
 
-          <!-- Fact 04 -->
           <section>
-            <div class="fact">
-              <h2>New Star Fact!</h2>
-              <h2>✨Visible Star Count✨</h2>
+            <pre>
+              <code data-trim>
+                createSky({count: 350});
 
-              <p>Create 100 random stars</p>
-            </div>
+                function createSky({count}) {
+                  for(let i = 0; i < count; i++) {
+                    const coordinates = getRandomCoordinate() /*{x,y}*/;
+                    const color = getRandomColor(),
+                    const star = createStar({ color, size: 2, ...coordinates  });
+                    svgElement.appendChild(star);
+                  }
+                }
+              </code>
+            </pre>
+            <aside class="notes">
+              That's the basic logic of creating the night sky. I abstracted away the position and color generation
+              and the result looks like this.
+            </aside>
           </section>
 
           <section>
             <div class="codepen codepen-embed"
-              data-width="960"
-              data-height="700"
-              data-editable="true"
-              data-theme-id="35666"
-              data-slug-hash="bOMGMx"
-              data-default-tab="html,result"
-              data-user="gkey"
-              data-pen-title="Chapter 01 - A star">
+                data-width="960"
+                data-height="600"
+                data-editable="true"
+                data-theme-id="0"
+                data-slug-hash="rorMpV"
+                data-default-tab="result"
+                data-user="gkey">
             </div>
+            <aside class="notes">
+              That was surprisingly easy — but something is missing. It looks really boring.
+            </aside>
+          </section>
+
+          <section
+            data-background-opacity="1"
+            data-background-image="images/twinkle-sky.gif">
+            <h1>Twinkling</h1>
+            <aside class="notes">
+              Twinkling of course! Like you can see in the background. In order to build it we need to ask what's twinkling?
+            </aside>
           </section>
 
           <section>
             <h2>Astronomical Scintillation</h2>
-          </section>
-
-          <section
-            data-background-opacity="0.5"
-            data-background-image="images/twinkle-sky.gif">
-            <cite>
-                scintillation is a generic term for variations in <strong>apparent brightness</strong> or position of a <strong>distant luminous object</strong> viewed through a <strong>medium</strong>
-            </cite>
+            <cite>scintillation is a generic term for variations in apparent brightness or position of a distant luminous object viewed through a medium</cite>
           </section>
 
           <section data-background-image="images/pool.gif">
             <aside class="notes">
-              It's more or less the very same effect as you can see here on the ground of the pool.
-              There a brighter and fainter areas of light.
+              In the end it's nothing more than the effect you can see in a pool with the difference that only stars can twinkle. You will never see planets, our Moon or Sun twinkle. Well you will never see again if you dare to look into the Sun.
             </aside>
           </section>
 
           <section>
-            <h2>Only distant objects</h2>
-            <h3>Works not for our planets, moon or sun.</h3>
-          </section>
-
-          <section data-background-image="images/twinkle-zoomed.gif">
+            <video width="600" data-autoplay loop>
+              <source data-src="videos/sirius-scintillation.mp4" type="video/mp4" />
+            </video>
             <aside class="notes">
-                To have such an effect you need to look at a far distant objects so they act like point sources of light. Stars are matching this definition. Our moon and our solar system planets are not far away enough so you can't see the effect.
+              That's Sirius (Dog Star). You can clearly see changes in brightness and position even color and shape. That brings us quickly to our next fact.
             </aside>
           </section>
 
-          <!-- Fact 05 -->
           <section>
+            <!-- Fact -->
             <div class="fact">
-              <h2>New Star Fact!</h2>
+              <span>New Star Fact!</span>
               <h2>✨Twinkling✨</h2>
-
-              <p>Interpretation: Pulsating & Fading animations</p>
+              <span>Idea: Two CSS animations (scale, opacity)</span>
+              <aside class="notes">
+                  We will implement this with some artistic simplifications. My plan is to create a star with two CSS animations attached. One will scale a star up and down and the second animation will change the opacity.
+              </aside>
             </div>
           </section>
 
           <section>
-            <div class="codepen codepen-embed"
-              data-width="960"
-              data-height="700"
-              data-editable="true"
-              data-theme-id="35666"
-              data-slug-hash="ZVxgqK"
-              data-default-tab="html,result"
-              data-user="gkey"
-              data-pen-title="Chapter 01 - A star">
-            </div>
-          </section>
+            <!--
+              codepen only, only the star animation.
+              explain animations, CSS variables
+            -->
+            <aside class="notes">
+              1)
+                That's the idea applied. You can see the two animations to their work
+                and you can see how I can adjust the parameters just by assigning different values
+                to the CSS Variables.
 
+              2)
+                This don't look very promising. Shall we create our night sky that is commented out at the moment? And that's the result - this looks amazing, doesn't it ? 🙌
+            </aside>
+          </section>
         </section>
 
         <!-- Chapter 3 (Shooting Stars) -->
         <section>
           <section data-background-image="images/shooting-01.gif">
             <span>Chapter 03 </span>
-            <h1>Shooting Stars</h1>
-          </section>
-
-          <section>
-            <h3>What's a shooting star?</h3>
-            <div class="l-col2">
-              <div>
-                <img data-src="images/meteor-overview.png">
-              </div>
-              <div>
-                  <ul>
-                    <li class="fragment">Comets</li>
-                    <li class="fragment">Asteroid </li>
-                    <li class="fragment">Meteoroid</li>
-                    <li class="fragment">Meteor</li>
-                    <li class="fragment">Meteorite</li>
-                  </ul>
-                  <br>
-                  <span class="fragment">Shooting stars are Meteors! </span>
-              </div>
-            </div>
-            <!-- <img data-src="images/meteor-name-that-rock.jpg"> -->
-            <aside class="notes">
-              Differentiation
-            </aside>
-          </section>
-
-          <section>
-            <blockquote>Meteors are leaving a bright trail as they are heated to incandescence (glowing) by the friction of the atmosphere and they are so small that they entirely burn up and disappear.</blockquote>
-          </section>
-
-          <section data-background-image="images/horizon.jpg">
-            <aside class="notes">
-              It's such a thin layer that the objects entering it burn up quickly or arrive at earth as meteorites after a short visible phase.
-            </aside>
-          </section>
-
-          <!-- Fact 06 -->
-          <section>
-            <h2>New Star Fact!</h2>
-            <h2>✨Move & Burn✨</h2>
-            <p>Interpretation:  Orbit Animation with Fade</p>
-          </section>
-
-          <section>
-            <div class="codepen codepen-embed"
-              data-width="960"
-              data-height="700"
-              data-editable="true"
-              data-theme-id="35666"
-              data-slug-hash="bOMEON"
-              data-default-tab="html,result"
-              data-user="gkey"
-              data-pen-title="Chapter 01 - A star">
-            </div>
-          </section>
-
-          <section>
-            <h2>How many shooting stars?</h2>
-            <ul>
-              <li class="fragment">4-6 per hours</li>
-              <li class="fragment">Durign dawn twice as many</li>
-              <li class="fragment">We look in direction where Earth is moving!
-                  <img data-src="images/earth-direction-giphy.gif"/>
-              </li>
-            </ul>
-          </section>
-
-          <section data-background-image="images/meteor-shower-tonight.jpg">
-            <h2>Meteor Shower</h2>
-            <p>Up to 200 meteors per hour,</p>
-          </section>
-
-          <!-- Fact 07 -->
-          <section>
-            <h2>New Star Fact!</h2>
-            <h2>✨Meteor Shower✨</h2>
-            <p>Interpretation: Create 10 randomly shooting stars </p>
-          </section>
-
-          <section>
-            <div class="codepen codepen-embed"
-              data-width="960"
-              data-height="700"
-              data-editable="true"
-              data-theme-id="35666"
-              data-slug-hash="EGLKvd"
-              data-default-tab="html,result"
-              data-user="gkey"
-              data-pen-title="Chapter 01 - A star">
-            </div>
+            <h2>Shooting Stars</h2>
           </section>
         </section>
 
@@ -531,112 +586,12 @@
             <span>Bonus Chapter</span>
             <h1>Parallax Sky</h1>
           </section>
-
-          <section>
-            <blockquote>Parallax is a <strong>displacement</strong> or difference in the apparent position of an object viewed along two different lines of sight.</blockquote>
-            <span class="fragment"> 👉 Look at your finger while you close your eyes alternately</span>
-
-            <aside class="notes">
-              Thanks to this effect our brain can perceive depth with the help of our two eyes each with a different line of sight. The parallax effect comes from the fact that distance objects appear smaller and slower.
-            </aside>
-          </section>
-
-          <section>
-            <img data-src="images/parallax-train.gif">
-            <aside class="notes">
-              Everybody knows this effect from a car or train ride or maybe you created a parallax effect on your website.
-            </aside>
-          </section>
-
-          <section>
-            <h2>Stellar parallax</h2>
-
-            <div class="l-col2">
-              <div>
-                <video data-autoplay loop>
-                  <source data-src="videos/parallax.mp4" type="video/webm" />
-                </video>
-              </div>
-              <div>
-                <ul>
-                  <li>calculate distance to near stars</li>
-                  <li>moving your head is not sufficent</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          <section>
-            <h2>Another Fact!</h2>
-            <h2>✨✨Star Parallax✨✨</h2>
-            <p>Interpretation: Classic Parallax Effect</p>
-          </section>
-
-          <section>
-            <h3>Classic Parallax Effect</h3>
-            <span>Calculate 0-1 depending on the scroll position</span>
-            <span>Save it in CSS Variable</span>
-            <span>Each star gets another depth</span>
-            <span>Calculate offset</span>
-          </section>
-
-          <section>
-            <div class="codepen codepen-embed"
-              data-width="960"
-              data-height="700"
-              data-editable="true"
-              data-theme-id="35666"
-              data-slug-hash="vvjKNX"
-              data-default-tab="html,result"
-              data-user="gkey"
-              data-pen-title="Chapter 01 - A star">
-            </div>
-          </section>
-
         </section>
 
         <!-- Conclusion -->
         <section>
           <section>
             <h1>Conclusion</h1>
-          </section>
-
-          <section>
-            <ul>
-              <li>Chapter 1: Stars
-                  ✨GAS BALL✨
-                  ✨Temperature✨
-                  ✨Size✨<
-              </li>
-              <li>Night Sky
-                  ✨Visible Star Count✨
-                  ✨Twinkling✨
-              </li>
-              <li>Shooting Stars
-                  ✨Move & Burn✨
-                  ✨Meteor Shower✨
-              </li>
-              <li>Parallax</li>
-            </ul>
-          </section>
-
-          <section>
-            <h1>Final Result</h1>
-          </section>
-
-          <section>
-            <div class="codepen codepen-embed"
-              data-width="960"
-              data-height="700"
-              data-editable="true"
-              data-slug-hash="vvjKNX"
-              data-show-tab-bar="no"
-              data-user="gkey">
-            </div>
-          </section>
-
-          <section>
-            <h1>Thanks</h1>
           </section>
         </section>
       </div>

@@ -3,11 +3,17 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const devPlugins = [
   new HTMLWebpackPlugin({
-    template: 'src/index.html'
+    template: 'src/index.html',
   }),
 
   new HTMLWebpackPlugin({
-    template: 'src/index.html'
+    template: 'src/index-first-draft.html',
+    filename: 'index-first-draft.html'
+  }),
+
+  new HTMLWebpackPlugin({
+    template: 'src/index-second-draft.html',
+    filename: 'index-second-draft.html'
   }),
 
 ]

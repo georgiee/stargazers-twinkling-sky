@@ -555,20 +555,142 @@
             </div>
           </section>
 
+          <!-- Pulse -->
           <section>
-            <!--
-              codepen only, only the star animation.
-              explain animations, CSS variables
-            -->
-            <aside class="notes">
-              1)
-                That's the idea applied. You can see the two animations to their work
-                and you can see how I can adjust the parameters just by assigning different values
-                to the CSS Variables.
+            <pre>
+              <code data-trim>
+                  .twinkle-little-star {
+                    animation: starPulse 5s infinite alternate;
+                  }
 
-              2)
-                This don't look very promising. Shall we create our night sky that is commented out at the moment? And that's the result - this looks amazing, doesn't it ? 🙌
-            </aside>
+                  @keyframes starPulse {
+                    0% { transform: scale3d(1, 1, 1);}
+                    30% { transform: scale3d(1.2, 1.6, 1.2);}
+                    40% { transform: scale3d(1.5, 1.2, 1.4);}
+                    70% { transform: scale3d(0.6, 0.2, 0.1);}
+                    90% { transform: scale3d(0.9, 0.5, 0.1);}
+                    100% { transform: scale3d(1.2, 0.6, 1.3);}
+                  }
+              </code>
+            </pre>
+            <div class="codepen codepen-embed"
+                data-width="960"
+                data-height="200"
+                data-editable="true"
+                data-theme-id="35700"
+                data-slug-hash="MZBxNz"
+                data-default-tab="result"
+                data-user="gkey">
+            </div>
+          </section>
+
+          <!-- Glow -->
+          <section>
+            <pre>
+              <code data-trim>
+                  .twinkle-little-star {
+                    animation: starGlowing 1s infinite alternate;
+                  }
+
+                  @keyframes starGlowing {
+                    0% {opacity: 1;}
+                    100% {opacity: 0.1;}
+                  }
+              </code>
+            </pre>
+            <div class="codepen codepen-embed"
+                data-width="960"
+                data-height="250"
+                data-editable="true"
+                data-theme-id="0"
+                data-slug-hash="JwBVMK"
+                data-default-tab="result"
+                data-user="gkey">
+            </div>
+          </section>
+
+          <!-- Pulse & Glow -->
+          <section>
+            <pre>
+              <code data-trim>
+                  .twinkle-little-star {
+                    animation:
+                      starPulse 5s infinite alternate,
+                      starGlowing 2s infinite alternate;
+                  }
+              </code>
+            </pre>
+            <div class="codepen codepen-embed"
+                data-width="960"
+                data-height="250"
+                data-editable="true"
+                data-theme-id="0"
+                data-slug-hash="bOjJKm"
+                data-default-tab="result"
+                data-user="gkey">
+            </div>
+          </section>
+
+          <!-- Multiple -->
+          <section>
+            <pre>
+              <code data-trim>
+                  .twinkle-little-star {
+                    animation:
+                      starPulse 5s infinite alternate,
+                      starGlowing 2s infinite alternate;
+
+                    animation-delay: var(--animation-twinkle-delay, 0);
+                  }
+              </code>
+            </pre>
+            <div class="codepen codepen-embed"
+                data-width="960"
+                data-height="300"
+                data-editable="true"
+                data-theme-id="0"
+                data-slug-hash="gZjyQz"
+                data-default-tab="result"
+                data-user="gkey">
+            </div>
+          </section>
+
+
+          <section>
+
+            <pre>
+              <code data-trim>
+                  function createStar({size, color, x, y}) {
+                    const starShape = createSVGElement('circle');
+                    const delay = Math.round(-1 * Math.random() * 4000);
+
+                    starShape.classList.add('twinkle-little-star');
+                    starShape.style.setProperty('--animation-twinkle-delay', delay + 'ms');
+                    /**...*/
+                  }
+              </code>
+            </pre>
+            <div class="codepen codepen-embed"
+                data-width="960"
+                data-height="350"
+                data-editable="true"
+                data-theme-id="0"
+                data-slug-hash="wREvPg"
+                data-default-tab="result"
+                data-user="gkey">
+            </div>
+          </section>
+
+          <section>
+              <div class="codepen codepen-embed"
+                  data-width="960"
+                  data-height="700"
+                  data-editable="true"
+                  data-theme-id="0"
+                  data-slug-hash="roZNbo"
+                  data-default-tab="result"
+                  data-user="gkey">
+              </div>
           </section>
         </section>
 
@@ -577,8 +699,197 @@
           <section data-background-image="images/shooting-01.gif">
             <span>Chapter 03 </span>
             <h2>Shooting Stars</h2>
+            <aside class="notes">
+              The sky is missing some action that's why I want to see some shooting stars. Let's quickly explore
+              what shooting stars are and then add some.
+            </aside>
+          </section>
+
+          <section>
+            <h3>What are shooting stars?</h3>
+          </section>
+
+          <section
+            data-background-opacity="0.5"
+            data-background-image="images/pebbles.jpg">
+            <h2>pebble sized</h2>
+            <aside class="notes">
+              Shooting Stars are pebble sized rocks.
+            </aside>
+          </section>
+
+          <section
+            data-background-image="images/horizon.jpg">
+            <aside class="notes">
+              entering the atmosphere, the small blue line here,
+            </aside>
+          </section>
+
+          <section>
+            <img width="500" data-src="images3/burning-bits.gif"/>
+            <aside class="notes">
+                and that starts burning because of the friction with the air due to the high speed. Most of them just burn up entirely.
+            </aside>
+          </section>
+
+          <section>
+            <img data-src="images3/shooting-star.png"/>
+            <ul>
+              <li>Comet</li>
+              <li>Asteroid</li>
+              <li>Meteroid</li>
+              <li>Meteor</li>
+              <li>Meteorite</li>
+            </ul>
+          </section>
+
+          <!-- Fact -->
+          <section>
+            <div class="fact">
+              <span>New Star Fact!</span>
+              <h3>✨Falling Rock✨</h3>
+              <span>Idea: Create an orbiting circle</span>
+            </div>
+
+            <aside class="notes">
+              We got a new fact! I call it "Falling Rock". Let's build a circle that falls in a 45 degree angle.
+            </aside>
+          </section>
+
+          <section>
+            <pre>
+              <code data-trim>
+                <circle class='shooting-star' fill="white" r="20"></circle>
+              </code>
+
+              <code data-trim>
+                .shooting-star {
+                  animation: shootingStarOrbit 2s linear infinite;
+                }
+                @keyframes shootingStarOrbit {
+                  0% { transform: rotate(0);}
+                  100% { transform: rotate(360deg);}
+                }
+              </code>
+            </pre>
+            <aside class="notes">
+              You can see that the cirle is indeed rotating
+              but we wanted an orbit, so something is missing.
+            </aside>
+
+            <div  style="width: 400px; margin: auto;">
+                <div class="codepen"
+                  data-height="200"
+                  data-editable="true"
+                  data-theme-id="35700"
+                  data-slug-hash="dwqPPG"
+                  data-default-tab="result"
+                  data-user="gkey">
+              </div>
+            </div>
+
+          </section>
+
+          <section>
+            <pre>
+              <code data-trim>
+                .shooting-star {
+                  animation: shootingStarOrbit 2s linear infinite;
+                }
+                @keyframes shootingStarOrbit {
+                  0% { transform: rotate(0) translate(100px, 0);}
+                  100% { transform: rotate(180deg) translate(100px, 0);}
+                }
+              </code>
+            </pre>
+            <aside class="notes">
+              In addition to the rotation we also translate. This will have the
+              effect of rotating around a new center. In this case 100/0 relative
+              to the circle position.
+
+              Order matters, so don't translate and then rotate!
+            </aside>
+
+            <div  style="width: 400px; margin: auto;">
+                <div class="codepen"
+                  data-height="200"
+                  data-editable="true"
+                  data-theme-id="35700"
+                  data-slug-hash="MZqvVd"
+                  data-default-tab="result"
+                  data-user="gkey">
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <pre>
+              <code data-trim>
+                @keyframes shootingStarOrbit {
+                  100% {
+                    transform:
+                      rotate(180deg)
+                      translate(var(--shooting-orbit-radius, 100px), 0);
+                  }
+                }
+              </code>
+              <code data-trim>
+                  shootingStar.style.setProperty(
+                    '--shooting-orbit-radius', value + 'px');
+              </code>
+            </pre>
+            <aside class="notes">
+              The animation is good — but we are going to have different radii and angles.
+              Will we need to create an animation for each variation.
+
+              We don't as we can use the power of CSS variables in animations too!
+            </aside>
+
+            <div  style="width: 400px; margin: auto;">
+                <div class="codepen"
+                  data-height="250"
+                  data-editable="true"
+                  data-theme-id="35700"
+                  data-slug-hash="aPaLNp"
+                  data-default-tab="result"
+                  data-user="gkey">
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <pre>
+              <code data-trim>
+                @keyframes shootingStarOrbit {
+                  100% {
+                    transform:
+                      rotate(var(--shooting-orbit-angle, 180deg))
+                      translate(var(--shooting-orbit-radius, 100px), 0);
+                  }
+                }
+              </code>
+              <code data-trim>
+                  shootingStar.style.setProperty(
+                    '--shooting-orbit-angle', value + 'deg');
+              </code>
+            </pre>
+            <aside class="notes">
+              We can do the same for the angle.
+            </aside>
+
+            <div  style="width: 400px; margin: auto;">
+                <div class="codepen"
+                  data-height="250"
+                  data-editable="true"
+                  data-theme-id="35700"
+                  data-slug-hash="REYjaz"
+                  data-default-tab="result"
+                  data-user="gkey">
+              </div>
+            </div>
           </section>
         </section>
+      </section>
 
         <!-- Chapter 4 (Parallax) -->
         <section>

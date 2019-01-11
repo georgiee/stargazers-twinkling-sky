@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="reveal/css/reveal.css">
   <link rel="stylesheet" href="reveal/css/theme/night.css">
   <link rel="stylesheet" href="reveal/lib/css/zenburn.css"/>
-
   <title>Twinkling Night Sky</title>
   <style>
     html, body {
@@ -81,7 +80,6 @@
 <body>
   <div class="reveal">
       <div class="slides">
-
         <section data-background-image="images/looking-at-stars-romantic-travel.png">
           <h1 class="title-headline">Stargazing for developers</h1>
           <span class="title-headline">A twinkling night sky with shooting stars in SVG</span>
@@ -170,6 +168,7 @@
             </div>
           </section>
 
+          <!-- Code: Star II -->
           <section>
             How do we implement it?
             <pre>
@@ -200,6 +199,7 @@
                 That's our sun burning its fuel. As mentioned before stars produce a lot of heat while they are burning its fuel. They reach million degrees celsius in their cores — but what counts is their surface temperatur.
             </aside>
           </section>
+
           <section>
             <div>
               <img width="300" data-src="images3/sun-shot.jpg"/>
@@ -245,6 +245,7 @@
             </aside>
           </section>
 
+          <!-- Code: Star II -->
           <section>
             <pre>
               <code data-trim>
@@ -259,8 +260,8 @@
               </code>
             </pre>
 
-            <svg viewbox="-10 -10 100 20" width="300">
-              <!--   15000 Kelvin -->
+            <svg viewbox="-10 -10 100 20" width="300" class="fragment">
+              <!-- 15000 Kelvin -->
               <circle r="10" cx="0"  fill="#B5CDFF"></circle>
               <!-- 5000 Kelvin -->
               <circle r="10" cx="30" fill="#FFE4CE"></circle>
@@ -311,6 +312,7 @@
             </aside>
           </section>
 
+          <!-- Code: Star III -->
           <section>
             <pre>
               <code data-trim>
@@ -325,7 +327,7 @@
               </code>
             </pre>
 
-            <svg viewbox="-480 -350 960 700" width ="400">
+            <svg viewbox="-480 -350 960 700" width ="400" class="fragment">
               <!-- 15000 Kelvin -->
               <circle r="1000" cx="-1250"  fill="#B5CDFF"></circle>
               <!-- 5000 Kelvin -->
@@ -366,9 +368,6 @@
                   }
               </code>
               <code data-trim>
-                  createStar({size: 10, color: '#B5CDFF': 0, y: 0})
-              </code>
-              <code data-trim>
                 <g transform="translate(0 0)">
                   <circle r="10" fill="#B5CDFF"></circle>
                 </g>
@@ -387,16 +386,16 @@
             </aside>
           </section>
 
+          <!-- Code: Star IV (createStar) via BvPzKL -->
           <section>
-            <div class="codepen-lazy-load codepen-embed"
-                data-width="960"
-                data-height="600"
-                data-editable="true"
-                data-theme-id="0"
-                data-slug-hash="BvPzKL"
-                data-default-tab="js,result"
-                data-user="gkey">
-            </div>
+            <pre>
+              <code data-trim>
+                createStar({color: '#B5CDFF', size: 20, x: 50, y: 0});
+                createStar({color: '#FFE4CE', size: 50, x: 180, y: 0});
+                createStar({color: '#FF6C00', size: 100, x: 400, y: 0});
+              </code>
+            </pre>
+            <iframe width="600" height="400" data-src="http://localhost:8000/01-star-colors/"></iframe>
 
             <aside class="notes">
                 The result looks like this and I can show you how easy I can add more stars now.
@@ -478,6 +477,7 @@
             </aside>
           </section>
 
+          <!-- Code: Twinkle I (createSky) via rorMpV -->
           <section>
             <pre>
               <code data-trim>
@@ -499,16 +499,8 @@
             </aside>
           </section>
 
-          <section>
-            <div class="codepen-lazy-load codepen-embed"
-                data-width="960"
-                data-height="600"
-                data-editable="true"
-                data-theme-id="0"
-                data-slug-hash="rorMpV"
-                data-default-tab="result"
-                data-user="gkey">
-            </div>
+          <!-- (Large Preview) Code: Twinkle I (createSky) via rorMpV -->
+          <section data-background-iframe="http://localhost:8000/02-nightsky-static-sky">
             <aside class="notes">
               That was surprisingly easy — but something is missing. It looks really boring.
             </aside>
@@ -555,7 +547,7 @@
             </div>
           </section>
 
-          <!-- Pulse -->
+          <!-- Code: Twinkle II (Pulse) via MZBxNz -->
           <section>
             <pre>
               <code data-trim>
@@ -573,18 +565,15 @@
                   }
               </code>
             </pre>
-            <div class="codepen-lazy-load codepen-embed"
-                data-width="960"
-                data-height="200"
-                data-editable="true"
-                data-theme-id="35700"
-                data-slug-hash="MZBxNz"
-                data-default-tab="result"
-                data-user="gkey">
-            </div>
+
+            <iframe
+              width="600"
+              height="250"
+              data-src="http://localhost:8000/02-nightsky-pulse/">
+            </iframe>
           </section>
 
-          <!-- Glow -->
+          <!-- Code: Twinkle III (Glow) via JwBVMK -->
           <section>
             <pre>
               <code data-trim>
@@ -598,18 +587,14 @@
                   }
               </code>
             </pre>
-            <div class="codepen-lazy-load codepen-embed"
-                data-width="960"
-                data-height="250"
-                data-editable="true"
-                data-theme-id="0"
-                data-slug-hash="JwBVMK"
-                data-default-tab="result"
-                data-user="gkey">
-            </div>
+            <iframe
+              width="600"
+              height="250"
+              data-src="http://localhost:8000/02-nightsky-glow">
+            </iframe>
           </section>
 
-          <!-- Pulse & Glow -->
+          <!-- Code: Twinkle IV (Pulse & Glow) via bOjJKm -->
           <section>
             <pre>
               <code data-trim>
@@ -620,18 +605,15 @@
                   }
               </code>
             </pre>
-            <div class="codepen-lazy-load codepen-embed"
-                data-width="960"
-                data-height="250"
-                data-editable="true"
-                data-theme-id="0"
-                data-slug-hash="bOjJKm"
-                data-default-tab="result"
-                data-user="gkey">
-            </div>
+
+            <iframe
+              width="600"
+              height="250"
+              data-src="http://localhost:8000/02-nightsky-pulse-glow">
+            </iframe>
           </section>
 
-          <!-- Multiple -->
+          <!-- Code: Twinkle V (Multiple) via gZjyQz -->
           <section>
             <pre>
               <code data-trim>
@@ -644,18 +626,14 @@
                   }
               </code>
             </pre>
-            <div class="codepen-lazy-load codepen-embed"
-                data-width="960"
-                data-height="300"
-                data-editable="true"
-                data-theme-id="0"
-                data-slug-hash="gZjyQz"
-                data-default-tab="result"
-                data-user="gkey">
-            </div>
+
+            <iframe
+              width="600"
+              height="250"
+              data-src="http://localhost:8000/02-nightsky-multiple-offsets"></iframe>
           </section>
 
-
+          <!-- Code: Twinkle V (First Twinkle Sky) via wREvPg -->
           <section>
             <pre>
               <code data-trim>
@@ -669,33 +647,22 @@
                   }
               </code>
             </pre>
-            <div class="codepen-lazy-load codepen-embed"
-                data-width="960"
-                data-height="350"
-                data-editable="true"
-                data-theme-id="0"
-                data-slug-hash="wREvPg"
-                data-default-tab="result"
-                data-user="gkey">
-            </div>
-            <aside class="notes">
+
+            <iframe
+              width="600"
+              height="250"
+              data-src="http://localhost:8000/02-nightsky-first-twinkle-sky"></iframe>
+
+              <aside class="notes">
               We can add the twinkling effect to our existign sky by modifying the createStar method.
               We need to add the css class and the and a random delay.
             </aside>
           </section>
 
-          <section>
-            <div class="codepen-lazy-load codepen-embed"
-                data-width="960"
-                data-height="700"
-                data-editable="true"
-                data-theme-id="0"
-                data-slug-hash="roZNbo"
-                data-default-tab="result"
-                data-user="gkey">
-            </div>
+          <!-- (Large Preview) Code: Twinkle V (First Twinkle Sky) via roZNbo -->
+          <section data-background-iframe="http://localhost:8000/02-nightsky-static-sky-with-twinkle">
             <aside class="notes">
-              The twinklign sky then looks like this.
+              The twinkling sky then looks like this.
             </aside>
           </section>
         </section>
@@ -770,14 +737,12 @@
             </aside>
           </section>
 
-          <!-- Part I: Fading -->
+          <!-- Part I: Fading via KbGdvW -->
           <section>
             <pre>
               <code data-trim>
                 <circle class='shooting-star' fill="white" r="20"></circle>
-              </code>
-
-              <code data-trim>
+              </code><code data-trim>
                   .shooting-star {
                     animation: shootingStarBurn 2s linear infinite;
                   }
@@ -794,20 +759,13 @@
               That looks good, let's look for the orbit animation.
             </aside>
 
-            <div  style="width: 400px; margin: auto;">
-                <div class="codepen-lazy-load"
-                  data-height="200"
-                  data-editable="true"
-                  data-theme-id="35700"
-                  data-slug-hash="KbGdvW"
-                  data-default-tab="result"
-                  data-user="gkey">
-              </div>
-            </div>
-
+            <iframe
+              width="600"
+              height="250"
+              data-src="http://localhost:8000/03-shooting-star-part-i-fading"></iframe>
           </section>
 
-          <!-- Part II: No Orbit -->
+          <!-- Part II: No Orbit via dwqPPG-->
           <section>
             <pre>
               <code data-trim>
@@ -825,20 +783,14 @@
               but we wanted an orbit, so something is missing.
             </aside>
 
-            <div  style="width: 400px; margin: auto;">
-                <div class="codepen-lazy-load"
-                  data-height="200"
-                  data-editable="true"
-                  data-theme-id="35700"
-                  data-slug-hash="dwqPPG"
-                  data-default-tab="result"
-                  data-user="gkey">
-              </div>
-            </div>
+            <iframe
+              width="600"
+              height="250"
+              data-src="http://localhost:8000/03-shooting-star-part-ii-no-orbit"></iframe>
 
           </section>
 
-          <!-- Part III: Orbit with rotation + translation -->
+          <!-- Part III: Orbit with rotation + translation via MZqvVd -->
           <section>
             <pre>
               <code data-trim>
@@ -859,19 +811,13 @@
               Order matters, so don't translate and then rotate!
             </aside>
 
-            <div  style="width: 400px; margin: auto;">
-                <div class="codepen-lazy-load"
-                  data-height="200"
-                  data-editable="true"
-                  data-theme-id="35700"
-                  data-slug-hash="MZqvVd"
-                  data-default-tab="result"
-                  data-user="gkey">
-              </div>
-            </div>
+            <iframe
+              width="600"
+              height="250"
+              data-src="http://localhost:8000/03-shooting-star-part-iii-rotate-then-translate"></iframe>
           </section>
 
-          <!-- Part IV: CSS Variables for Radius -->
+          <!-- Part IV: CSS Variables for Radius via aPaLNp-->
           <section>
             <pre>
               <code data-trim>
@@ -883,11 +829,12 @@
                   }
                 }
               </code>
-              <code data-trim>
+              <code data-trim class="fragment">
                   shootingStar.style.setProperty(
                     '--shooting-orbit-radius', value + 'px');
               </code>
             </pre>
+
             <aside class="notes">
               The animation is good — but we are going to have different radii and angles.
               Will we need to create an animation for each variation.
@@ -895,19 +842,13 @@
               We don't as we can use the power of CSS variables in animations too!
             </aside>
 
-            <div  style="width: 400px; margin: auto;">
-                <div class="codepen-lazy-load"
-                  data-height="250"
-                  data-editable="true"
-                  data-theme-id="35700"
-                  data-slug-hash="aPaLNp"
-                  data-default-tab="result"
-                  data-user="gkey">
-              </div>
-            </div>
+            <iframe
+              width="600"
+              height="300"
+              data-src="http://localhost:8000/03-shooting-star-part-iv-css-variables-radius"></iframe>
           </section>
 
-          <!-- Part V: CSS Variables for Angle plus: Start Angle -->
+          <!-- Part V: CSS Variables for Angle plus: Start Angle via REYjaz-->
           <section>
             <pre>
               <code data-trim>
@@ -917,8 +858,7 @@
                   100% { transform:
                     rotate(var(--shooting-orbit-angle, 180deg)) /* translate.. */ }
                 }
-              </code>
-              <code data-trim>
+              </code><code data-trim class="fragment">
                   shootingStar.style
                     .setProperty('--shooting-orbit-angle-start', value + 'deg');
                   shootingStar.style
@@ -929,19 +869,13 @@
               We can do the same for the angle.
             </aside>
 
-            <div  style="width: 700px; margin: auto;">
-                <div class="codepen-lazy-load"
-                  data-height="250"
-                  data-editable="true"
-                  data-theme-id="35700"
-                  data-slug-hash="REYjaz"
-                  data-default-tab="result"
-                  data-user="gkey">
-              </div>
-            </div>
+            <iframe
+              width="600"
+              height="300"
+              data-src="http://localhost:8000/03-shooting-star-part-v-css-variables-orbit"></iframe>
           </section>
 
-          <!-- Part VI: createShootingStar -->
+          <!-- Part VI: createShootingStar via BvOJKw -->
           <section>
             <pre>
               <code data-trim>
@@ -962,37 +896,22 @@
               We can do the same for the angle.
             </aside>
 
-            <div  style="width: 400px; margin: auto;">
-                <div class="codepen-lazy-load"
-                  data-height="250"
-                  data-editable="true"
-                  data-theme-id="35700"
-                  data-slug-hash="BvOJKw"
-                  data-default-tab="result"
-                  data-user="gkey">
-              </div>
-            </div>
+            <iframe
+              width="600"
+              height="300"
+              data-src="http://localhost:8000/03-shooting-star-part-vi-createshootingstar"></iframe>
           </section>
 
           <!-- Part VI: createShootingStar (large) -->
-          <section>
-              <div  style="width: 960px; height: 700px; ">
-                  <div class="codepen-lazy-load"
-                    data-height="700"
-                    data-editable="true"
-                    data-theme-id="35700"
-                    data-slug-hash="BvOJKw"
-                    data-default-tab="result"
-                    data-user="gkey">
-                </div>
-              </div>
+          <section data-background-iframe="http://localhost:8000/03-shooting-star-part-vi-createshootingstar">
+
           </section>
 
           <section>
             <h2>How many shooting stars?</h2>
             <ul>
               <li class="fragment">4-6 per hours</li>
-              <li class="fragment">Durign dawn (before sunrise) twice as many</li>
+              <li class="fragment">During dawn (before sunrise) twice as many</li>
               <li class="fragment">We look in direction where Earth is moving!
                   <img data-src="images/earth-direction-giphy.gif"/>
               </li>
@@ -1025,9 +944,10 @@
           <section>
             <h2>New Star Fact!</h2>
             <h2>✨Meteor Shower✨</h2>
-            <p>Interpretation: Create 10 randomly shooting stars </p>
+            <p>Interpretation: Create randomly shooting stars </p>
           </section>
 
+          <!-- Code: Meteor Shower via zymrXx -->
           <section>
             <pre>
               <code data-trim>
@@ -1041,16 +961,12 @@
                   }
               </code>
             </pre>
-            <div style="width: 960px; height: 300px; ">
-                <div class="codepen-lazy-load"
-                  data-height="500"
-                  data-editable="true"
-                  data-theme-id="35700"
-                  data-slug-hash="zymrXx"
-                  data-default-tab="result"
-                  data-user="gkey">
-              </div>
-            </div>
+
+            <iframe
+              width="600"
+              height="300"
+              data-src="http://localhost:8000/03-shooting-star-meteor-shower"></iframe>
+
             <aside class="notes">
               We use our 'createShootingStar' method we created earlier and create three shooting stars.
               The shooting star animation is not applied and we hide the white circle by default.
@@ -1058,23 +974,16 @@
               we can run only the shooting star we want.
             </aside>
           </section>
-          <section data-background-image="images3/homer-combine.gif">
+
+          <section data-background-image="images3/homer-burn.gif">
             <aside class="notes">
               Should we try to combine our sky with the shooting stars ?
             </aside>
           </section>
 
-          <section>
-            <div style="width: 960px; height: 700px; ">
-              <div class="codepen-lazy-load"
-                data-height="700"
-                data-editable="true"
-                data-theme-id="0"
-                data-slug-hash="EGdyVo"
-                data-default-tab="result"
-                data-user="gkey">
-              </div>
-            </div>
+          <!-- Code Preview Shooting Stars & Night Sky via EGdyVo-->
+          <section
+            data-background-iframe="http://localhost:8000/03-shooting-star-night-sky">
 
             <aside class="notes">
               Oh, that looks not so good...
@@ -1141,7 +1050,7 @@
             <span>Calculate offset</span>
           </section>
 
-
+          <!-- Code Parallax Basic via EGdyMO -->
           <section>
             <pre>
               <code data-trim>
@@ -1160,16 +1069,12 @@
                   }
               </code>
             </pre>
-            <div style="width: 960px; height: 250px; ">
-                <div class="codepen-lazy-load"
-                  data-height="250"
-                  data-editable="true"
-                  data-theme-id="35700"
-                  data-slug-hash="EGdyMO"
-                  data-default-tab="result"
-                  data-user="gkey">
-              </div>
-            </div>
+
+            <iframe
+              width="600"
+              height="300"
+              data-src="http://localhost:8000/04-parallax-technique"></iframe>
+
             <aside class="notes">
               The body is set to a large height so we can scroll.
               The SVG is fixed so we can see it.
@@ -1179,16 +1084,12 @@
             </aside>
           </section>
 
+          <!-- Parallax in Sky via wRYzZX  -->
           <section>
-            <div class="codepen-lazy-load codepen-embed"
-              data-width="960"
-              data-height="660"
-              data-editable="true"
-              data-theme-id="35700"
-              data-slug-hash="wRYzZX"
-              data-default-tab="result"
-              data-user="gkey">
-            </div>
+            <iframe
+              width="900"
+              height="700"
+              data-src="http://localhost:8000/04-parallax-with-night-sky"></iframe>
           </section>
 
         </section>
@@ -1200,51 +1101,33 @@
           </section>
 
           <section>
-            <div style="width: 960px; height: 250px; ">
-              <div class="codepen-lazy-load codepen-embed"
-                  data-width="360"
-                  data-height="400"
-                  data-editable="true"
-                  data-theme-id="35700"
-                  data-slug-hash="BvPzKL"
-                  data-default-tab="result"
-                  data-user="gkey">
-              </div>
-            </div>
+            <iframe
+              width="900"
+              height="400"
+              data-src="http://localhost:8000/01-star-colors"></iframe>
+
             <aside class="notes">
               We explored Betelgeuse a star far away to discover how stars can be build
             </aside>
           </section>
 
           <section>
-            <div style="width: 960px; height: 250px; ">
-              <div class="codepen-lazy-load codepen-embed"
-                  data-width="360"
-                  data-height="400"
-                  data-editable="true"
-                  data-theme-id="35700"
-                  data-slug-hash="wREvPg"
-                  data-default-tab="result"
-                  data-user="gkey">
-              </div>
-            </div>
+              <iframe
+                width="900"
+                height="400"
+                data-src="http://localhost:8000/02-nightsky-first-twinkle-sky"></iframe>
+
             <aside class="notes">
               Back on earth we looked in the sky and learned how we can build a twinkling effect from simple transformations.
             </aside>
           </section>
 
           <section>
-            <div style="width: 960px; height: 250px; ">
-              <div class="codepen-lazy-load codepen-embed"
-                  data-width="360"
-                  data-height="400"
-                  data-editable="true"
-                  data-theme-id="35700"
-                  data-slug-hash="zymrXx"
-                  data-default-tab="result"
-                  data-user="gkey">
-              </div>
-            </div>
+            <iframe
+              width="900"
+              height="600"
+              data-src="http://localhost:8000/03-shooting-star-meteor-shower"></iframe>
+
             <aside class="notes">
               and we learned about shooting stars are burning rocks
               which we can animate beautifully in SVG with the help of CSS.
@@ -1260,17 +1143,10 @@
           </section>
 
           <section>
-            <div style="width: 900px; height: 660px; ">
-              <div class="codepen-lazy-load codepen-embed"
-                  data-width="900"
-                  data-height="660"
-                  data-editable="true"
-                  data-theme-id="35700"
-                  data-slug-hash="roqjaw"
-                  data-default-tab="result"
-                  data-user="gkey">
-              </div>
-            </div>
+            <iframe
+              width="900"
+              height="600"
+              data-src="http://localhost:8000/05-stargazers-final-result"></iframe>
           </section>
 
           <section>

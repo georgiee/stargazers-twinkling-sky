@@ -136,14 +136,34 @@
 
         <!-- Intro -->
         <section>
-          <section>
-            <p>Teaching Coding to kids</p>
-            <img data-src="images3/about-03.png"/>
-            <p>Origami addicted</p>
-            <p>Frontend Developer at Satellytes</p>
+          <section
+            data-background-size="contain"
+            data-background-image="images3/about.jpg">
+            <aside class="notes">
+              <p>A few words about me. Learned Origami in Japan</p>
+              <p>Fold Origami every day since then</p>
+              <p>I also created a threejs virtual origami application</p>
+            </aside>
           </section>
 
-          <section>
+          <section data-background-image="images3/IMG_20170629_142704.jpg">
+            <aside class="notes">
+              <p>In my spare time I teach coding to kids</p>
+            </aside>
+          </section>
+
+          <section data-background-image="images3/about-satellytes.png">
+            <h2 class="fragment">Hiring</h2>
+            <aside class="notes">
+              <p>
+              and I'm also working for Satellytes here in Munich
+              and we are hiring by the way
+              </p>
+            </aside>
+          </section>
+        </section>
+
+        <section>
             <h3>Journey to the stars</h3>
             <p class="fragment">4 chapters</p>
             <ul>
@@ -165,8 +185,8 @@
             <div class="fact-summary">
               <h2 class="fragment">✨FACT✨</h2>
               <span class="fragment">🎭 Idea: *How to build it* </span><br>
-              <span class="fragment">Coding</span>
             </div>
+            <span class="fragment">Coding</span>
 
             <aside class="notes">
               <p>During a chapter we will discover new science ✨FACTS✨ marked with these emoji stars</p>
@@ -286,8 +306,9 @@
                   We use a SVG circle. The circle is given a radius r and a color with the fill attribute.
                 </p>
                 <p>
-                  Once created it will look like a star. Well, a very rough one and the color hotpink seems a little off This brings us directly to our next question.
+                  Once created it will look like a star. Well, a very rough one and the color hotpink seems a little off
                 </p>
+                <p>This brings us directly to our next question.</p>
             </aside>
           </section>
 
@@ -1485,20 +1506,14 @@
             </aside>
           </section>
 
-          <section data-background-iframe="http://localhost:8000/05-stargazers-final-result">
+          <section data-background-iframe="http://localhost:8000/05-stargazers-final-credits">
             <aside class="notes">
               Together with the parallax effect we have seen we created the final result
             </aside>
           </section>
-
-          <section>
-            <h1>Thanks</h1>
-          </section>
         </section>
       </div>
   </div>
-
-  <button class="btn-debug" title="Toggle Debug View">🚧</button>
 
   <script src="reveal/lib/js/head.min.js"></script>
   <script src="reveal/js/reveal.js"></script>
@@ -1509,10 +1524,10 @@
       Reveal.initialize({
         transition: 'none',
         history: true,
-        // keyboard: {
-        //   39: 'next',
-        //   37: 'prev'
-        // },
+        keyboard: {
+          39: 'next',
+          37: 'prev'
+        },
         dependencies: [
           {src: 'reveal/plugin/notes/notes.js'},
   		    { src: 'reveal/plugin/zoom-js/zoom.js', async: true },

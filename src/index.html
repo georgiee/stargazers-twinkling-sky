@@ -106,6 +106,10 @@
       animation: zoomOut 1s;
     }
 
+    .fact-summary {
+      outline: 1px dotted grey;
+    }
+
     @keyframes zoomOut {
       0% {
         transform: scale(2);
@@ -130,35 +134,67 @@
           </aside>
         </section>
 
+        <!-- Intro -->
         <section>
-          <p>Teaching Coding to kids</p>
-          <p>Frontend Developer at Satellytes</p>
-          <img data-src="images3/about-03.png"/>
-          <p>Origami addicted</p>
-        </section>
+          <section>
+            <p>Teaching Coding to kids</p>
+            <img data-src="images3/about-03.png"/>
+            <p>Origami addicted</p>
+            <p>Frontend Developer at Satellytes</p>
+          </section>
 
-        <section>
-          <p>Journey to the stars</p>
-          <ul>
-            <li>Some SVG Basic </li>
-            <li>CSS Animationen</li>
-            <li>CSS Variablen</li>
-            <li>Vanilla Javascript to dynamic stars</li>
-          </ul>
-          <h2 class="fragment">✨FACT✨</h2>
-          <span class="fragment">Idea: *What we will do* </span>
+          <section>
+            <h3>Journey to the stars</h3>
+            <p class="fragment">4 chapters</p>
+            <ul>
+              <li class="fragment">I) Anatomy of a Star</li>
+              <li class="fragment">II) Night Sky</li>
+              <li class="fragment">III) Shooting Stars</li>
+              <li class="fragment">IV) Parallax Sky</li>
+            </ul>
+            <aside class="notes">
+              <p>Over the course of 4 chapters I will take you on a journey to the stars.</p>
+              <p>We will explore how a single star is working to create them easily.</p>
+              <p>After that we will assemble a full and crowded sky night</p>
+              <p>Shooting Stars can't miss in any night sky that's what we will look at in the third chapter</p>
+              <p>In the final chapter I will show you how you cann create a poweorful parallax scroll effect with the power of CSS Variables </p>
+            </aside>
+          </section>
 
-          <aside class="notes">
-            I will take you on a journey to the stars so we are able to build them with code.
+          <section>
+            <div class="fact-summary">
+              <h2 class="fragment">✨FACT✨</h2>
+              <span class="fragment">🎭 Idea: *How to build it* </span><br>
+              <span class="fragment">Coding</span>
+            </div>
 
-            Whenever we encounter a new fact you will see it clearly marked like this:
-            (✨FACT✨)
+            <aside class="notes">
+              <p>During a chapter we will discover new science ✨FACTS✨ marked with these emoji stars</p>
+              <p>..followed by an idea how to creatively code it </p>
+              <p>which we will do then.</p>
+            </aside>
+          </section>
 
-            Followed by the idea to actually implement it. This is a creative process and we don't need to stick 100% to the observed reality.
-
-            Let's start the journey.
-
-          </aside>
+          <section>
+            <h2>Coding</h2>
+            <ul>
+              <li class="fragment" data-fragment-index="1">SVG Markup </li>
+              <li class="fragment" data-fragment-index="2">CSS Animations</li>
+              <li class="fragment" data-fragment-index="2">CSS Variables</li>
+              <li class="fragment" data-fragment-index="3">
+                <span class="fragment" data-fragment-index="4">(</span>Vanilla Javascript<span class="fragment" data-fragment-index="4">) Optional 🙌</span></li>
+            </ul>
+            <aside class="notes">
+              <p>Speaking of Coding, you will see SVG Markup</p>
+              <p>together with CSS Animations & CSS Variables to create actual animations.</p>
+              <p>At some point we don't want to repeat ourselves.
+                We will use Javascript to create many variations of our SVG Code and to modify CSS Variables.
+              </p>
+              <p>
+                JavaScript itself isn't a strict requirement
+              </p>
+            </aside>
+          </section>
         </section>
 
         <!-- Chapter 1 (Star) -->
@@ -169,28 +205,28 @@
             <span>Chapter 01 </span>
             <h2>Anatomy of a star</h2>
             <aside class="notes">
-              Let's look from what a star is made of with the goal of
-              building a single star by ourselves.
+              <p>Let's start with the first chapter.</p>
+              <p>We want to know how a star is working so we can build one ourselves.</p>
             </aside>
           </section>
 
           <section>
             <img data-src="images3/orion-betelgeuse.png"/>
             <aside class="notes">
-              A night sky consists mostly of little stars and that's where we begin. I want to explore a single star so we know how to build one. I picked a little star that we can see with our naked eye. It's called Betelgeuse and you can see it in the famous Orion constellation.
+              We want to observe a single star — I picked a little dot that we can see with our naked eye. The star is called Betelgeuse and you can see it in the famous Orion constellation. Betelgeuse is more than 600 light years away.
             </aside>
           </section>
 
           <section data-background-image="images/warp-01.gif">
             <aside class="notes">
-              Betelgeuse is more than 600 light years away. We would travel for 600 years with light speed — with my developer superpower I can fast forward to save us some time 👊
+              We would travel for 600 years with light speed — with my developer superpower I can fast forward to save us some time 👊
             </aside>
           </section>
 
           <section data-state="start-zoom">
             <img width="400" data-src="images/betelgeuse.jpg" class="zoom-in">
             <aside class="notes">
-              We arrived! Say hello to Betelegeuse and let's ask our first question.
+              We arrived at Betelegeuse. Let's ask our first question.
             </aside>
           </section>
 
@@ -199,23 +235,16 @@
             <blockquote class="fragment">A bright ball of gas with a nuclear fusion producing a lot of heat.</blockquote>
             <aside class="notes">
               What is a star ?<br><br>
-              The answer is "A bright ball of gas with a nuclear fusion producing a lot of heat."
+              The scientific answer is "A bright ball of gas with a nuclear fusion producing a lot of heat."
             </aside>
           </section>
 
           <section>
             <img data-src="images3/gravity-fusion.jpg"/>
             <aside class="notes">
-              Normally everything would fall apart because of the heat. It's the gravity that keeps everyhting in balance and shapes the star as ball.
-            </aside>
-          </section>
-          <section>
-            <p>Is every gas ball a star ?</p>
-            <img class="fragment" data-src="images3/jupiter-and-saturn-great-conjunction.jpg"/>
-            <aside class="notes">
-                So is every gas ball a star?<br><br>
-                No, you really need the nuclear fusion.
-                Just look at Saturn & Jupiter. They are giant planets mad of gas in our solar system. They have no nuclear fusion running, produce no heat and they are no stars for that reason.
+              <p>if you cut open a star you can see it burning in the center.</p>
+              <p>Usually everything would fall apart because of the heat. </p>
+              <p>It's the gravity that keeps everyhting in balance and shapes the star as ball.</p>
             </aside>
           </section>
 
@@ -223,13 +252,14 @@
           <section>
             <div class="fact">
               <span>First Star Fact!</span>
-              <h2>✨Fusion Gas Balls✨</h2>
+              <h2>✨Hot Gas Ball✨</h2>
               <span class="fragment">🎭 Idea: Create a SVG circle</span>
             </div>
 
             <aside class="notes">
-              We earned our first star fact "Fusion Gas Balls".<br><br>
-              The idea is to create a SVG circle that represents the gas ball.
+              <p>Did you notice?</p>
+              <p>We earned our first star fact "Hot Gas Ball".</p>
+              <p>The idea is to create a SVG circle that represents the gas ball.</p>
             </aside>
           </section>
 
@@ -256,7 +286,7 @@
                   We use a SVG circle. The circle is given a radius r and a color with the fill attribute.
                 </p>
                 <p>
-                  Once created it will look like a star. Well, a very rough one and the color hotpink seems not right. This brings us directly to our next question.
+                  Once created it will look like a star. Well, a very rough one and the color hotpink seems a little off This brings us directly to our next question.
                 </p>
             </aside>
           </section>
@@ -270,62 +300,57 @@
           </section>
 
           <section>
-            <img data-src="images/sun-animation.gif"/>
-            <aside class="notes">
-                That's our sun burning its fuel. As mentioned before stars produce a lot of heat while they are burning its fuel. They reach million degrees celsius in their cores — but the color comes from the surface temperature.
-            </aside>
-          </section>
+            <div class="l-col2">
+              <div>
+                <img height="300" data-src="images/sun-animation.gif"/>
+                <br>
+                <span>Sun 5500°C</span>
+              </div>
 
-          <section>
-            <div>
-              <img width="300" data-src="images3/sun-shot.jpg"/>
-              <br>
-              <span>Sun 5500°C</span>
+              <div class="fragment">
+                <img height="300" data-src="images/betelgeuse.jpg"/>
+                <br>
+                <span>Betelgeuse 3200°C</span>
+              </div>
             </div>
-
-            <div class="fragment">
-              <img width="300" data-src="images/betelgeuse.jpg"/>
-              <br>
-              <span>Betelgeuse 3200°C</span>
-            </div>
+            <span class="fragment" style="color: red; font-size: 50px;">Red = Hot ?</span>
 
             <aside class="notes">
                 <p>
-                  The sun has a surface temperatur of 5500 degree celsius. You can see the equivalent
+                  The sun has a surface temperatur of 5500 degree celsius.
                 </p>
                 <p>
-                  Betelgeuse is much colder with a temperature of 3200 degree celsius. Both stars look reddish. You could think because they are hot.
+                  Betelgeuse is much colder with a temperature of 3200 degree celsius.
                 </p>
                 <p>
-                  But it's the opposite.
+                  Both stars are still very hot and they look reddish. You could now red means hot but it's quite the opposite.
                 </p>
             </aside>
           </section>
-
           <section
               data-background-image="images3/hottest-stars.png">
-            <h1 class="fragment invert">30.000°C (Eta Carinae)</h1>
+            <h1 class="fragment invert">30.000°C</h1>
+            <h2 style="color: black;">Eta Carinae</h2>
 
             <aside class="notes">
-              In reality the really, really hot stars are blue. They reach surface temperatures of more than 30.000 Kelvin which equals a deep blue.
+              Look at this blue star. It's called Eta Carinae and it's surface temperatur is more than 30.000 degree celsius.
+              In reality the really, really hot stars are blue and not red.
             </aside>
           </section>
-
+<!--
           <section>
-            <img data-src="images3/frequencies2.png"/>
+            <img data-src="images3/frequencies4.jpg"/>
             <aside class="notes">
-              If you have just wondered why blue is hotter than red, here a quick explanation.
-              <p>You can see different types of electromagentic waves in this image.</p>
-              <p>The energy rises from left to right and gets more dangerous ☠️
-              From harmless radio to x-ray for examples.
-              </p>
-              <p>
-                You can also see the color spectrum in the image center,
-                the small part in the center is what we can see with our eyes.
-                And here you can notice that the hottest color is actually blue and purple.
-              </p>
+              If you have just wondered why, here a quick explanation.
+              The image shows different types of electromagnetic waves. The energy gets higher and deadlier to the right.
+              Radio is harmless and x-ray deadly.
+
+              Blue is actually a color with more energy than red. The hotter an object the higher the energy it emits.
+              That's why it gets blue
+
+
             </aside>
-          </section>
+          </section> -->
 
           <!-- Fact -->
           <section>
@@ -338,7 +363,7 @@
             <aside class="notes">
               <p>Have you noticed we have a new start fact. Temperature is color!</p>
               <p>
-                The idea is easy: Let's create soem circles with different colors.
+                The idea is easy: Let's create some circles with different colors.
               </p>
             </aside>
           </section>
@@ -348,11 +373,8 @@
             <pre>
               <code data-trim>
                   <svg viewbox="-10 -10 100 20" width="100">
-                    <!-- 15000 Kelvin -->
                     <circle r="10" cx="0"  fill="#B5CDFF"></circle>
-                    <!-- 5000 Kelvin -->
                     <circle r="10" cx="30" fill="#FFE4CE"></circle>
-                    <!-- 2114 Kelvin -->
                     <circle r="10" cx="60" fill="#FF6C00"></circle>
                   </svg>
               </code>
@@ -365,6 +387,7 @@
             </svg>
 
             <aside class="notes">
+              We create threee circles each with a different color from hot to cold.
               Not too bad but all circles have the same size. Let's continue to our next question.
             </aside>
           </section>
@@ -373,18 +396,17 @@
           <section>
             <cite>How large is a star ?</cite>
             <aside class="notes">
-              <p>Do we know how large a star is?</p>
-              We all know that the sun is large. It's 1 million kiolemeter i diameter
-              but watch this.
+              How large is a star? We all know that the sun is large. It's 1 million kiolemeters in diameter
+              but now watch this comparison video.
             </aside>
           </section>
 
           <section
             data-background-size="contain"
             data-background-video="videos/comparison.mp4">
-            <p class="very-top" style="font-size: 38px;">
+            <!-- <p class="very-top" style="font-size: 38px;">
                 Earth>Sun>Eta Carinae>Betelgeuse>VY Canis Majoris
-            </p>
+            </p> -->
 
             <!--
             Earth > Sun > Eta Carinae ><br>
@@ -397,7 +419,8 @@
           <section>
             <img data-src="images/sun-canis-betel.png"/>
             <aside class="notes">
-                YC Canis Majoris is the largest ever discovered star in the universe and look how small the sun is compared to it. This brings us to the next fact!
+                YC Canis Majoris is one of the largest stars ever discovered in the universe
+                and look how small the sun is compared to it. This brings us to the next fact!
             </aside>
           </section>
 
@@ -405,8 +428,8 @@
           <section>
             <div class="fact">
               <span>New Star Fact!</span>
-              <h2>✨Stars are huge✨</h2>
-              <span class="fragment">🎭 Idea: Different circle radii</span>
+              <h3>✨Stars have different sizes✨</h3>
+              <span class="fragment">🎭 Idea: Circles with different radii</span>
             </div>
 
             <aside class="notes">
@@ -434,41 +457,53 @@
             </svg>
 
             <aside class="notes">
-              <p>You can see how different we can size the circle by providing a different radius through the attribute r.</p>
-              <p>But we will never create a night sky if we have to create circles manually.</p>
+              <p>We see our known group of circles. Know with different values for radius.</p>
+              <p>The result looks like this</p>
+              <p>That's okay, but we will never create a night sky if we have to create circles manually.</p>
             </aside>
           </section>
 
           <section>
+
+          </section>
+
+          <section>
             <pre>
-              <code data-trim >
+              <code data-trim>
                 <g transform="translate(0 0)">
-                  <circle r="10" fill="#B5CDFF"></circle>
+                  <circle r="10" fill="red"></circle>
                 </g>
               </code>
-              <code data-trim class="fragment" data-noescape>
+              <code class="fragment" data-trim>
+                  createStar({size: 10, color: 'red', x: 0, y: 0});
+              </code><code data-trim class="fragment" data-noescape>
+
                   function createStar({size, color, x, y}) {
                     const starShape = document.createElementNS(
                         "http://www.w3.org/2000/svg", 'circle');
-                    starShape.setAttribute('r', size + '');
-                    starShape.setAttribute('fill', color);
-
                     const star = createSVGElement('g');
-                    star.setAttribute('transform', `translate($ {x} $ {y})`);
 
                     star.appendChild(starShape);
-                    return star;
+
+                    starShape.setAttribute('r', size + '');
+                    starShape.setAttribute('fill', color);
+                    star.setAttribute('transform', 'translate(' + x + ' ' + y + ')';
+
+                    mySVG.appendChild(star);
                   }
               </code>
             </pre>
 
             <aside class="notes">
-              <p>1. We will create a function "createStar" that receives an object with size, color, x & y</p>
-              <p>2. To create a svg elements we use the rather complex looking document.createElementNS.</p>
-              <p>3. For further devleopment we switch to a custom createSVGElement to save us from repeating the required namespace.</p>
-              4. You will recongize that starShape is filled with our circle tag we used so far including the assignments to fill and radius
-              5. In addition I introduce a star element which is a svg group. A group is like a div
-              there is no default visual appearance. We use the group to assign our position. We don't want to use the properties cx and cy from the circle as this moves the center of the circle which will affect future transformations of the circle.
+              <p>We want to create the is markup with code — I also added a transform so we can choose different positions.</p>
+              <p>I want to use a function call like this where I provide all values</p>
+              <p>And the function itself looks like this</p>
+              <p>
+                1. Custom createSVGElement function
+                2. appendChild like in html
+                3. Set properties.
+              </p>
+              <p>That's it</p>
             </aside>
           </section>
 
@@ -481,18 +516,23 @@
                 createStar({color: '#FF6C00', size: 100, x: 400, y: 0});
               </code>
             </pre>
-            <iframe width="600" height="400" data-src="http://localhost:8000/01-star-colors/"></iframe>
+
+            <iframe class="fragment" width="600" height="400" data-src="http://localhost:8000/01-star-colors/"></iframe>
 
             <aside class="notes">
-                With that function we can now easily create vast amount of different stars
-                which means we are ready to build our sky.
+                <p>
+                  With that function we can now easily create vast amounts of different stars like the three ones here as an example.
+                </p>
 
-                To get a better image of what we are building let's travel back to earth first.
+                <p>We are ready to build our sky.</p>
             </aside>
           </section>
 
           <section data-background-image="images/warp-speed-back.gif">
-
+            <h2>Back to earth</h2>
+            <aside class="notes">
+              But to observe our night sky, we need to travel back to the earth first.
+            </aside>
           </section>
         </section>
 
@@ -502,44 +542,53 @@
             <span>Chapter 02 </span>
             <h1>Starry Night</h1>
             <aside class="notes">
-                Arriving at the earth we can see the beautiful night sky and one question of a romantic stargazer is inevitable.
+              Arriving at the earth we can see the beautiful night sky and one question of a romantic stargazer is inevitable.
             </aside>
           </section>
 
           <section>
             <h2>How many stars are in the universe?</h2>
             <p class="fragment">More stars than the earth has sand grains!</p>
-            <p class="fragment">10<sup>22</sup> - 10<sup>24</sup></p>
+            <p class="fragment">1,000,000,000,000,000,000,000,000 (one quadrillion)</p>
 
             <aside class="notes">
-                That sounds nice but I need hard facts. Unfortunately science won't give us any exact number to work with. Sometimes they say 10<sup>22</sup> and sometimes 10<sup>24</sup>. That's not satisfying. So let's rephrase our question.
+              How many stars are in the universe.
+              A romantic would say "more stars than the earth has sand grains.
+              A scientist would say one quadrillion.
+              But those numbers are not really helping. Maybe we should rephrase our question.
             </aside>
           </section>
 
           <section>
-            <h3>How many stars can we see in the night sky?</h3>
+            <h3>How many stars can we <strong style="text-decoration: underline">see</strong> in the night sky?</h3>
             <h2 class="fragment" data-fragment-index="1">
               9096 <span class="fragment" data-fragment-index="4">(4548)</span>
             </h2>
-            <span class="fragment" data-fragment-index="2">in a pitch black night</span>
+            <p class="fragment" data-fragment-index="2">in a pitch black night</p>
+            <p class="fragment" data-fragment-index="5">Worse with light pollution</p>
 
             <aside class="notes">
-                The answer is 9096. No more, no less. It's the number of stars we can see with our naked eye in a ptich black night. Actually the number is only half of it, as we can't see the sky of the other half of the earth. That cound get even worse when you think of light pollution.
+              <p>How many stars can we **see** in the night sky with our eyes.</p>
+              <p>The answer is exactly 9096 in a ptich black night.</p>
+              <p>Actually it's half of it as we are living on a globe.</p>
+              <p>And it gets so much worse with light pollution</p>
             </aside>
           </section>
 
           <section
             data-background-size="contain"
-            data-background-image="images3/night-sky-munich.png">
+            data-background-image="images3/night-sky-munich2.jpg">
             <aside class="notes">
-                Look at that image. It shows different night skies polluted by light from cities.
+                Look at that image. More and more stars disappear from right to left.
 
-                More and more stars disappear from right to left. The poor souls who are living in Munich downtown can only see 25 stars in any given night. It gets slightly better if you move out to the suburbs. There you can see up to 250 stars. The milky way is almost not visible in this sky. You have to travel far from here to get a glimpse of a perfect night sky. It's somewhere in nowhere near Berlin as you can see in that map.
+                You can see how you location affects the total count of stars.
+                <p>At the Marientplatz you won't be able to see more than 35 stars in the whole night sky</p>
+                <p>Compare this with some dark spots in East Germany where you can see the the maximum that our eyes can handle</p>
 
-                Numbers are the Bortle scale (https://en.wikipedia.org/wiki/Bortle_scale)
+                <!-- Numbers are the Bortle scale (https://en.wikipedia.org/wiki/Bortle_scale) -->
             </aside>
           </section>
-
+<!--
           <section>
             <img width="600" data-src="images3/darksitefinder_com2.png"/>
             darksitefinder.com
@@ -547,14 +596,14 @@
             <aside class="notes">
               You can see that dark spot here in the map from darksitefinder.com. And you can see how red are the large cities in Germany and also the mentioned good spot in East Germany (blue) north west of Berlin.
             </aside>
-          </section>
+          </section> -->
 
           <!-- Fact -->
           <section>
             <div class="fact">
               <span>New Star Fact!</span>
-              <h2>✨STAR COUNT✨</h2>
-              <span>Idea: Create 350 random stars.</span>
+              <h2>✨Star Count✨</h2>
+              <span>🎭Idea: Create many random small stars.</span>
             </div>
 
             <aside class="notes">
@@ -568,47 +617,56 @@
             <pre>
               <code data-trim>
                 createSky({count: 350});
-
+                </code><code class="fragment" data-trim>
                 function createSky({count}) {
                   for(let i = 0; i < count; i++) {
-                    const coordinates = getRandomCoordinate() /*{x,y}*/;
+                    const {x, y} = getRandomCoordinate();
                     const color = getRandomColor(),
-                    const star = createStar({ color, size: 2, ...coordinates  });
+                    const star = createStar({ color, size: 2, x, y  });
+
                     svgElement.appendChild(star);
                   }
                 }
               </code>
             </pre>
             <aside class="notes">
-              That's the basic logic of creating the night sky. I abstracted away the position and color generation
-              and the result looks like this.
+              <p>We want to use a JavaScript function where we pass in the total count of stars.</p>
+              <p> The function itself is a for loop which will create stars with random color and position and a fixed size of 2</p>
+              <p>The result looks like this</p>
             </aside>
           </section>
 
           <!-- (Large Preview) Code: Twinkle I (createSky) via rorMpV -->
           <section data-background-iframe="http://localhost:8000/02-nightsky-static-sky">
+            <h2 class="fragment">Boring</h2>
             <aside class="notes">
-              That was surprisingly easy — but something is missing. It looks really boring.
+              <p>That was surprisingly quick with the power of JavaScript.</p>
+              <p>But it looks boring so let's try to add another effect.</p>
             </aside>
           </section>
 
           <section
             data-background-opacity="1"
             data-background-image="images/twinkle-sky.gif">
-            <h1>Twinkling</h1>
+            <h1 class="fragment">Twinkling</h1>
+            <h2 class="fragment">Astronomical Scintillation</h2>
+
             <aside class="notes">
-              Twinkling of course! Like you can see in the background. In order to build it we need to ask what's twinkling?
+              <p>That effect you can see here is called Twinkling</p>
+              <p>or as we are scientists today: Astronomical Scintillation</p>
             </aside>
           </section>
 
           <section>
-            <h2>Astronomical Scintillation</h2>
-            <cite>scintillation is a generic term for variations in apparent brightness or position of a distant luminous object viewed through a medium</cite>
+            <cite>Scintillation is a generic term for <strong class="fragment">variations</strong> in apparent <strong class="fragment">brightness</strong> or <strong class="fragment">position</strong> of a distant <strong class="fragment">luminious object</strong> viewed through a medium</cite>
+            <aside class="notes">
+              Scintillation is a generic term for variations in apparent brightness or position of a distant luminious object viewed through a medium.
+            </aside>
           </section>
 
           <section data-background-image="images/pool.gif">
             <aside class="notes">
-              In the end it's nothing more than the effect you can see in a pool with the difference that only stars can twinkle. You will never see planets, our Moon or Sun twinkle. Well you will never see again if you dare to look into the Sun.
+              It's more or less the same effect we all know from a swimming pool.
             </aside>
           </section>
 
@@ -617,7 +675,8 @@
               <source data-src="videos/sirius-scintillation.mp4" type="video/mp4" />
             </video>
             <aside class="notes">
-              That's Sirius (Dog Star). You can clearly see changes in brightness and position even color and shape. That brings us quickly to our next fact.
+              <p>That's a star zoomed in. You can clearly see changes in brightness and position even color and shape.</p>
+              <p>That brings us quickly to our next fact.</p>
             </aside>
           </section>
 
@@ -625,10 +684,10 @@
             <!-- Fact -->
             <div class="fact">
               <span>New Star Fact!</span>
-              <h2>✨Twinkling✨</h2>
-              <span>Idea: Two CSS animations (scale, opacity)</span>
+              <h2>✨Stars can twinkle✨</h2>
+              <p class="fragment">🎭 Idea: CSS animations for scale & opacity</p>
               <aside class="notes">
-                  We will implement this with some artistic simplifications. My plan is to create a star with two CSS animations attached. One will scale a star up and down and the second animation will change the opacity.
+                <p>Stars can twinkle and we are going to implement it with two CSS animationsto change scale and opacity of our circles.</p>
               </aside>
             </div>
           </section>
@@ -637,17 +696,17 @@
           <section>
             <pre>
               <code data-trim>
+                  @keyframes starPulse {
+                    0% { transform: scale(1, 1); }
+                    30% { transform: scale(1.2, 1.6); }
+                    40% { transform: scale(1.5, 1.2); }
+                    70% { transform: scale(0.6, 0.2); }
+                    90% { transform: scale(0.9, 0.5); }
+                    100% { ransform: scale(1.2, 0.6); }
+                  }
+                  </code><code data-trim>
                   .twinkle-little-star {
                     animation: starPulse 5s infinite alternate;
-                  }
-
-                  @keyframes starPulse {
-                    0% { transform: scale3d(1, 1, 1);}
-                    30% { transform: scale3d(1.2, 1.6, 1.2);}
-                    40% { transform: scale3d(1.5, 1.2, 1.4);}
-                    70% { transform: scale3d(0.6, 0.2, 0.1);}
-                    90% { transform: scale3d(0.9, 0.5, 0.1);}
-                    100% { transform: scale3d(1.2, 0.6, 1.3);}
                   }
               </code>
             </pre>
@@ -657,6 +716,14 @@
               height="250"
               data-src="http://localhost:8000/02-nightsky-pulse/">
             </iframe>
+            <aside class="notes">
+              <p>The first CSS animation looks like this.</p>
+              <p>
+                We create it with a keyframe animation and apply a scaling
+                The rather rough animation is intended as we want to create the illusion of randomness
+                as you are suprised by the different changes.
+              </p>
+              <p>The animation itself is running forever and it's alternating so we have a greater variation in the animation cycle</p>
           </section>
 
           <!-- Code: Twinkle III (Glow) via JwBVMK -->
@@ -678,6 +745,10 @@
               height="250"
               data-src="http://localhost:8000/02-nightsky-glow">
             </iframe>
+            <aside class="notes">
+              The next CSS animation is more simple. Our star should fade in and out
+              and we use again a keyframe animation to do so.
+            </aside>
           </section>
 
           <!-- Code: Twinkle IV (Pulse & Glow) via bOjJKm -->
@@ -697,9 +768,36 @@
               height="250"
               data-src="http://localhost:8000/02-nightsky-pulse-glow">
             </iframe>
+            <aside class="notes">
+              <p>When we combine both  animations it will loook like this</p>
+              We use different timings for the animations to create a more natural animation.
+            </aside>
           </section>
 
-          <!-- Code: Twinkle V (Multiple) via gZjyQz -->
+          <!-- Code: Twinkle V-I (Multiple) via gZjyQz -->
+          <section>
+            <pre>
+              <code data-trim>
+                  .twinkle-little-star {
+                    animation:
+                      starPulse 5s infinite alternate,
+                      starGlowing 2s infinite alternate;
+                  }
+              </code>
+            </pre>
+
+            <iframe
+              width="600"
+              height="250"
+              data-src="http://localhost:8000/02-nightsky-multiple-offsets"></iframe>
+
+            <aside class="notes">
+              When we combine both animations it looks really bad. Everything is synced
+              which looks bad due to the lack of variations.
+            </aside>
+          </section>
+
+          <!-- Code: Twinkle V-II (Multiple) via gZjyQz -->
           <section>
             <pre>
               <code data-trim>
@@ -710,13 +808,24 @@
 
                     animation-delay: var(--animation-twinkle-delay, 0);
                   }
+                  .star01 {--animation-twinkle-delay: -100ms;}
+                  .star02 {--animation-twinkle-delay: -550ms;}
+                  .star03 {--animation-twinkle-delay: -320ms;}
               </code>
             </pre>
 
             <iframe
               width="600"
               height="250"
-              data-src="http://localhost:8000/02-nightsky-multiple-offsets"></iframe>
+              data-src="http://localhost:8000/02-nightsky-multiple-offsets-2"></iframe>
+
+            <aside class="notes">
+              <p>We use the power of CSS Variables to fill the CSS property animation-delay
+                so we can offset the animations.
+              </p>
+              <p>The animation offsets are negativ otherwise the animation would wait in the beginning</p>
+              <p>The default is set to 0 but we can apply different values to our individual stars through CSS!</p>
+            </aside>
           </section>
 
           <!-- Code: Twinkle V (First Twinkle Sky) via wREvPg -->
@@ -740,16 +849,23 @@
               data-src="http://localhost:8000/02-nightsky-first-twinkle-sky"></iframe>
 
               <aside class="notes">
-              We can add the twinkling effect to our existign sky by modifying the createStar method.
-              We need to add the css class and the and a random delay.
+                <p>We can know add the twinkling effect to all of our stars in the sky
+                just by modifying the createStar function we created earlier</p>
+                <p>The CSS Variables are assigned through the style object you can find on any DOM object.</p>
+                <p>We assign a random value between 0 and 4000ms</p>
+                <p>And the result looks already awesome. I kept the large circle here
+                  so you can see the effect in large and small.
+                </p>
             </aside>
           </section>
 
           <!-- (Large Preview) Code: Twinkle V (First Twinkle Sky) via roZNbo -->
           <section data-background-iframe="http://localhost:8000/02-nightsky-static-sky-with-twinkle">
             <aside class="notes">
-              The twinkling sky then looks like this.
+              <p>Here another version with the sky only. That's pretty nice and we have come really far in a short time already.</p>
+              <p>Let's jump to our thrid chapter.</p>
             </aside>
+
           </section>
         </section>
 
@@ -759,13 +875,19 @@
             <span>Chapter 03 </span>
             <h2>Shooting Stars</h2>
             <aside class="notes">
-              The sky is missing some action that's why I want to see some shooting stars. Let's quickly explore
-              what shooting stars are and then add some.
+              <p>The twinklign sky we have jsut build is beautiful already
+                  but it's missing some action.</p>
+
+              <p>That's why I want to see some shooting stars. Let's explore
+                  what shooting stars are and then create some.</p>
             </aside>
           </section>
 
           <section>
             <h3>What are shooting stars?</h3>
+            <aside class="notes">
+              So, what are shooting stars ?
+            </aside>
           </section>
 
           <section
@@ -773,21 +895,25 @@
             data-background-image="images/pebbles.jpg">
             <h2>pebble sized</h2>
             <aside class="notes">
-              Shooting Stars are pebble sized rocks.
+              They are are pebble sized rocks...
             </aside>
           </section>
 
           <section
             data-background-image="images/horizon.jpg">
             <aside class="notes">
-              entering the atmosphere, the small blue line here,
+              that enter our atmosphere - the small blue line in this photo -
             </aside>
           </section>
 
           <section>
-            <img width="500" data-src="images3/burning-bits.gif"/>
+            <p>up to 260.000 km/h</p>
+            <p class="fragment">plus air friction = </p>
+            <img class="fragment" height="400" data-src="images3/burning-bits.gif"/>
             <aside class="notes">
-                and that starts burning because of the friction with the air due to the high speed. Most of them just burn up entirely.
+              <p>The rocks travel with a speed up to 260.000 km/h.</p>
+              <p>The speed in combination with the friction of our atmosphere makes it burn and light up</p>
+              <p>We are lucky most of them are so small that they burn up entirely</p>
             </aside>
           </section>
 
@@ -795,12 +921,13 @@
           <section>
             <div class="fact">
               <span>New Star Fact!</span>
-              <h3>✨Burning Rock✨</h3>
-              <span>Idea: Create an orbiting circle with fading</span>
+              <h3>✨Flying Burning Rock✨</h3>
+              <span class="fragment">🎭 Idea: Create a fading and moving circle </span>
             </div>
 
             <aside class="notes">
-              We got a new fact! I call it "Burning Rock". Let's build a circle with fading.
+              We got a new fact! Shooting Stars are "Flying Burning Rocks"
+              and the idea is to create a circle with fading with some movement.
             </aside>
           </section>
 
@@ -809,11 +936,11 @@
             <pre>
               <code data-trim>
                 <circle class='shooting-star' fill="white" r="20"></circle>
-              </code><code data-trim>
+              </code>
+              <code class="fragment" data-trim>
                   .shooting-star {
                     animation: shootingStarBurn 2s linear infinite;
                   }
-
                   @keyframes shootingStarBurn {
                     0% { opacity: 0;}
                     50% { opacity: 1;}
@@ -822,8 +949,10 @@
               </code>
             </pre>
             <aside class="notes">
-              We start with a white circle and add an animation to simulate the burning with a fadein & fadeout animation.
-              That looks good, let's look for the orbit animation.
+              <p>We use a circle again — but this time it stands for a piece of rock and not a star!</p>
+              <p>To simulate the burning we are not visible in the beginning, start burning and disappear again.</p>
+              <p>Everything just by using a keyframe animation with different opacity values</p>
+              <p>That looks good, now let's build some movement</p>
             </aside>
 
             <iframe
@@ -832,9 +961,11 @@
               data-src="http://localhost:8000/03-shooting-star-part-i-fading"></iframe>
           </section>
 
-          <!-- Part II: No Orbit via dwqPPG-->
+          <!-- Part II-I: No Orbit via dwqPPG-->
           <section>
-            <pre>
+            <img data-src="images3/shooting-star-arc.gif">
+
+            <pre class="fragment">
               <code data-trim>
                 .shooting-star {
                   animation: shootingStarOrbit 2s linear infinite;
@@ -846,15 +977,26 @@
               </code>
             </pre>
             <aside class="notes">
-              You can see that the cirle is indeed rotating
-              but we wanted an orbit, so something is missing.
+              <p>We want to move the circle in an arc</p>
+              <p>and we start by rotating it for 180 degree</p>
+              <p>But something is wrong with the result - you can't see it rotate.</p>
             </aside>
 
             <iframe
+             class="fragment"
               width="600"
               height="250"
               data-src="http://localhost:8000/03-shooting-star-part-ii-no-orbit"></iframe>
 
+          </section>
+
+          <!-- Part II-I: No Orbit via dwqPPG-->
+          <section data-background-iframe="http://localhost:8000/03-shooting-star-part-ii-no-orbit">
+            <aside class="notes">
+              <p>If wee look at a larger version and attach some shape to the circle</p>
+              <p>we can see that it's rotating but around itself only</p>
+              <p>We need to offset the center of the animation</p>
+            </aside>
           </section>
 
           <!-- Part III: Orbit with rotation + translation via MZqvVd -->
@@ -871,17 +1013,54 @@
               </code>
             </pre>
             <aside class="notes">
-              In addition to the rotation we also translate. This will have the
-              effect of rotating around a new center. In this case 100/0 relative
-              to the circle position.
-
-              Order matters, so don't translate and then rotate!
+              <p>
+                In addition to the rotation we also translate. This will have the
+                effect of rotating around a new center. In this case 100 px right
+                to the origin of our circle (here red)
+              </p>
+              <p>
+                Order matters, so don't translate and then rotate!
+              </p>
             </aside>
 
             <iframe
-              width="600"
-              height="250"
+              width="400"
+              height="400"
               data-src="http://localhost:8000/03-shooting-star-part-iii-rotate-then-translate"></iframe>
+
+            <iframe
+             class="fragment"
+              width="400"
+              height="400"
+              data-src="http://localhost:8000/03-shooting-star-part-iii-rotate-then-translate-2"></iframe>
+          </section>
+
+          <section>
+            <pre>
+              <code data-trim>
+                .shooting-star {
+                  animation: shootingStarOrbit 2s linear infinite;
+                }
+                @keyframes shootingStarOrbit {
+                  0% { transform: rotate(0) translate(100px, 0);}
+                  100% { transform: rotate(180deg) translate(100px, 0);}
+                }
+              </code>
+            </pre>
+
+            <ul>
+              <li class="fragment">rotate(0)</li>
+              <li class="fragment">translate(100px, 0)}</li>
+              <li class="fragment">CSS Variables and keyframes are friends 👫</li>
+            </ul>
+
+            <aside class="notes">
+              <p>
+                The animation is nice already. But we want to use variations
+                for the angle and radius we define.
+              </p>
+              <p>Amazingly CSS Variables work here too!</p>
+            </aside>
           </section>
 
           <!-- Part IV: CSS Variables for Radius via aPaLNp-->
@@ -895,18 +1074,24 @@
                       translate(var(--shooting-orbit-radius, 100px), 0);
                   }
                 }
-              </code>
-              <code data-trim class="fragment">
-                  shootingStar.style.setProperty(
-                    '--shooting-orbit-radius', value + 'px');
+              </code><code data-trim class="fragment">
+                // Provide values through JS
+                shootingStar.style.setProperty(
+                  '--shooting-orbit-radius', value + 'px');
               </code>
             </pre>
 
             <aside class="notes">
-              The animation is good — but we are going to have different radii and angles.
-              Will we need to create an animation for each variation.
+              <p>
+                Look at the translate value. We use a CSS variable
+                  that we change we can change with Javascript.
+              </p>
 
-              We don't as we can use the power of CSS variables in animations too!
+              <p>
+                You can see how I can change the radius with JavaScript
+                of the left instance. The right still sticks to the default
+                as no value is given.
+              </p>
             </aside>
 
             <iframe
@@ -925,7 +1110,7 @@
                   100% { transform:
                     rotate(var(--shooting-orbit-angle, 180deg)) /* translate.. */ }
                 }
-              </code><code data-trim class="fragment">
+              </code><code data-trim>
                   shootingStar.style
                     .setProperty('--shooting-orbit-angle-start', value + 'deg');
                   shootingStar.style
@@ -933,7 +1118,8 @@
               </code>
             </pre>
             <aside class="notes">
-              We can do the same for the angle.
+              <p>We can do the same for the angle. </p>
+              <p>Here I can provide different values for the start and end angle of the arc we want to describe.</p>
             </aside>
 
             <iframe
@@ -946,27 +1132,36 @@
           <section>
             <pre>
               <code data-trim>
-                  function createShootingStar({x, y, radius, angle, angleStart, debug}) {
+                  function createShootingStar({x, y, radius, angle, angleStart}) {
                     const shootingStarShape = createSVGElement('circle');
-                    shootingStar.style.setProperty('--shooting-orbit-radius', radius + 'px');
-                    /**...*/
+                    const shootingStar = createSVGElement('g');
+                    shootingStar.appendChild(shootingStarShape);
+
+                    shootingStar.classList.add('shooting-star');
+                    shootingStar.setAttribute('transform', 'translate('+ x + '' + y + ')');
+
+                    shootingStarShape.style.setProperty('--shooting-orbit-radius', radius + 'px');
+                    shootingStarShape.style.setProperty('--shooting-orbit-angle', angle + 'deg');
+                    shootingStarShape.style.setProperty('--shooting-orbit-angle-start', angleStart + 'deg');
+                    shootingStarShape.setAttribute('r', size);
+                    shootingStarShape.setAttribute('fill', 'white');
+
+                    mySVG.appendChild(shootingStar);
                   }
-                  createShootingStar({
-                    x: 100, y: 100,
-                    radius: 100,
-                    angleStart: -90, angle: -180,
-                    debug: true
-                  });
+              </code>
+              <code data-trim class="fragment">
+                createShootingStar({
+                  x: 100, y: 100, radius: 100,
+                  angleStart: -90, angle: -180
+                });
               </code>
             </pre>
             <aside class="notes">
-              We can do the same for the angle.
+              <p>We have build a shooting star where we can easily create variations.</p>
+              <p>Let's create a function so we can easily create them</p>
+              <p>The method itself will create the SVG structure and apply SS proeprties and values liek we did for the stars in the night sky</p>
             </aside>
 
-            <iframe
-              width="600"
-              height="300"
-              data-src="http://localhost:8000/03-shooting-star-part-vi-createshootingstar"></iframe>
           </section>
 
           <!-- Part VI: createShootingStar (large) -->
@@ -975,76 +1170,138 @@
           </section>
 
           <section>
-            <h2>How many shooting stars?</h2>
-            <ul>
-              <li class="fragment">4-6 per hours</li>
-              <li class="fragment">During dawn (before sunrise) twice as many</li>
-              <li class="fragment">We look in direction where Earth is moving!
-                  <img data-src="images/earth-direction-giphy.gif"/>
-              </li>
-            </ul>
-          </section>
-
-          <section>
-              <video width="960" data-autoplay loop>
-                <source data-src="videos/dawn-shooting-stars.mp4" type="video/mp4" />
-              </video>
+            <h3>How many shooting stars?</h3>
+            <p class="fragment">4-6 per hours</p>
+            <aside class="notes">
+              <p>The next question is how many shooting stars are Actually happening in the sky?</p>
+              <p>During a usual night and outside of a city you can observe up to 6 shooting stars per hours</p>
+            </aside>
           </section>
 
           <section data-background-image="images/meteor-shower-tonight.jpg">
             <h2>Meteor Shower</h2>
-            <p>Up to 200 meteors per hour</p>
+            <p class="fragment">Up to 200 meteors per hour</p>
+            <p class="fragment">caused by comet debris</p>
           </section>
 
           <section>
-            <img data-src="images3/perseide.jpg"/>
+            <h3>Perseid Meteor Shower</h3>
+            <img data-src="images3/perseide.jpg" height="400"/>
+
             <aside class="notes">
-                A meteor shower is caused when the earth travels through a comet's path
-                which contains a high density of very small debris.
-                The most famous one are the Perseides happening in August — unfortunately
-                there is a full moon this year. So instead of 200 meteors per hour you cna only see
-                10-15 per hour.
+              <p>The most famous meteor shower is happening each year in August and it's called Perseid Meteor Shower</p>
+              <p>A meteor shower happens when the earth is crossing the exhaust of a comet</p>
+              <p>As said you can observe up to 200 meteors per hours — unfortunately this year it's only 10-15 as the full moon emits too much light.</p>
+            </aside>
+          </section>
+
+          <section>
+            <div class="l-col2">
+              <img data-src="images3/perseus.png" height="500" />
+              <div>
+                <ul>
+                  <li>Caused by Comet Swift-Tuttle</li>
+                  <li>Named by source in the sky</li>
+                  <li>Star Constellation Perseus</li>
+                </ul>
+              </div>
+            </div>
+            <aside class="notes">
+              <p>
+                The name of the meteor shower comes not from the name of the comet it's causing. Switf-Tuttle here.
+              </p>
+              <p>it comes from the origin in the sky, here the Perseus Star Conestellation</p>
             </aside>
           </section>
 
           <!-- Fact 07 -->
           <section>
-            <h2>New Star Fact!</h2>
-            <h2>✨Meteor Shower✨</h2>
-            <p>Interpretation: Create randomly shooting stars </p>
+            <span>New Star Fact!</span>
+            <h2 class="fragment">✨Meteor Shower✨</h2>
+            <p class="fragment">🎭Idea: Create randomly shooting stars </p>
           </section>
 
           <!-- Code: Meteor Shower via zymrXx -->
           <section>
-            <pre>
-              <code data-trim>
-                  .shooting-star__shape {
-                    visibility: hidden;
-                  }
+            <div class="l-col2">
+              <div>
+                <pre>
+                    <code data-trim>
+                      createShootingStar({
+                        x: 100, y: 100,
+                        radius: 100, angle: 45
+                      });
 
-                  .shooting-star.is-shooting .shooting-star__shape {
-                    visibility: visible;
-                    animation: shootingStarOrbit ...
-                  }
-              </code>
-            </pre>
+                      createShootingStar({
+                        x: 350, y: 100, radius: 50,
+                        angleStart: 270, angle: 90
+                      });
 
-            <iframe
-              width="600"
-              height="300"
-              data-src="http://localhost:8000/03-shooting-star-meteor-shower"></iframe>
+                      createShootingStar({
+                        x: 550, y: 750, radius: 600,
+                        angleStart: -90, angle: -150
+                      });
+                    </code>
+                  </pre>
+              </div>
+              <div>
+                <iframe
+                  width="480"
+                  height="480"
+                  data-src="http://localhost:8000/03-shooting-star-meteor-shower"></iframe>
+              </div>
+            </div>
 
             <aside class="notes">
-              We use our 'createShootingStar' method we created earlier and create three shooting stars.
-              The shooting star animation is not applied and we hide the white circle by default.
-              Only when we attach the class 'is-shooting' we activate our shooting star animation. That way
-              we can run only the shooting star we want.
+              <p>We use our 'createShootingStar' method to create three different shooting stars</p>
+              <p>But this looks really bad as everything is starting at the same time
+                and shooting forever. We need to chaneg this.
+              </p>
+            </aside>
+          </section>
+
+          <!-- Code: Meteor Shower via zymrXx -->
+          <section>
+            <div class="l-col2">
+              <div>
+                <pre><code data-trim style="font-size: 16px; line-height: 120%;">
+                    .shooting-star {
+                      visibility: hidden;
+                    }
+                    .shooting-star.is-shooting {
+                      visibility: visible;
+                      animation: shootingStarOrbit ...
+                    }
+                    </code>
+                  <code data-trim style="font-size: 16px; line-height: 120%;">
+                    setInterval(() => shootNext(), 4000);
+
+                    function shootNext() {
+                      const shootingStar = nextStar();
+                      shootingStar.classList.add('is-shooting');
+
+                      lastStar.classList.remove('is-shooting');
+                      lastStar = shootingStar;
+                    }
+                  </code></pre>
+              </div>
+
+              <iframe
+                width="300"
+                height="300"
+                data-src="http://localhost:8000/03-shooting-star-meteor-shower-2"></iframe>
+            </div>
+
+            <aside class="notes">
+              <p>We hide the shooting star in the beginning</p>
+              <p>Only when we decide to show it we apply the class is-shooting</p>
+              <p>This will start the animation and we will remove it when the next star shoots</p>
             </aside>
           </section>
 
           <section data-background-image="images3/homer-burn.gif">
             <aside class="notes">
-              Should we try to combine our sky with the shooting stars ?
+              Let's try to combine our sky with the shooting stars.
             </aside>
           </section>
 
@@ -1053,11 +1310,11 @@
             data-background-iframe="http://localhost:8000/03-shooting-star-night-sky">
 
             <aside class="notes">
-              Oh, that looks not so good...
-
-              (Click on debug)
-
-              There we go! This looks so nice, doesn't it ?
+              <p>Oh, that looks not so good... maybe we should disable our helping visuals first.</p>
+              <p>(Click on debug)</p>
+              <P>There we go! This looks nice.</P>
+              <p>You can see our stars twinkle and the shooting stars appearing randomly.</p>
+              <p>Let's go to the final chapter to apply a parallax effect.</p>
             </aside>
           </section>
         </section>
@@ -1070,84 +1327,96 @@
           </section>
 
           <section>
-            <blockquote>Parallax is a <strong>displacement</strong> or difference in the apparent position of an object viewed along two different lines of sight.</blockquote>
-            <span class="fragment"> 👉 Look at your finger while you close your eyes alternately</span>
-
-            <aside class="notes">
-              Thanks to this effect our brain can perceive depth with the help of our two eyes each with a different line of sight. The parallax effect comes from the fact that distance objects appear smaller and slower.
-            </aside>
-          </section>
-
-          <section>
             <img data-src="images/parallax-train.gif">
             <aside class="notes">
-              Everybody knows this effect from a car or train ride or maybe you created a parallax effect on your website.
+              <p>You can see the parallax effect when you are travelling with a train or a card</p>
+              <p>It's the fact that near objects are traveling faster across the window than distant objects.</p>
             </aside>
           </section>
 
           <section>
-            <h2>Stellar parallax</h2>
+            <h4>Stellar parallax</h4>
+            <video height="500" data-autoplay loop>
+              <source data-src="videos/parallax.mp4" type="video/webm" />
+            </video>
 
-            <div class="l-col2">
-              <div>
-                <video data-autoplay loop>
-                  <source data-src="videos/parallax.mp4" type="video/webm" />
-                </video>
-              </div>
-              <div>
-                <ul>
-                  <li>Moving your head won't work</li>
-                  <li>The Earth needs to travel so you can see parallax effects</li>
-                </ul>
-              </div>
-            </div>
+            <aside class="notes">
+              <p>The same effect can be seen in the sky — but your head movement is not enough.</p>
+              <p>The whole earth needs to move so you can see diferences</p>
+              <p>But this works only for stars near enough. If they are too far away
+                not even the earth movement is enough anymore
+              </p>
+              <p>You can see it in the video. The earth moves and you can see a star moving across the sky?while the
+                really far away stars are not moving again.
+              </p>
+            </aside>
           </section>
 
           <section>
-            <h2>Another Fact!</h2>
+            <span>Another Fact!</span>
             <h2>✨✨Star Parallax✨✨</h2>
-            <p>Interpretation: Classic Parallax Effect</p>
+            <p class="fragment">🎭 Idea: Scrolling Parallax Effect</p>
+            <aside class="notes">
+              We have a new star fact and the idea is to use an effect many of you already know.
+            </aside>
           </section>
 
           <section>
             <h3>Classic Parallax Effect</h3>
-            <span>Calculate 0-1 depending on the scroll position</span>
-            <span>Save it in CSS Variable</span>
-            <span>Each star gets another depth</span>
-            <span>Calculate offset</span>
+            <ul>
+              <li>Move objects depending on the scroll position and depth</li>
+              <li>translation = maxTranslation * scrollPosition / depth</li>
+              <li>Each star receives a depth bewteen 0 - 5</li>
+            </ul>
           </section>
 
           <!-- Code Parallax Basic via EGdyMO -->
           <section>
-            <pre>
-              <code data-trim>
-                requestAnimationFrame(() => {
-                  parallaxRatio = scrollTop/(totalHeight - viewportHeight);
-                  svg.style.setProperty('--star-parallax-ratio', parallaxRatio);
-                }
-              </code><code data-trim>
-                  .parallax-effect {
-                    --translationY: calc(-1px * var(--ratio) * var(--maxTranslation));
-                    transform: translate(0, calc(var(--translationY) / var(--depth) ));
-                  }
-                  .bar-01 {
-                    --maxTranslation: 100;
-                    --depth: 1;
-                  }
-              </code>
-            </pre>
+            <div class="l-col2">
+              <div style="width: 300px">
+                <iframe
+                  width="300"
+                  height="600"
+                  data-src="http://localhost:8000/04-parallax-technique"></iframe>
+              </div>
 
-            <iframe
-              width="600"
-              height="300"
-              data-src="http://localhost:8000/04-parallax-technique"></iframe>
+              <div>
+                <pre>
+                  <code data-trim>
+                    function loop(){
+                      // value between 0 and 1 depending on the scroll position
+                      parallaxRatio = scrollTop/(totalHeight - viewportHeight);
+                      svg.style.setProperty('--ratio', parallaxRatio);
+                      requestAnimationFrame(loop);
+                    }
+                    loop();
+
+                  </code>
+                  <code data-trim class="fragment">
+                      .bar1 { --depth: 1; }
+                      .bar2 { --depth: 2; }
+                      .bar3 { --depth: 3; }
+                      .bar4 { --depth: 4; }
+                      .bar5 { --depth: 5; }
+                  </code><code data-trim class="fragment">
+                      .parallax-effect {
+                        /** movement = -1 * ratio * maxTranslation */
+                        --translationY: calc(-1px * var(--ratio) * var(--maxTranslation));
+                        /** actualMovement = movement/depth */
+                        transform: translate(0, calc(var(--translationY) / var(--depth) ));
+                      }
+                  </code>
+                </pre>
+              </div>
+            </div>
 
             <aside class="notes">
-              The body is set to a large height so we can scroll.
-              The SVG is fixed so we can see it.
-
-              When I scroll the ratio is calculated (inside a request animation frame)
-              and then the
+              <p>The body is set to a large height so we can scroll.</p>
+              <p>The SVG is fixed so we can see it.</p>
+              <p>Whenever I scroll the ratio, a value between of 0 and 1 is calculated and written into the CSS variables</p>
+              <p>The CSS Variable is set on the svg but inherited to all stars</p>
+              <p>The star itself is given a depth value</p>
+              <p>And with all information it can calculate it's position. The higher the depth the smaller the displacement</p>
             </aside>
           </section>
 
@@ -1157,6 +1426,10 @@
               width="900"
               height="700"
               data-src="http://localhost:8000/04-parallax-with-night-sky"></iframe>
+              <aside class="notes">
+                And when we apply it to our existing night sky
+                it will look like this.
+              </aside>
           </section>
 
         </section>
@@ -1168,6 +1441,9 @@
           </section>
 
           <section>
+            <pre><code data-trim>
+              createStar({size: 10, color: 'red', x: 0, y: 0});
+            </code></pre>
             <iframe
               width="900"
               height="400"
@@ -1179,10 +1455,10 @@
           </section>
 
           <section>
-              <iframe
-                width="900"
-                height="400"
-                data-src="http://localhost:8000/02-nightsky-first-twinkle-sky"></iframe>
+            <iframe
+              width="900"
+              height="400"
+              data-src="http://localhost:8000/02-nightsky-first-twinkle-sky"></iframe>
 
             <aside class="notes">
               Back on earth we looked in the sky and learned how we can build a twinkling effect from simple transformations.
@@ -1190,8 +1466,15 @@
           </section>
 
           <section>
+
+              <pre><code data-trim>
+                  createShootingStar({
+                    x: 100, y: 100, radius: 100,
+                    angleStart: -90, angle: -180
+                  });
+              </code></pre>
             <iframe
-              width="900"
+              width="600"
               height="600"
               data-src="http://localhost:8000/03-shooting-star-meteor-shower"></iframe>
 
@@ -1204,8 +1487,8 @@
 
           <section data-background-iframe="http://localhost:8000/05-stargazers-final-result">
             <aside class="notes">
-                Together with the parallax effect we have seen we created the final result
-              </aside>
+              Together with the parallax effect we have seen we created the final result
+            </aside>
           </section>
 
           <section>

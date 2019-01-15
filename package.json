@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "develop": "webpack-dev-server",
+    "codepens": "live-server --port=8000 codepens",
     "build": "webpack",
     "deploy": "gh-pages -d dist",
     "test": "jest",

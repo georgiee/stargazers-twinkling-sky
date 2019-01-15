@@ -1,0 +1,38 @@
+.shooting-star {
+  animation: shootingStarOrbit 2s linear infinite;
+}
+
+.shooting-star {
+  fill: white;
+}
+
+.shooting-star.debug {
+  fill: url(#debugCircle);
+}
+
+.btn-debug {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 5vw;
+}
+
+@keyframes shootingStarOrbit {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+/* only for this pen */
+body {
+  background: black;
+  margin: 0;
+}
+
+svg {
+  max-height: 100vh;
+}

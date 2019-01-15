@@ -1,0 +1,65 @@
+.shooting-star {
+  animation:
+  shootingStarOrbit 2s linear infinite,
+    shootingStarBurn 2s linear infinite;
+}
+
+.shooting-star-bad {
+  fill: url(#debugCircle);
+
+  animation:
+    shootingStarOrbitBad 2s linear infinite,
+    shootingStarBurn 2s linear infinite;
+}
+
+.shooting-star-bad-fixed {
+  transform-origin: -100px 0;
+  animation:
+    shootingStarOrbitBad 2s linear infinite,
+    shootingStarBurn 2s linear infinite;
+}
+
+/* Order matters as this is a matrix calculation internally, this won't work */
+@keyframes shootingStarOrbitBad {
+  0% {
+    transform: translate(100px, 0) rotate(0) ;
+  }
+
+  100% {
+    transform: translate(100px, 0) rotate(180deg);
+  }
+}
+
+@keyframes shootingStarOrbit {
+  0% {
+    transform: rotate(0) translate(100px, 0);
+  }
+
+  100% {
+    transform: rotate(180deg) translate(100px, 0);
+  }
+}
+
+@keyframes shootingStarBurn {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* only for this pen */
+body {
+  background: black;
+  margin: 0;
+}
+
+svg {
+  max-height: 100vh;
+}

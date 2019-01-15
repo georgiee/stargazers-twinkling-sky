@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Parallax Technique</title>
+
+
+
+      <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+
+  <svg id='nightsky' viewbox="0 -40 200 560" width ="100%" preserveAspectRatio="xMidYMid meet">
+
+  <g transform="translate(0 480)">
+    <rect width="100%" height="2" fill="yellow" class="bar"></rect>
+
+    <g class="bar01 bar parallax-effect">
+      <rect width="100%" height="2" fill="red" ></rect>
+      <text x="5"  class="bar-label">Depth 1</text>
+    </g>
+
+    <g class="bar02 bar parallax-effect">
+      <rect width="100%" height="2" fill="red" ></rect>
+      <text  x="5" class="bar-label">Depth 2</text>
+    </g>
+
+    <g class="bar03 bar parallax-effect">
+      <rect width="100%" height="2" fill="red" ></rect>
+      <text  x="5" class="bar-label">Depth 3</text>
+    </g>
+    <g class="bar04 bar parallax-effect">
+      <rect width="100%" height="2" fill="red" ></rect>
+      <text  x="5" class="bar-label">Depth 4</text>
+    </g>
+    <g class="bar05 bar parallax-effect">
+      <rect width="100%" height="2" fill="red" ></rect>
+      <text  x="5" class="bar-label">Depth 5</text>
+    </g>
+  </g>
+
+
+  <text x="5" y="520" class="ratio-text">Ratio: 0</text>
+
+  <rect width="100%" height="100%" fill="url(#grid)" />
+
+  <defs>
+    <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+      <path d="M 10 0 L 0 0 0 10" fill="none" stroke="gray" stroke-width="0.5"/>
+    </pattern>
+
+    <pattern  x="0" y="50" id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+      <rect width="100" height="100" fill="url(#smallGrid)"/>
+      <path d="M 100 0 L 0 0 0 100" fill="none" stroke="gray" stroke-width="1"/>
+    </pattern>
+  </defs>
+</svg>
+
+
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

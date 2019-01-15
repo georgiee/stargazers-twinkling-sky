@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Stargazers Final Result</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .credits-content {
+      text-align: center;
+      transform-origin: 50% 100px;
+      animation: starwars calc(1ms * var(--duration, 120000)) 1 linear backwards;
+      padding-top: 100vh;
+
+    }
+
+    .credits-content p {
+      max-width: 200px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 80px;
+    }
+
+    @keyframes starwars {
+      0% {
+        transform: perspective(1000px) rotateX(70deg) translateY(0)
+      }
+
+      100% {
+        transform: perspective(1000px) rotateX(70deg) translateY(-4000px)
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <svg id='nightsky' viewbox="0 0 960 700" width ="100%" preserveAspectRatio="xMidYMid slice">
+  </svg>
+
+  <div class='credits-content'>
+    <h1>Thank you</h1>
+    <p>We are hiring</p>
+    <p>and you should really visit satellytes.com
+      or talk to me later !</p>
+    <p>While being on satellytes.com try pressing <code>alt + d</code> 🎭
+    this will enable debug mode of the twinkling effect we are using there ✨
+    </p>
+  </div>
+
+<script  src="js/index.js"></script>
+
+</body>
+
+</html>

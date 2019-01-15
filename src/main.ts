@@ -5,11 +5,43 @@ import { runExample01 } from './examples/example01';
 // const svgElement = document.getElementById('nightSkySVG');
 // NightSky.create(svgElement);
 
+function createCreditsFrame() {
+  let destroyed = false;
+  const container = document.querySelector('.global-container');
+  const iframe = document.createElement('iframe');
+  iframe.setAttribute('src', 'http://localhost:8000/05-stargazers-final-credits');
+  iframe.setAttribute('frameborder', '0');
+  iframe.setAttribute('width', '100%');
+  iframe.setAttribute('height', '10)%');
+  iframe.style.cssText = `
+    width: 100vw;
+    height: 100vh;
+  `
+  container.appendChild(iframe);
 
+  function destroy() {
+    if(!destroyed) {
+      console.log('destroy iframe')
+      container.removeChild(iframe);
+    }
+  }
+
+  return {
+    destroy
+  }
+}
+
+let creditsFrame;
 if(Reveal) {
   Reveal.addEventListener( 'slidechanged', function( {currentSlide} ) {
     const state = currentSlide.dataset.state;
-    // FinalCredits.run();
+    if(state === 'final-credits') {
+      console.log('cretae iframe');
+      creditsFrame = createCreditsFrame()
+    }else if(creditsFrame) {
+      creditsFrame.destroy();
+      creditsFrame = null;
+    }
 
     // const codepenToLoad = currentSlide.querySelector('.codepen-lazy-load');
     // if(codepenToLoad) {

@@ -12,6 +12,22 @@
   <link rel="stylesheet" href="reveal/lib/css/zenburn.css"/>
   <title>Twinkling Night Sky</title>
   <style>
+
+    .global-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+    }
+
+    .about-sy.about-sy  {
+      background-color: rgba(0,0,0,0.5);
+      transform: translate(0, -45%);
+      padding: 20px 0;
+    }
+
     html, body {
       min-height: 100vh;
     }
@@ -76,6 +92,11 @@
       grid-auto-rows: minmax(min-content, max-content);;
       /* align-items: flex-start; */
     }
+
+    .l-col2 iframe {
+      max-width: none !important;
+    }
+
     .l-col2.l-col2 img {
       max-height: none;
     }
@@ -106,8 +127,9 @@
       animation: zoomOut 1s;
     }
 
-    .fact-summary {
+    .fact-summary.fact-summary {
       outline: 1px dotted grey;
+      padding: 20px;
     }
 
     @keyframes zoomOut {
@@ -155,12 +177,19 @@
             </aside>
           </section>
 
-          <section data-background-image="images3/about-satellytes.png">
-            <h2 class="fragment">Hiring</h2>
+          <section
+            data-background-image="images3/about-sy.jpg">
+            <div class="about-sy">
+              <h2>Frontend Developer</h2>
+              <h3>Satellytes, Munich</h3>
+              <p class="fragment">✨We are hiring: Frontend & Backend✨</p>
+            </div>
             <aside class="notes">
               <p>
-              and I'm also working for Satellytes here in Munich
-              and we are hiring by the way
+                and I'm also working for Satellytes here in Munich
+              </p>
+              <p>
+                and we are hiring by the way
               </p>
             </aside>
           </section>
@@ -1075,8 +1104,8 @@
             </pre>
 
             <ul>
-              <li class="fragment">translate(100px, 0)} (radius)</li>
-              <li class="fragment">rotate(0), rotate(180) (start/end angle)</li>
+              <li class="fragment">translate(100px, 0) ➡ radius</li>
+              <li class="fragment">rotate(0), rotate(180) ➡ start/end angle</li>
               <li class="fragment">CSS Variables and keyframes are friends 👫</li>
             </ul>
 
@@ -1202,7 +1231,7 @@
           <!-- Part VI: createShootingStar (large) -->
           <section data-background-iframe="http://localhost:8000/03-shooting-star-part-vi-createshootingstar-2">
             <aside class="notes">
-              and when we disable the visualization helpers it already looks like a shooting star.
+                When we disable all the visual helpers the result already looks like a shooting star!
             </aside>
           </section>
 
@@ -1210,7 +1239,8 @@
             <h3>How many shooting stars?</h3>
             <p class="fragment">4-6 per hours</p>
             <aside class="notes">
-              <p>The next question is how many shooting stars are Actually happening in the sky?</p>
+              <p>There is one question missing yet.</p>
+              <p>How many shooting stars are actually happening in the sky?</p>
               <p>During a usual night and outside of a city you can observe up to 6 shooting stars per hours</p>
             </aside>
           </section>
@@ -1225,13 +1255,14 @@
           </section>
 
           <section>
-            <h3>Perseid Meteor Shower</h3>
-            <img data-src="images3/perseide.jpg" height="400"/>
+            <h3 class="fragment">Perseid Meteor Shower</h3>
+            <img class="fragment" data-src="images3/perseide.jpg" height="400"/>
 
             <aside class="notes">
               <p>The most famous meteor shower is happening each year in August and it's called Perseid Meteor Shower</p>
-              <p>A meteor shower happens when the earth is crossing the exhaust of a comet</p>
-              <p>As said you can observe up to 200 meteors per hours — unfortunately this year it's only 10-15 as the full moon emits too much light.</p>
+              <p>A meteor shower happens when the earth is crossing paths with a comet
+                as we literally hit the exhause debris of the comet that enter our atmosphere.
+              </p>
             </aside>
           </section>
 <!--
@@ -1262,7 +1293,7 @@
             <aside class="notes">
               <p>We gained a new star fact.</p>
               <p>Meteor Shower</p>
-              <p>and the idea is to create multiple random shooting stars</p>
+              <p>The idea is to create multiple random shooting stars</p>
             </aside>
           </section>
 
@@ -1300,7 +1331,7 @@
 
             <aside class="notes">
               <p>We use our 'createShootingStar' method to create three different shooting stars</p>
-              <p>The result are parallel shooting stars</p>
+              <p>The result are multiple shooting stars</p>
               <p>But they all start at the same time and shooting forever. We need to change this.</p>
             </aside>
           </section>
@@ -1341,9 +1372,9 @@
 
             <aside class="notes">
               <p>We hide the shooting star in the beginning</p>
-              <p>Only when we decide to show it we apply the class is-shooting</p>
+              <p>and only show it and apply the animation when the class is-shooting is present</p>
               <p>We use a shootNext function to randomly assign the css class is-shooting to a shootingn star</p>
-              <p>the result looks like this</p>
+              <p>the result looks like this where each shooting star is randomly activated</p>
             </aside>
           </section>
 
@@ -1379,15 +1410,28 @@
             <span>Bonus Chapter</span>
             <h1>Parallax Sky</h1>
             <aside class="notes">
-                <p>It's time for our final chapter. We will create a parallax effect.</p>
+                <p>It's time for our final chapter where we create a parallax effect with CSS.</p>
             </aside>
           </section>
 
           <section>
-            <img data-src="images/parallax-train.gif">
+            <div class="l-col2">
+              <div>
+                <img data-src="images/parallax-train.gif">
+              </div>
+              <div>
+                <ul>
+                  <li class="fragment">Near objects are fast</li>
+                  <li class="fragment">Far objects are slow</li>
+                  <li class="fragment">Very far objects stand still</li>
+                </ul>
+              </div>
+            </div>
             <aside class="notes">
               <p>You can see the parallax effect when you are travelling with a train or a card</p>
-              <p>It's the fact that near objects are traveling faster across the window than distant objects.</p>
+              <p>Near objects look like they are travelling faster across the window</p>
+              <p>Distant objects appear to be slower</p>
+              <p>Or almost stand still</p>
             </aside>
           </section>
 
@@ -1398,24 +1442,23 @@
             </video>
 
             <aside class="notes">
-              <p>The same effect can be seen in the sky — but your head movement is not enough.</p>
-              <p>The whole earth needs to move so you can see diferences</p>
-              <p>But this works only for stars near enough. If they are too far away
-                not even the earth movement is enough anymore
-              </p>
+              <p>The same effect can be seen in the sky it's called Stellar parallax</p>
+              <p>This time the earth is moving.</p>
+              <p>Same rules, stars near to us are faster than the distant ones.</p>
             </aside>
           </section>
 
           <section>
             <span>Another Star Fact!</span>
-            <h2 class="fragment">✨✨Star Parallax✨✨</h2>
+            <h2 class="fragment">✨Star Parallax✨</h2>
             <p class="fragment">🎭 Idea: Scrolling Parallax Effect</p>
             <aside class="notes">
-              We have a new star fact and the idea is to use an effect many of you already know.
+              <p>We have a new star fact "Star parallax"! </p>
+              <p>and the idea is to create a scrolling paralax effect depending on the scroll position</p>
             </aside>
           </section>
 
-          <section>
+          <!-- <section>
             <h3>Classic Parallax Effect</h3>
             <div class="l-col2">
               <div>
@@ -1426,7 +1469,6 @@
                     <li class="fragment">Scrolling will move objects vertical</li>
                     <li class="fragment">Objects with different speed</li>
                     <li class="fragment">desiredOffset/depth = offset</li>
-                    <li class="fragment">100 / 1 = 100 (~ bushes)</li>
                     <li class="fragment">100 / 5 = 20 (~ clouds)</li>
                   </ul>
               </div>
@@ -1438,14 +1480,14 @@
               <p>If a object has a low depth number it's like an object near the windiow like trees</p>
               <p>If a object has a hight depth number it's like an object far away like the mountains</p>
             </aside>
-          </section>
+          </section> -->
 
           <!-- Code Parallax Basic via EGdyMO -->
           <section>
             <div class="l-col2">
-              <div style="width: 300px">
+              <div style="width: 250px">
                 <iframe
-                  width="300"
+                  width="250"
                   height="600"
                   data-src="http://localhost:8000/04-parallax-technique"></iframe>
               </div>
@@ -1463,17 +1505,17 @@
 
                   </code>
                   <code data-trim class="fragment">
-                      .bar1 { --depth: 1; }
-                      .bar2 { --depth: 2; }
-                      .bar3 { --depth: 3; }
-                      .bar4 { --depth: 4; }
-                      .bar5 { --depth: 5; }
+                      .bar1.parallax-effect { --depth: 1; }
+                      //...
+                      .bar5.parallax-effect { --depth: 5; }
+
                   </code><code data-trim class="fragment">
                       .parallax-effect {
-                        /** desiredOffset = -1 * ratio * maxTranslation */
-                        --desiredOffset: calc(-1px * var(--ratio) * var(--maxTranslation, 200));
-                        /** translateY = desiredOffset/depth */
-                        transform: translate(0, calc(var(--desiredOffset) / var(--depth) ));
+                        --maxOffset: 200;
+                        /** offset = -1 * ratio * maxOffset */
+                        --offset: calc(-1px * var(--ratio) * var(--maxOffset));
+                        /** translateY = offset/depth */
+                        transform: translateY(calc(var(--offset)/var(--depth) ));
                       }
                   </code>
                 </pre>
@@ -1481,24 +1523,30 @@
             </div>
 
             <aside class="notes">
-              <p>The body is set to a large height so we can scroll.</p>
-              <p>The SVG is fixed so we can see it.</p>
-              <p>Whenever I scroll the ratio, a value between of 0 and 1 is calculated and written into the CSS variables</p>
-              <p>The CSS Variable is set on the svg but inherited to all stars</p>
-              <p>The star itself is given a depth value</p>
-              <p>And with all information it can calculate it's position. The higher the depth the smaller the displacement</p>
+              <p>
+                no scroll event, use requestAnimationFrame
+                <br>
+                calculate scroll ratio 0..1
+                <br>
+                Update CSS variable
+              </p>
+              <p>The bars are given different depth values. Higher is slower.</p>
+              <p>
+                We can then calculate the final position of each bar
+                by calculating the offset first and then the individual position of each bar.
+              </p>
             </aside>
           </section>
 
           <!-- Parallax in Sky via wRYzZX  -->
-          <section>
-            <iframe
+          <section data-background-iframe="http://localhost:8000/04-parallax-with-night-sky">
+            <!-- <iframe
               width="900"
               height="700"
-              data-src="http://localhost:8000/04-parallax-with-night-sky"></iframe>
+              data-src="http://localhost:8000/04-parallax-with-night-sky"></iframe> -->
               <aside class="notes">
                 And when we apply it to our existing night sky
-                it will look like th  is.
+                it will look like this when scrolled
               </aside>
           </section>
 
@@ -1548,24 +1596,23 @@
           </section>
 
           <section>
-
-              <pre><code data-trim>
-                  createShootingStar({
-                    x: 100, y: 100, radius: 100,
-                    angleStart: -90, angle: -180
-                  });
-              </code></pre>
+            <pre><code data-trim>
+                createShootingStar({
+                  x: 100, y: 100, radius: 100,
+                  angleStart: -90, angle: -180
+                });
+            </code></pre>
             <iframe
               width="600"
               height="600"
-              data-src="http://localhost:8000/03-shooting-star-meteor-shower"></iframe>
+              data-src="http://localhost:8000/03-shooting-star-meteor-shower-2"></iframe>
 
             <aside class="notes">
               and we learned how we can create variations of shooting stars with the power of CSS Variables
             </aside>
           </section>
 
-          <section data-background-iframe="http://localhost:8000/05-stargazers-final-credits">
+          <section data-state="final-credits">
             <aside class="notes">
               Together with the parallax effect we have seen we created the final result
             </aside>
@@ -1583,6 +1630,9 @@
       Reveal.initialize({
         transition: 'none',
         history: true,
+        progress: false,
+        controlsTutorial: false,
+        controls: false,
         keyboard: {
           39: 'next',
           37: 'prev'
@@ -1597,6 +1647,8 @@
 
   <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
+  <!-- used to overlay final credits, see main.ts -->
+  <div class="global-container"></div>
 </body>
 
 </html>

@@ -3,7 +3,7 @@ var ratioText = document.querySelector('.ratio-text');
 var bar01Label = document.querySelector('.bar01 .bar-label');
 
 let scrollChange = 10;
-let autoscroll = true;
+let autoscroll = false;
 
 function removeAutoScroll(event) {
     autoscroll = false;
@@ -11,24 +11,44 @@ function removeAutoScroll(event) {
 }
 window.addEventListener('mousewheel', removeAutoScroll);
 
-loopScrollRatioUpdate(function (ratio) {
-    if(autoscroll) {
-        var viewportHeight = document.documentElement.clientHeight;
-        document.documentElement.scrollTop += scrollChange;
-        if(document.documentElement.scrollTop >= (document.body.clientHeight - viewportHeight)) {
-            scrollChange*=-1;
-        }
+let ratio = 0;
+let speed = 0.005;
 
-        if(document.documentElement.scrollTop <= 0) {
-            scrollChange*=-1;
-        }
+(function loop() {
+    ratio += speed;
+    svg.style.setProperty('--star-parallax-ratio', ratio + '');
+
+    if(ratio < 0) {
+        ratio = 0;
+        speed*=-1
+    }else if(ratio > 1) {
+        ratio = 1;
+        speed*=-1
     }
-    
-    
     ratioText.textContent = 'Scroll Ratio: ' + Math.round(ratio * 100) / 100;
-    svg.style.setProperty('--star-parallax-ratio', "" + ratio);
     bar01Label.textContent = 'Depth 1 (' + Math.round(ratio * 100) + ')';
-});
+    requestAnimationFrame(loop);
+})();
+
+
+// loopScrollRatioUpdate(function (ratio) {
+//     if(autoscroll) {
+//         var viewportHeight = document.documentElement.clientHeight;
+//         document.documentElement.scrollTop += scrollChange;
+//         if(document.documentElement.scrollTop >= (document.body.clientHeight - viewportHeight)) {
+//             scrollChange*=-1;
+//         }
+
+//         if(document.documentElement.scrollTop <= 0) {
+//             scrollChange*=-1;
+//         }
+//     }
+
+
+//     ratioText.textContent = 'Scroll Ratio: ' + Math.round(ratio * 100) / 100;
+//     svg.style.setProperty('--star-parallax-ratio', "" + ratio);
+//     bar01Label.textContent = 'Depth 1 (' + Math.round(ratio * 100) + ')';
+// });
 
 function loopScrollRatioUpdate(cb) {
     var previousScrollTop = -1;

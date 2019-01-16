@@ -1,3 +1,8 @@
+body, html {
+  overflow: hidden;
+  margin: 0;
+}
+
 .bar01 {
   --star-parallax-depth: 1;
 }
@@ -26,8 +31,6 @@
   --parallaxTranslationY: calc(-1px * var(--star-parallax-ratio, 0) * var(--star-parallax-intensity, 500));
 
   transform: translate(0, calc(var(--parallaxTranslationY) / var(--star-parallax-depth, 1) ));
-  transition: transform 0.1s;
-  will-change: transform;
 }
 
 .ratio-text {

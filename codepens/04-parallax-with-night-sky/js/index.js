@@ -15,29 +15,49 @@ createMeteorShower();
 
 
 let scrollChange = 25;
-let autoscroll = true;
+let autoscroll = false;
 
-function removeAutoScroll(event) {
-    autoscroll = false;
-    window.removeEventListener('scroll', removeAutoScroll);
-}
-window.addEventListener('mousewheel', removeAutoScroll);
+// function removeAutoScroll(event) {
+//     autoscroll = false;
+//     window.removeEventListener('scroll', removeAutoScroll);
+// }
+// window.addEventListener('mousewheel', removeAutoScroll);
 
-loopScrollRatioUpdate(function (ratio) {
-    if(autoscroll) {
-        var viewportHeight = document.documentElement.clientHeight;
-        document.documentElement.scrollTop += scrollChange;
-        if(document.documentElement.scrollTop >= (document.body.clientHeight - viewportHeight)) {
-            scrollChange*=-1;
-        }
 
-        if(document.documentElement.scrollTop <= 0) {
-            scrollChange*=-1;
-        }
+let ratio = 1;
+let speed = -0.01;
+
+(function loop() {
+    ratio += speed;
+    svg.style.setProperty('--star-parallax-ratio', ratio + '');
+
+    if(ratio < -4) {
+        ratio = -4;
+        speed*=-1
+    }else if(ratio > 4) {
+        ratio = 4;
+        speed*=-1
     }
-    
-    svg.style.setProperty('--star-parallax-ratio', "" + ratio);
-});
+    requestAnimationFrame(loop);
+})();
+
+
+
+// loopScrollRatioUpdate(function (ratio) {
+//     if(autoscroll) {
+//         var viewportHeight = document.documentElement.clientHeight;
+//         document.documentElement.scrollTop += scrollChange;
+//         if(document.documentElement.scrollTop >= (document.body.clientHeight - viewportHeight)) {
+//             scrollChange*=-1;
+//         }
+
+//         if(document.documentElement.scrollTop <= 0) {
+//             scrollChange*=-1;
+//         }
+//     }
+
+//     svg.style.setProperty('--star-parallax-ratio', "" + ratio);
+// });
 
 
 /**

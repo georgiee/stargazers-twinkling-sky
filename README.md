@@ -1,14 +1,25 @@
 # Stargazers Talk
-draft
-CSS Variablen Syntax kurz erklären
 
-A) createSHootignSTars mit parametern zeigne (alles parallel)
-B) dann erst is-shooting beispiel
+A talk about creating a twinkling night sky with CSS & SVG (and some JS for our comfort only).
 
-GIF Paralalx Scroll Effect
+The presentaiton engine is [Reveal.js](https://github.com/hakimel/reveal.js)
 
-Ende:
-Sternenhimmel mit automatischem Scrollen von "Danke usw", Credits, Thanks
+---
 
-Idee:
-Abschluss mit "visit satellytes.com and press alt + d" -> zeigen und zurück in die Präsentation.
+## Facts collected
++ ✨Hot Gas Ball✨
++ ✨Temperature is color✨
++ ✨Stars have different sizes✨
++ ✨Star Count✨
++ ✨Stars can twinkle✨
++ ✨Flying Burning Rock✨
++ ✨Meteor Shower✨
++ ✨Star Parallax✨
+
+## Code Examples
+I created and collected dozens of codepens while preparing this talk. You can find them here:
+codepen.io/collection/DbRbQL/
+
+For the actual talk I exported them and pallced them in the folder `codepens`
+where I added some small & quick changes as needed. So the sources are only almost the same.
+

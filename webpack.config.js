@@ -20,7 +20,9 @@ const devPlugins = [
 
 const plugins = [
   ...devPlugins,
-  // new CopyWebpackPlugin([ { from: 'src/assets', to: 'assets' }])
+  new CopyWebpackPlugin([ { from: 'codepens', to: 'codepens' }]),
+
+  new CopyWebpackPlugin([ { from: 'public', to: '' }])
 ];
 
 

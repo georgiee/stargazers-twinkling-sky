@@ -10,14 +10,14 @@ var svg = document.getElementById('nightsky');
 var sizeShootingStar = 1;
 var sizeSkyStar = 1;
 
-createSky({ count: 250 });
-createMeteorShower();
+// createSky({ count: 150 });
+// createMeteorShower();
 
 let ratio = -1;
 
 (function finalCreditsLoop() {
     ratio += 0.001;
-    svg.style.setProperty('--star-parallax-ratio', ratio + '');
+    // svg.style.setProperty('--star-parallax-ratio', ratio + '');
     requestAnimationFrame(finalCreditsLoop);
 })();
 

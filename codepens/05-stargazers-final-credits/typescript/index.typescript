@@ -43,11 +43,11 @@ function createMeteorShower() {
 function createShootingStar({x, y, radius, angle, angleStart = 0, debug = false}) {
   const shootingStarShape = createSVGElement('circle');
   shootingStarShape.classList.add('shooting-star__shape');
-  
+
   const shootingStar = createSVGElement('g');
   shootingStar.classList.add('shooting-star');
-  shootingStar.setAttribute('transform', `translate(${x} ${y})`);  
-  
+  shootingStar.setAttribute('transform', `translate(${x} ${y})`);
+
   shootingStarShape.style.setProperty('--shooting-orbit-radius', radius + 'px');
   shootingStarShape.style.setProperty('--shooting-orbit-angle', angle + 'deg');
   shootingStarShape.style.setProperty('--shooting-orbit-angle-start', angleStart + 'deg');
@@ -67,7 +67,7 @@ function debugShootingStar(star, radius, angleStart, angle) {
   debugOrbit.setAttribute('r', radius.toString());
   debugOrbit.setAttribute('fill', `yellow`);
   debugOrbit.style.opacity = (0.3).toString();
-   
+
   const markCenter = createSVGElement('circle');
   markCenter.setAttribute('r', 5);
   markCenter.setAttribute('fill', 'yellow');
@@ -78,16 +78,16 @@ function debugShootingStar(star, radius, angleStart, angle) {
   arc.setAttribute('stroke', 'red');
   arc.setAttribute('stroke-width', 'yellow');
   arc.classList.add('debug__arc');
-      
-  arc.setAttribute("d", describeArc(0, 0, radius, angleStart, angle));  
-  
+
+  arc.setAttribute("d", describeArc(0, 0, radius, angleStart, angle));
+
   const starDebug = createSVGElement('g');
   starDebug.classList.add('shooting-star__debug');
 
   starDebug.appendChild(markCenter);
   starDebug.appendChild(debugOrbit);
   starDebug.appendChild(arc);
-  
+
   star.appendChild(starDebug);
 }
 
@@ -110,28 +110,28 @@ function polarToCartesian(centerX, centerY, radius, angleInDegrees) {
 function describeArc(x, y, radius, startAngle, endAngle){
     startAngle+=90;
     endAngle+=90;
-  
+
     var start = polarToCartesian(x, y, radius, endAngle );
     var end = polarToCartesian(x, y, radius, startAngle);
 
-    var sweepFlag = endAngle > startAngle ? 0 : 1; 
+    var sweepFlag = endAngle > startAngle ? 0 : 1;
     var largeArcFlag = endAngle - startAngle <= 180 ? "0" : "1";
-  
+
     if(endAngle - startAngle < -180) {
       largeArcFlag = "1"
     }
-  
+
     var d = [
-        "M", start.x, start.y, 
+        "M", start.x, start.y,
         "A", radius, radius, 0, largeArcFlag, sweepFlag, end.x, end.y
     ].join(" ");
 
-    return d;       
+    return d;
 }
 
 function loopRandomShooting(shootingStars, cb, timeout = 5000, maxTimeout = 5000) {
   let previousStar = null;
-  
+
   const getNextStar = randomEntryGenerator(shootingStars);
   const shootDuration = 5000;
   let delayBetweenShoots = timeout;
@@ -187,24 +187,24 @@ function createSky({count}) {
 
 function createStar({size, color, x, y, index}) {
   const delay = Math.round(-1 * Math.random() * 4000);
-  
+
   const starShape = createSVGElement('circle');
   starShape.setAttribute('r', size + '');
   starShape.setAttribute('fill', color);
-  
+
   starShape.classList.add('twinkle-little-star');
   starShape.style.setProperty('--animation-twinkle-delay', delay + 'ms');
-  
+
   const star = createSVGElement('g');
   star.setAttribute('transform', `translate(${x} ${y})`);
 
-  
+
   const parallaxGroup = createSVGElement('g');
   parallaxGroup.appendChild(starShape)
   star.appendChild(parallaxGroup);
   parallaxGroup.classList.add('parallax-effect');
   parallaxGroup.style.setProperty('--star-parallax-depth', index%5 + 1);
-  
+
   return star;
 }
 
@@ -227,7 +227,7 @@ function getRandomPosition({width, height, offsetX = 0, offsetY = 0, padding = 0
   const startY = offsetY + padding;
   const maxWidth = width - padding *2;
   const maxHeight = height - padding *2;
-  
+
   return {
      x: startX + maxWidth * Math.random(),
      y: startY + maxHeight * Math.random()
@@ -237,7 +237,7 @@ function getRandomPosition({width, height, offsetX = 0, offsetY = 0, padding = 0
 
 function getRandomColor() {
   const availableColors = ['#B5CDFF', '#FFE4CE', '#FF6C00'];
-  
+
   const index = Math.round(Math.random() * (availableColors.length -1));
   return availableColors[index];
 }

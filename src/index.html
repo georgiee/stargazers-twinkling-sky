@@ -22,6 +22,10 @@
       pointer-events: none;
     }
 
+    code {
+      overflow: hidden !important;
+    }
+
     .about-sy.about-sy  {
       transform: translate(0, -45%);
       padding: 20px 0;
@@ -209,12 +213,12 @@
 
         <section>
             <h3>Journey to the stars</h3>
-            <p>4 chapters</p>
+            <p>3 chapters</p>
             <ul>
               <li class="fragment">I) Anatomy of a Star</li>
               <li class="fragment">II) Night Sky</li>
               <li class="fragment">III) Shooting Stars</li>
-              <li class="fragment">IV) Parallax Sky</li>
+              <!-- <li class="fragment">IV) Parallax Sky</li> -->
             </ul>
             <aside class="notes">
               <p>Over the course of 4 chapters I will take you on a journey to the stars.</p>
@@ -276,7 +280,10 @@
           <section>
             <img data-src="images3/orion-betelgeuse.png"/>
             <aside class="notes">
-              We want to observe a single star — I picked a little dot that we can see with our naked eye. The star is called Betelgeuse and you can see it in the famous Orion constellation. Betelgeuse is more than 600 light years away.
+              <p>We want to observe a single star</p>
+              <p>I picked a little dot that we can see with our naked eye.</p>
+              <p>The star is called Betelgeuse and you can see it in the famous Orion constellation.</p>
+               <p>Betelgeuse is more than 600 light years away.s</p>
             </aside>
           </section>
 
@@ -397,8 +404,10 @@
             <h2 class="fragment" data-fragment-index="1" style="color: black;">Eta Carinae</h2>
 
             <aside class="notes">
-              Look at this blue star. It's called Eta Carinae and it's surface temperatur is more than 30.000 degree celsius.
-              In reality the really, really hot stars are blue and not red.
+              <p>Look at this blue star.</p>
+              <p>It's called Eta Carinae</p>
+              <p>and it's surface temperatur is more than 30.000 degree celsius.</p>
+              <p>In reality the really, really hot stars are blue and not red.</p>
             </aside>
           </section>
 <!--
@@ -478,12 +487,19 @@
             <video width="960" data-autoplay onended="Reveal.nextFragment();">
               <source data-src="videos/comparison.mp4" type="video/mp4" />
             </video> -->
+            <aside class="notes">
+              Earth
+              Sun
+              Eta Carina
+              Betelgeuse
+              VY Canis Majoris
+            </aside>
           </section>
 
           <section>
             <img data-src="images/sun-canis-betel.png"/>
             <aside class="notes">
-                YC Canis Majoris is one of the largest stars ever discovered in the universe
+                VY (wiwai) Canis Majoris is one of the largest stars ever discovered in the universe
                 and look how small the sun is compared to it. This brings us to the next fact!
             </aside>
           </section>
@@ -717,11 +733,11 @@
           </section>
 
           <section>
-            <cite>Scintillation is a generic term for variations in apparent brightness or position of a distant luminious object viewed through a medium</cite>
+            <cite>Scintillation is a generic term for...</cite>
             <br><br>
             <h3 class="fragment">a star that <span style="text-decoration: underline">looks like</span> it's blinking and moving</h3>
             <aside class="notes">
-              <p>Scintillation is a generic term for variations in apparent brightness or position of a distant luminious object viewed through a medium.</p>
+              <p>Scintillation is a generic term for ... no we don't need a definition today.</p>
               <p>Or easier: Stars that looks like it's blinking and moving</p>
             </aside>
           </section>
@@ -1281,7 +1297,7 @@
             </aside>
           </section>
 
-          <section>
+          <!-- <section>
             <h3 class="fragment">Perseid Meteor Shower</h3>
             <img class="fragment" data-src="images3/perseide.jpg" height="400"/>
 
@@ -1291,7 +1307,7 @@
                 as we literally hit the exhause debris of the comet that enter our atmosphere.
               </p>
             </aside>
-          </section>
+          </section> -->
 <!--
           <section>
             <div class="l-col2">
@@ -1432,15 +1448,15 @@
         </section>
 
         <!-- Chapter 4 (Parallax) -->
-        <section>
-          <section data-background-image="images/parallax-city.gif">
+        <!-- <section> -->
+          <!-- <section data-background-image="images/parallax-city.gif">
             <span>Bonus Chapter</span>
             <h1>Parallax Sky</h1>
             <aside class="notes">
                 <p>It's time for our final chapter where we create a parallax effect with CSS.</p>
             </aside>
-          </section>
-
+          </section> -->
+<!--
           <section>
             <div class="l-col2">
               <div>
@@ -1460,8 +1476,8 @@
               <p>Distant objects appear to be slower</p>
               <p>Or almost stand still</p>
             </aside>
-          </section>
-
+          </section> -->
+<!--
           <section>
             <h4>Stellar parallax</h4>
             <video height="500" data-autoplay loop>
@@ -1473,9 +1489,9 @@
               <p>This time the earth is moving.</p>
               <p>Same rules, stars near to us are faster than the distant ones.</p>
             </aside>
-          </section>
+          </section> -->
 
-          <section>
+          <!-- <section>
             <span>Another Star Fact!</span>
             <h2 class="fragment">✨Star Parallax✨</h2>
             <p class="fragment">🎭 Idea: Scrolling Parallax Effect</p>
@@ -1483,7 +1499,7 @@
               <p>We have a new star fact "Star parallax"! </p>
               <p>and the idea is to create a scrolling paralax effect depending on the scroll position</p>
             </aside>
-          </section>
+          </section> -->
 
           <!-- <section>
             <h3>Classic Parallax Effect</h3>
@@ -1510,7 +1526,7 @@
           </section> -->
 
           <!-- Code Parallax Basic via EGdyMO -->
-          <section>
+          <!-- <section>
             <div class="l-col2">
               <div style="width: 250px">
                 <iframe
@@ -1563,10 +1579,10 @@
                 by calculating the offset first and then the individual position of each bar.
               </p>
             </aside>
-          </section>
+          </section> -->
 
           <!-- Parallax in Sky via wRYzZX  -->
-          <section>
+          <!-- <section>
             <iframe
               width="900"
               height="700"
@@ -1575,9 +1591,9 @@
                 And when we apply it to our existing night sky
                 it will look like this when scrolled
               </aside>
-          </section>
+          </section> -->
 
-        </section>
+        <!-- </section> -->
 
         <!-- Conclusion -->
         <section>
@@ -1641,7 +1657,7 @@
 
           <section data-state="final-credits">
             <aside class="notes">
-              Together with the parallax effect we have seen we created the final result
+
             </aside>
           </section>
         </section>

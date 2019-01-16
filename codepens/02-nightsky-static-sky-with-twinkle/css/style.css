@@ -4,11 +4,6 @@ body, html {
 }
 
 
-body, html {
-  overflow: hidden;
-  margin: 0;
-}
-
 .twinkle-little-star {
   animation:
     starPulse 5s infinite alternate,

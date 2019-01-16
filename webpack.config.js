@@ -4,29 +4,15 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const devPlugins = [
   new HTMLWebpackPlugin({
     template: 'src/index.html',
-  }),
-
-  new HTMLWebpackPlugin({
-    template: 'src/index-first-draft.html',
-    filename: 'index-first-draft.html'
-  }),
-
-  new HTMLWebpackPlugin({
-    template: 'src/index-second-draft.html',
-    filename: 'index-second-draft.html'
-  }),
-
+  })
 ]
 
 const plugins = [
   ...devPlugins,
-  new CopyWebpackPlugin([ { from: 'codepens', to: 'codepens' }]),
+  new CopyWebpackPlugin([ { from: 'codepens/**/*', to: '' }]),
 
   new CopyWebpackPlugin([ { from: 'public', to: '' }])
 ];
-
-
-const ASSET_PATH = '/public'
 
 module.exports = {
   entry: "./src/main.ts",

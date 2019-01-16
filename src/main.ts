@@ -9,7 +9,7 @@ function createCreditsFrame() {
   let destroyed = false;
   const container = document.querySelector('.global-container');
   const iframe = document.createElement('iframe');
-  iframe.setAttribute('src', 'codepens/05-stargazers-final-credits');
+  iframe.setAttribute('src', 'codepens/05-stargazers-final-credits/');
   iframe.setAttribute('frameborder', '0');
   iframe.setAttribute('width', '100%');
   iframe.setAttribute('height', '10)%');

@@ -10,14 +10,14 @@ var svg = document.getElementById('nightsky');
 var sizeShootingStar = 1;
 var sizeSkyStar = 1;
 
-// createSky({ count: 150 });
-// createMeteorShower();
+createSky({ count: 350 });
+createMeteorShower();
 
-let ratio = -1;
+let ratio = 1;
 
 (function finalCreditsLoop() {
-    ratio += 0.001;
-    // svg.style.setProperty('--star-parallax-ratio', ratio + '');
+    ratio -= 0.001;
+    svg.style.setProperty('--star-parallax-ratio', ratio + '');
     requestAnimationFrame(finalCreditsLoop);
 })();
 
@@ -170,7 +170,9 @@ function createStar(_a) {
     parallaxGroup.appendChild(starShape);
     star.appendChild(parallaxGroup);
     parallaxGroup.classList.add('parallax-effect');
-    parallaxGroup.style.setProperty('--star-parallax-depth', index % 5 + 1);
+    parallaxGroup.style.setProperty('--star-parallax-depth', 1*(index % 5 + 1));
+    parallaxGroup.style.setProperty('--star-parallax-intensity', 500);
+
     return star;
 }
 function createSVGElement(tag) {

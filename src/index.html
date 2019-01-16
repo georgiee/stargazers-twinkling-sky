@@ -23,7 +23,6 @@
     }
 
     .about-sy.about-sy  {
-      background-color: rgba(0,0,0,0.5);
       transform: translate(0, -45%);
       padding: 20px 0;
     }
@@ -147,23 +146,38 @@
 <body>
   <div class="reveal">
       <div class="slides">
-        <section data-background-image="images/looking-at-stars-romantic-travel.png">
-          <h1 class="title-headline">Stargazing for developers</h1>
-          <span class="title-headline">A twinkling night sky with shooting stars in SVG</span>
-
+        <section data-background-image="images3/about-sy.jpg">
+          <div class="about-sy">
+            <h2>Stargazing for developers</h2>
+            <span>A twinkling night sky with shooting stars powered by SVG & CSS</span>
+          </div>
           <aside class="notes">
-              Hello stargazers, let's build our own night sky with twinkling and shooting stars. We will use SVG, CSS and and JavaScript to our convenience. You will also learn awesome facts about the universe.
+            <p>Welcome to my talk Stargazing for developer</p>
+            <p>We are building a twinkling night sky with shooting stars today.</p>
           </aside>
         </section>
 
         <!-- Intro -->
         <section>
+          <section>
+            <h3>About me</h3>
+            <ul>
+              <li class="fragment">Learned programming with Flash 4</li>
+              <li class="fragment">Frontend Developer</li>
+              <li class="fragment">I love experimenting with technology</li>
+            </ul>
+            <aside class="notes">
+                <p>I learned programming with Flash 4 in 2998</p>
+                <p>I'm a Frontend Developer using Angular in my daily job and React for my pet projects</p>
+                <p>and I love experimenting with WebGL, my Arduino and algorithms.</p>
+            </aside>
+          </section>
           <section
             data-background-size="contain"
             data-background-image="images3/about.jpg">
             <aside class="notes">
-              <p>A few words about me. Learned Origami in Japan</p>
-              <p>Fold Origami every day since then</p>
+              <p>I'm also Origami addicted since I learned it in Japan from Takeshi</p>
+              <p>Since then I fold Origiami nearly every day.</p>
               <p>I also created a threejs virtual origami application</p>
             </aside>
           </section>
@@ -171,25 +185,23 @@
           <section
             data-background-opacity="0.3"
             data-background-image="images3/IMG_20170629_142704.jpg">
-            <h2>Teaching Coding to kids</h2>
+            <h3>Teaching Coding to kids (Digitalwerkstatt)</h3>
             <aside class="notes">
-              <p>In my spare time I teach coding to kids</p>
+              <p>In my spare time I teach coding to kids at the Digitalwerkstatt in Munich</p>
             </aside>
           </section>
 
           <section
-            data-background-image="images3/about-sy.jpg">
-            <div class="about-sy">
-              <h2>Frontend Developer</h2>
-              <h3>Satellytes, Munich</h3>
-              <p class="fragment">✨We are hiring: Frontend & Backend✨</p>
-            </div>
+            data-background-image="images3/sy-bg-neutral2.jpg">
+            <h2>Frontend Developer</h2>
+            <h3>Satellytes, Munich</h3>
+            <p class="fragment">✨We are hiring: Frontend & Backend✨</p>
             <aside class="notes">
               <p>
                 and I'm also working for Satellytes here in Munich
               </p>
               <p>
-                and we are hiring by the way
+                and suprise suprise we are hiring
               </p>
             </aside>
           </section>
@@ -597,7 +609,7 @@
           <section>
             <h2>How many stars are in the universe?</h2>
             <p class="fragment">More stars than the earth has sand grains!</p>
-            <p class="fragment">1,000,000,000,000,000,000,000,000 (one quadrillion)</p>
+            <p class="fragment">1,000,000,000,000,000,000,000,000 <br> (one quadrillion)</p>
 
             <aside class="notes">
               <p>How many stars are in the universe.</p>
@@ -625,7 +637,7 @@
 
           <section
             data-background-size="contain"
-            data-background-image="images3/night-sky-munich2.jpg">
+            data-background-image="images3/night-sky-munich3.jpg">
             <aside class="notes">
                 <p>Look at that image. More and more stars disappear from right to left.
                     You can see how you location affects the total count of stars.</p>
@@ -705,7 +717,7 @@
           </section>
 
           <section>
-            <cite>Scintillation is a generic term for <strong class="fragment">variations</strong> in apparent <strong class="fragment">brightness</strong> or <strong class="fragment">position</strong> of a distant <strong class="fragment">luminious object</strong> viewed through a medium</cite>
+            <cite>Scintillation is a generic term for variations in apparent brightness or position of a distant luminious object viewed through a medium</cite>
             <br><br>
             <h3 class="fragment">a star that <span style="text-decoration: underline">looks like</span> it's blinking and moving</h3>
             <aside class="notes">
@@ -1053,17 +1065,43 @@
 
           <!-- Part III: Orbit with rotation + translation via MZqvVd -->
           <section>
-            <pre>
-              <code data-trim>
-                .shooting-star {
-                  animation: shootingStarOrbit 2s linear infinite;
-                }
-                @keyframes shootingStarOrbit {
-                  0% { transform: rotate(0) translate(100px, 0);}
-                  100% { transform: rotate(180deg) translate(100px, 0);}
-                }
-              </code>
-            </pre>
+            <pre><code data-trim>
+              .shooting-star {
+                animation: shootingStarOrbit 2s linear infinite;
+              }
+              @keyframes shootingStarOrbit {
+                0% { transform: rotate(0) translate(100px, 0);}
+                100% { transform: rotate(180deg) translate(100px, 0);}
+              }
+            </code></pre>
+
+
+              <div class="l-col2">
+                <div style="height:400px">
+                  <iframe
+                    data-fragment-index="1"
+                    class="fragment"
+                    width="400"
+                    height="400"
+                    data-src="http://localhost:8000/03-shooting-star-part-iii-rotate-then-translate"></iframe>
+                </div>
+                <div style="height:400px; position: relative;">
+                  <iframe
+                      data-fragment-index="2"
+                      class="fragment"
+                      width="400"
+                      height="400"
+                      data-src="http://localhost:8000/03-shooting-star-part-iii-rotate-then-translate-2"></iframe>
+
+                  <pre data-fragment-index="2" class="fragment" style="width:800px;position: absolute;bottom:0;left:-350px"><code data-trim>
+                      @keyframes shootingStarOrbit {
+                        0% { transform: translate(100px, 0) rotate(0); }
+                        100% { transform: translate(100px, 0) rotate(180deg); }
+                      }
+                  </code></pre>
+                </div>
+              </div>
+
             <aside class="notes">
               <p>In addition to the rotation we also translate. We use this adjusted animation
                 and we can see the desired result.
@@ -1077,17 +1115,6 @@
               </p>
             </aside>
 
-            <iframe
-              class="fragment"
-              width="400"
-              height="400"
-              data-src="http://localhost:8000/03-shooting-star-part-iii-rotate-then-translate"></iframe>
-
-            <iframe
-             class="fragment"
-              width="400"
-              height="400"
-              data-src="http://localhost:8000/03-shooting-star-part-iii-rotate-then-translate-2"></iframe>
           </section>
 
           <section>
@@ -1237,7 +1264,7 @@
 
           <section>
             <h3>How many shooting stars?</h3>
-            <p class="fragment">4-6 per hours</p>
+            <p class="fragment">4-6 per hour</p>
             <aside class="notes">
               <p>There is one question missing yet.</p>
               <p>How many shooting stars are actually happening in the sky?</p>

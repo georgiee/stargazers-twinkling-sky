@@ -1,0 +1,50 @@
+const svg = document.getElementById('nightsky');
+const ratioText = document.querySelector('.ratio-text');
+const bar01Label = document.querySelector('.bar01 .bar-label');
+
+loopScrollRatioUpdate(ratio => {
+  ratioText.textContent = 'Scroll Ratio: ' + Math.round(ratio * 100)/100;
+  svg.style.setProperty('--star-parallax-ratio', `${ratio}`);
+  bar01Label.textContent = 'Depth 1 (' + Math.round(ratio * 100) + ')';
+});
+
+function loopScrollRatioUpdate(cb) {
+  let previousScrollTop = -1;
+  const RELATIVE_TO_VIEWPORT = false;
+
+  const loop = function() {
+    const scrollTop = getScrollTop();
+
+    if (previousScrollTop !== scrollTop) {
+      previousScrollTop = scrollTop;
+
+      let ratio = 0;
+      const viewportHeight = document.documentElement.clientHeight;
+
+      // this ratio will exceed [0..1] as we measure relative to the viewport without looking for the actual content height
+      // this will yield a dense star field at the top and a lower one the further you scroll down
+      if(RELATIVE_TO_VIEWPORT) {
+        ratio = scrollTop/viewportHeight;
+
+        // alternative: use a calcualte max value to center the dense field
+        // const max = (document.body.clientHeight - viewportHeight)/viewportHeight;
+        // center round the center (most dense in the center)
+        // ratio = scrollTop/viewportHeight - max/2;
+      }else {
+        // ratio will be in the range of [0..1] as we measure relative to the total height
+        ratio = scrollTop/(document.body.clientHeight - viewportHeight);
+      }
+
+      cb(ratio);
+    }
+
+    requestAnimationFrame(loop);
+  }
+
+  loop();
+}
+
+
+function getScrollTop() {
+  return (document.scrollingElement || document.documentElement).scrollTop
+}

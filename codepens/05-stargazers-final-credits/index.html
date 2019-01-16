@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Stargazers Final Result</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .credits-content {
+      text-align: center;
+      transform-origin: 50% -800px;
+      font-family: 'Montserrat', sans-serif;
+
+      animation: starwars 30s infinite linear backwards;
+    }
+
+    .credits {
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, calc(50vh + 150px));
+      width: 700px;
+      padding-bottom: 500px;
+    }
+
+    .credits-content p {
+    }
+
+    h1 {
+      font-size: 80px;
+      margin-bottom: 150px;
+    }
+
+    h2 {
+      font-size: 40px;
+    }
+
+    p {
+      font-size: 30px;
+      line-height: 120%;
+    }
+
+    @keyframes starwars {
+      0% {
+        transform: perspective(1000px) rotateX(70deg) translateY(0)
+      }
+
+      99% {
+        opacity: 1;
+      }
+
+      100% {
+        transform: perspective(1000px) rotateX(70deg) translateY(-150%);
+        opacity: 0;
+      }
+    }
+    body {
+      overflow: hidden;
+    }
+    ul {
+      margin: 0;
+    }
+    li {
+      list-style-type: none;
+      margin-bottom: 20px;
+    }
+    h2 {
+      margin-top: 0;
+    }
+
+    .urls {
+      text-align: center;
+      font-size: 30px;
+      visibility: hidden;
+    }
+
+    .show-all .urls {
+      visibility: visible;
+    }
+  </style>
+
+</head>
+
+<body>
+  <svg id='nightsky' viewbox="0 0 960 700" width ="100%" preserveAspectRatio="xMidYMid slice">
+  </svg>
+
+  <div class="urls">
+    <span>codepen.io/collection/DbRbQL/</span><br>
+
+  </div>
+
+  <div class="credits">
+    <div class='credits-content'>
+      <h1>Thank you!</h1>
+
+      <span>add me on twitter<span>
+      <h2>@deluxee</h2>
+      <span>or on github</span>
+      <h2>@georgiee</h2>
+
+      <svg viewbox="-10 -10 100 20" width="100">
+        <circle r="10" cx="0"  fill="#B5CDFF"></circle>
+        <circle r="10" cx="30" fill="#FFE4CE"></circle>
+        <circle r="10" cx="60" fill="#FF6C00"></circle>
+      </svg>
+
+      <h2>www.satellytes.com</h2>
+      <p>Debug Night Sky Mode on our website: <br>Press <code>alt+d</code> 🎭✨</p>
+
+      <svg viewbox="-10 -10 100 20" width="100">
+        <circle r="10" cx="0"  fill="#B5CDFF"></circle>
+        <circle r="10" cx="30" fill="#FFE4CE"></circle>
+        <circle r="10" cx="60" fill="#FF6C00"></circle>
+      </svg>
+      <p>
+          ✨Facts collected ✨
+      </p>
+
+      <p>✨Hot Gas Ball✨</p>
+      <p>✨Temperature is color✨</p>
+      <p>✨Stars have different sizes✨</p>
+      <p>✨Star Count✨</p>
+      <p>✨Stars can twinkle✨</p>
+      <p>✨Flying Burning Rock✨</p>
+      <p>✨Meteor Shower✨</p>
+      <p>✨Star Parallax✨</p>
+      <p>
+          ✨We are hiring: Frontend & Backend✨
+      </p>
+
+
+      <svg viewbox="-10 -10 100 20" width="100">
+        <circle r="10" cx="0"  fill="#B5CDFF"></circle>
+        <circle r="10" cx="30" fill="#FFE4CE"></circle>
+        <circle r="10" cx="60" fill="#FF6C00"></circle>
+      </svg>
+
+      <p>Best of <img height="30" src="images/meetup.png"/> spam comments
+      while I developed this talk.</p>
+      <ul>
+        <li>Briella Osborne: for a very pronounced</li>
+        <li>Rose Wilcox: courier, and then Ishall</li>
+        <li>Mercy Lawrence: she was soon joined</li>
+        <li>Helen Patterson: hopeless. Thehead had</li>
+        <li>Emily Leon: to give you notice,</li>
+        <li>Betty Combs: It is not</li>
+        <li>Elizabeth Shannon: an Englishmanâ€™s faith(sixty years</li>
+        <li>Catalina Sosa: the right to instructthe</li>
+        <li>Hope Erickson: My mother used to</li>
+      </ul>
+    </div>
+  </div>
+
+
+<script  src="js/index.js"></script>
+<script>
+  const credits = document.querySelector('.credits-content');
+  credits.addEventListener('animationiteration', () => {
+    document.body.classList.add('show-all');
+  })
+</script>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+.shooting-star__shape {
+  visibility: hidden;
+}
+
+.shooting-star.is-shooting .shooting-star__shape {
+  visibility: visible;
+  animation:
+    shootingStarOrbit 2s linear infinite,
+    shootingStarBurn 2s linear infinite;
+}
+@keyframes shootingStarOrbit {
+  0% {
+    transform:
+        rotate(var(--shooting-orbit-angle-start, 0deg))
+        translate(var(--shooting-orbit-radius, 100px), 0);
+  }
+
+  100% {
+    transform:
+        rotate(var(--shooting-orbit-angle, 180deg))
+        translate(var(--shooting-orbit-radius, 100px), 0);
+  }
+}
+
+
+@keyframes shootingStarBurn {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.twinkle-little-star {
+  animation:
+    starPulse 5s infinite alternate,
+    starGlowing 2s infinite alternate;
+
+  animation-delay: var(--animation-twinkle-delay, 0);
+}
+
+.parallax-effect {
+  --parallaxTranslationY: calc(-1px * var(--star-parallax-ratio, 0) * var(--star-parallax-intensity, 100));
+
+  transform: translate(0, calc(var(--parallaxTranslationY) / var(--star-parallax-depth, 1) ));
+  will-change: transform;
+}
+
+@keyframes starPulse {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  30% {
+    transform: scale(1.2, 1.6);
+  }
+
+  40% {
+    transform: scale(1.5, 1.2);
+  }
+
+  70% {
+    transform: scale(0.6, 0.2);
+  }
+
+  90% {
+    transform: scale(0.9, 0.5);
+  }
+
+  100% {
+    transform: scale(1.2, 0.6);
+  }
+}
+
+@keyframes starGlowing {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
+}
+
+
+/* only for this pen */
+body {
+  background: black;
+  margin: 0;
+  color: #fff;
+}
+
+#nightsky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
+
+.btn-debug {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  font-size: 3vw;
+}
+
+.debug-grid,
+.shooting-star__debug {
+  display: none;
+}
+
+.debug .shooting-star__debug {
+  display: block;
+}
+
+.debug .shooting-star__shape {
+  r: 10;
+}
+
+.debug .twinkle-little-star {
+  r: 10;
+}
+
+.debug .debug-grid {
+  display: block;
+}
+
+

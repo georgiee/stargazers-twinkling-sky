@@ -1,0 +1,22 @@
+.twinkle-little-star {
+  animation: starGlowing 1s infinite alternate;
+}
+
+@keyframes starGlowing {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.1;
+  }
+}
+
+body {
+  background: black;
+}
+
+
+svg {
+  max-height: 100vh
+};

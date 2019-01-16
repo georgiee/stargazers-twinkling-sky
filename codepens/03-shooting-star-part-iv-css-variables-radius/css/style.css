@@ -1,0 +1,94 @@
+svg {
+  --shooting-orbit-radius-unitless: 100;
+}
+
+.shooting-star {
+  --shooting-orbit-radius: calc(var(--shooting-orbit-radius-unitless) * 1px);
+}
+
+.shooting-star__shape {
+  animation:
+    shootingStarOrbit 2s linear infinite,
+    shootingStarBurn 2s linear infinite;
+}
+
+@keyframes shootingStarOrbit {
+  0% {
+    transform: rotate(0) translate(100px, 0);
+  }
+
+  100% {
+    transform: rotate(180deg) translate(100px, 0);
+  }
+}
+
+.debug {
+  transform: translate(100px, 100px) ;
+}
+
+.debug-panel__orbit-radius {
+  font-size: 45px;
+}
+
+.debug-panel {
+  font-size: 30px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+.debug__radius {
+  transform: scale(calc(var(--shooting-orbit-radius-unitless)));
+}
+
+.debug__offset {
+  cx: calc(var(--shooting-orbit-radius-unitless) * 1px);
+}
+
+.debug__arrow {
+  transform: scale(calc(var(--shooting-orbit-radius-unitless)/100));
+}
+
+@keyframes shootingStarOrbit {
+  0% {
+    transform: rotate(0) translate(var(--shooting-orbit-radius, 100px), 0);
+  }
+
+  100% {
+    transform: rotate(180deg) translate(var(--shooting-orbit-radius, 100px), 0);
+  }
+}
+
+/* Order matters as this is a matrix calculation internally, this won't work */
+@keyframes shootingStarOrbitBad {
+  0% {
+    transform: translate(100px, 0) rotate(0) ;
+  }
+
+  100% {
+    transform: translate(100px, 0) rotate(180deg);
+  }
+}
+
+@keyframes shootingStarBurn {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* only for this pen */
+body {
+  background: black;
+  margin: 0;
+}
+
+svg {
+  max-height: 100vh
+};

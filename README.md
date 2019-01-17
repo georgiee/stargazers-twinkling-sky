@@ -2,7 +2,9 @@
 
 A talk about creating a twinkling night sky with CSS & SVG (and some JS for our comfort only).
 
-[View Slides](https://georgiee.github.io/stargazers-twinkling-sky/)
+[View Slides](https://georgiee.github.io/stargazers-twinkling-sky/)<br>
+[Add me one Twitter (@deluxee) 🙌](https://twitter.com/deluxee)
+
 ---
 
 ## ✨Facts collected✨
@@ -27,9 +29,12 @@ where I added some small & quick changes as needed. So the sources are only almo
 + [Origamizake, three.js origami folding](https://georgiee.github.io/origami/)
 + [Satellytes](http://satellytes.com)
 + [Teaching Kids](https://www.digitalwerkstatt.de/)
++ [About Coding Kids and Screaming Carrots - JSConf EU 2018](https://www.youtube.com/watch?v=t0m5rrKKMOA)
+
+You can also checkout my open source [Angular Advanced workshop](https://github.com/georgiee/angular-workshop-skipbo)
+on github with some fun challenges.
 
 ## Reveal Things
-
 The presentaiton engine is [Reveal.js](https://github.com/hakimel/reveal.js)
 
 This thing caused a leak that made the final score screen laggy (30-40fps).

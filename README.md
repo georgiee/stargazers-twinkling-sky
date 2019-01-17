@@ -24,6 +24,12 @@ I created and collected dozens of codepens while preparing this talk. You can fi
 For the actual talk I exported them and pallced them in the folder `codepens`
 where I added some small & quick changes as needed. So the sources are only almost the same.
 
+## URLS
++ [codepen.io/collection/DbRbQL/](http://codepen.io/collection/DbRbQL/)
++ [Origamizake, three.js origami folding](https://georgiee.github.io/origami/)
++ [Satellytes](http://satellytes.com)
++ [Teaching Kids](https://www.digitalwerkstatt.de/)
+
 ## Reveal Things
 
 This thing caused a leak that made the final score screen laggy (30-40fps).

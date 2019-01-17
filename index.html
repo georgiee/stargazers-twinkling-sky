@@ -5,13 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
-
   <link rel="stylesheet" href="reveal/css/reveal.css">
   <link rel="stylesheet" href="reveal/css/theme/night.css">
   <link rel="stylesheet" href="reveal/lib/css/zenburn.css"/>
-  <title>Twinkling Night Sky</title>
+  <title>Stargazing for developers - A twinkling night sky with shooting stars powered by SVG & CSS</title>
   <style>
+    .slides-footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      color: #fff;
+      padding: 5px;
+      font-family: "Open Sans", sans-serif;
+      font-size: 10px;
+      opacity: 0.5;
+    }
 
     .global-container {
       position: fixed;
@@ -20,6 +29,10 @@
       right: 0;
       bottom: 0;
       pointer-events: none;
+    }
+
+    code {
+      overflow: hidden !important;
     }
 
     .about-sy.about-sy  {
@@ -162,23 +175,25 @@
           <section>
             <h3>About me</h3>
             <ul>
+              <li class="fragment">Georgios Kaleadis</li>
               <li class="fragment">Learned programming with Flash 4</li>
               <li class="fragment">Frontend Developer</li>
               <li class="fragment">I love experimenting with technology</li>
             </ul>
             <aside class="notes">
-                <p>I learned programming with Flash 4 in 2998</p>
-                <p>I'm a Frontend Developer using Angular in my daily job and React for my pet projects</p>
-                <p>and I love experimenting with WebGL, my Arduino and algorithms.</p>
+                <p>My name is Georgios Kaleadis</p>
+                <p>I learned programming with Flash 4 in 1998</p>
+                <p>I'm a Frontend Developer using Angular in my daily job and React or Vue for my pet projects</p>
+                <p>and I love experimenting with technology like WebGL, my Arduino and algorithms.</p>
             </aside>
           </section>
           <section
             data-background-size="contain"
             data-background-image="images3/about.jpg">
             <aside class="notes">
-              <p>I'm also Origami addicted since I learned it in Japan from Takeshi</p>
-              <p>Since then I fold Origiami nearly every day.</p>
-              <p>I also created a threejs virtual origami application</p>
+              <p>I learned Origami from a random guy I met called Takeshi in Japan 2016</p>
+              <p>I'm addicted to Origami since then and I fold nearly every day.</p>
+              <p>I also created a javascript application with threejs where you can fold & crease in 3D</p>
             </aside>
           </section>
 
@@ -187,7 +202,7 @@
             data-background-image="images3/IMG_20170629_142704.jpg">
             <h3>Teaching Coding to kids (Digitalwerkstatt)</h3>
             <aside class="notes">
-              <p>In my spare time I teach coding to kids at the Digitalwerkstatt in Munich</p>
+              <p>In my spare time I teach coding to kids at the Digitalwerkstatt here in Munich</p>
             </aside>
           </section>
 
@@ -198,8 +213,9 @@
             <p class="fragment">✨We are hiring: Frontend & Backend✨</p>
             <aside class="notes">
               <p>
-                and I'm also working for Satellytes here in Munich
+                I'm working for Satellytes as a Frontend Developer.
               </p>
+              <p>Actually I'm one of the founders</p>
               <p>
                 and suprise suprise we are hiring
               </p>
@@ -209,19 +225,18 @@
 
         <section>
             <h3>Journey to the stars</h3>
-            <p>4 chapters</p>
+            <p>3 chapters</p>
             <ul>
               <li class="fragment">I) Anatomy of a Star</li>
               <li class="fragment">II) Night Sky</li>
               <li class="fragment">III) Shooting Stars</li>
-              <li class="fragment">IV) Parallax Sky</li>
+              <!-- <li class="fragment">IV) Parallax Sky</li> -->
             </ul>
             <aside class="notes">
-              <p>Over the course of 4 chapters I will take you on a journey to the stars.</p>
+              <p>Over the course of 3 chapters I will take you on a journey to the stars.</p>
               <p>We will explore how a single star is working to create them easily.</p>
               <p>After that we will assemble a full and crowded sky night</p>
               <p>Shooting Stars can't miss in any night sky that's what we will look at in the third chapter</p>
-              <p>In the final chapter I will show you how you cann create a poweorful parallax scroll effect with the power of CSS Variables </p>
             </aside>
           </section>
 
@@ -234,7 +249,6 @@
             <aside class="notes">
               <p>During a chapter we will discover new science ✨FACTS✨ marked with these emoji stars</p>
               <p>..followed by an idea how to creatively code it </p>
-              <p>which we will do then.</p>
             </aside>
           </section>
 
@@ -250,8 +264,9 @@
             <aside class="notes">
               <p>Speaking of Coding, you will see SVG Markup</p>
               <p>together with CSS Animations & CSS Variables to create actual animations.</p>
-              <p>At some point we don't want to repeat ourselves.
-                We will use Javascript to create many variations of our SVG Code and to modify CSS Variables.
+              <p>At some point we don't want to repeat ourselves.</p>
+              <p>
+                  We will use Javascript to create many variations of our SVG Code and to modify CSS Variables.
               </p>
               <p>
                 JavaScript itself isn't a strict requirement
@@ -276,7 +291,10 @@
           <section>
             <img data-src="images3/orion-betelgeuse.png"/>
             <aside class="notes">
-              We want to observe a single star — I picked a little dot that we can see with our naked eye. The star is called Betelgeuse and you can see it in the famous Orion constellation. Betelgeuse is more than 600 light years away.
+              <p>We want to observe a single star</p>
+              <p>I picked a little dot that we can see with our naked eye.</p>
+              <p>The star is called Betelgeuse and you can see it in the famous Orion constellation.</p>
+               <p>Betelgeuse is more than 600 light years away.s</p>
             </aside>
           </section>
 
@@ -397,8 +415,10 @@
             <h2 class="fragment" data-fragment-index="1" style="color: black;">Eta Carinae</h2>
 
             <aside class="notes">
-              Look at this blue star. It's called Eta Carinae and it's surface temperatur is more than 30.000 degree celsius.
-              In reality the really, really hot stars are blue and not red.
+              <p>Look at this blue star.</p>
+              <p>It's called Eta Carinae</p>
+              <p>and it's surface temperatur is more than 30.000 degree celsius.</p>
+              <p>In reality the really, really hot stars are blue and not red.</p>
             </aside>
           </section>
 <!--
@@ -478,12 +498,19 @@
             <video width="960" data-autoplay onended="Reveal.nextFragment();">
               <source data-src="videos/comparison.mp4" type="video/mp4" />
             </video> -->
+            <aside class="notes">
+              Earth
+              Sun
+              Eta Carina
+              Betelgeuse
+              VY Canis Majoris
+            </aside>
           </section>
 
           <section>
             <img data-src="images/sun-canis-betel.png"/>
             <aside class="notes">
-                YC Canis Majoris is one of the largest stars ever discovered in the universe
+                VY (wiwai) Canis Majoris is one of the largest stars ever discovered in the universe
                 and look how small the sun is compared to it. This brings us to the next fact!
             </aside>
           </section>
@@ -717,12 +744,12 @@
           </section>
 
           <section>
-            <cite>Scintillation is a generic term for variations in apparent brightness or position of a distant luminious object viewed through a medium</cite>
+            <cite>Scintillation is a generic term for...</cite>
             <br><br>
             <h3 class="fragment">a star that <span style="text-decoration: underline">looks like</span> it's blinking and moving</h3>
             <aside class="notes">
-              <p>Scintillation is a generic term for variations in apparent brightness or position of a distant luminious object viewed through a medium.</p>
-              <p>Or easier: Stars that looks like it's blinking and moving</p>
+              <p>Scintillation is a generic term for ... no we don't need a definition today.</p>
+              <p>Scintillation is the effect that a Star looks like it's blinking and moving</p>
             </aside>
           </section>
 
@@ -855,8 +882,8 @@
               data-src="codepens/02-nightsky-multiple-offsets/"></iframe>
 
             <aside class="notes">
-              When we combine both animations it looks really bad. Everything is synced
-              which looks bad due to the lack of variations.
+              <p>Let's create three circles and apply our animation. </p>
+              <p>The result looks really artificial because everything is in sync</p>
             </aside>
           </section>
 
@@ -878,6 +905,7 @@
             </pre>
 
             <iframe
+              class="fragment"
               width="600"
               height="250"
               data-src="codepens/02-nightsky-multiple-offsets-2/"></iframe>
@@ -886,6 +914,7 @@
               <p>We use the power of CSS Variables to fill the CSS property animation-delay
                 so we can offset the animations.
               </p>
+              <p>You can see how the result looks like when it's not synced</p>
               <p>The animation offsets are negativ otherwise the animation would wait in the beginning</p>
               <p>The default is set to 0 but we can apply different values to our individual stars through CSS!</p>
             </aside>
@@ -1263,7 +1292,7 @@
           </section>
 
           <section>
-            <h3>How many shooting stars?</h3>
+            <h3 class="fragment">How many shooting stars?</h3>
             <p class="fragment">4-6 per hour</p>
             <aside class="notes">
               <p>There is one question missing yet.</p>
@@ -1281,7 +1310,7 @@
             </aside>
           </section>
 
-          <section>
+          <!-- <section>
             <h3 class="fragment">Perseid Meteor Shower</h3>
             <img class="fragment" data-src="images3/perseide.jpg" height="400"/>
 
@@ -1291,7 +1320,7 @@
                 as we literally hit the exhause debris of the comet that enter our atmosphere.
               </p>
             </aside>
-          </section>
+          </section> -->
 <!--
           <section>
             <div class="l-col2">
@@ -1432,15 +1461,15 @@
         </section>
 
         <!-- Chapter 4 (Parallax) -->
-        <section>
-          <section data-background-image="images/parallax-city.gif">
+        <!-- <section> -->
+          <!-- <section data-background-image="images/parallax-city.gif">
             <span>Bonus Chapter</span>
             <h1>Parallax Sky</h1>
             <aside class="notes">
                 <p>It's time for our final chapter where we create a parallax effect with CSS.</p>
             </aside>
-          </section>
-
+          </section> -->
+<!--
           <section>
             <div class="l-col2">
               <div>
@@ -1460,8 +1489,8 @@
               <p>Distant objects appear to be slower</p>
               <p>Or almost stand still</p>
             </aside>
-          </section>
-
+          </section> -->
+<!--
           <section>
             <h4>Stellar parallax</h4>
             <video height="500" data-autoplay loop>
@@ -1473,9 +1502,9 @@
               <p>This time the earth is moving.</p>
               <p>Same rules, stars near to us are faster than the distant ones.</p>
             </aside>
-          </section>
+          </section> -->
 
-          <section>
+          <!-- <section>
             <span>Another Star Fact!</span>
             <h2 class="fragment">✨Star Parallax✨</h2>
             <p class="fragment">🎭 Idea: Scrolling Parallax Effect</p>
@@ -1483,7 +1512,7 @@
               <p>We have a new star fact "Star parallax"! </p>
               <p>and the idea is to create a scrolling paralax effect depending on the scroll position</p>
             </aside>
-          </section>
+          </section> -->
 
           <!-- <section>
             <h3>Classic Parallax Effect</h3>
@@ -1510,7 +1539,7 @@
           </section> -->
 
           <!-- Code Parallax Basic via EGdyMO -->
-          <section>
+          <!-- <section>
             <div class="l-col2">
               <div style="width: 250px">
                 <iframe
@@ -1563,21 +1592,21 @@
                 by calculating the offset first and then the individual position of each bar.
               </p>
             </aside>
-          </section>
+          </section> -->
 
           <!-- Parallax in Sky via wRYzZX  -->
-          <section data-background-iframe="codepens/04-parallax-with-night-sky/">
-            <!-- <iframe
+          <!-- <section>
+            <iframe
               width="900"
               height="700"
-              data-src="codepens/04-parallax-with-night-sky"></iframe> -->
+              data-src="codepens/04-parallax-with-night-sky/"></iframe>
               <aside class="notes">
                 And when we apply it to our existing night sky
                 it will look like this when scrolled
               </aside>
-          </section>
+          </section> -->
 
-        </section>
+        <!-- </section> -->
 
         <!-- Conclusion -->
         <section>
@@ -1641,7 +1670,7 @@
 
           <section data-state="final-credits">
             <aside class="notes">
-              Together with the parallax effect we have seen we created the final result
+
             </aside>
           </section>
         </section>
@@ -1659,7 +1688,7 @@
         history: true,
         progress: false,
         controlsTutorial: false,
-        controls: true,
+        controls: false,
         keyboard: {
           39: 'next',
           37: 'prev'
@@ -1676,6 +1705,10 @@
 
   <!-- used to overlay final credits, see main.ts -->
   <div class="global-container"></div>
+
+  <footer class='slides-footer'>
+    Georgios Kaleadis - @deluxee (Twitter)
+  </footer>
 <script type="text/javascript" src="main.js"></script></body>
 
 </html>

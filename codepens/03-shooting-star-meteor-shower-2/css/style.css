@@ -1,10 +1,15 @@
-.shooting-star__shape { 
+body, html {
+  overflow: hidden;
+  margin: 0;
+}
+
+.shooting-star__shape {
   visibility: hidden;
 }
 
 .shooting-star.is-shooting .shooting-star__shape {
   visibility: visible;
-  animation: 
+  animation:
     shootingStarOrbit 2s linear infinite,
     shootingStarBurn 2s linear infinite;
 }
@@ -12,11 +17,11 @@
 
 @keyframes shootingStarOrbit {
   0% {
-    transform: 
+    transform:
         rotate(var(--shooting-orbit-angle-start, 0deg))
         translate(var(--shooting-orbit-radius, 100px), 0);
   }
-  
+
   100% {
     transform:
         rotate(var(--shooting-orbit-angle, 180deg))
@@ -29,11 +34,11 @@
   0% {
     opacity: 0;
   }
-  
+
   50% {
     opacity: 1;
   }
-  
+
   100% {
     opacity: 0;
   }

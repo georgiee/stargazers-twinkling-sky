@@ -1,3 +1,9 @@
+body, html {
+  overflow: hidden;
+  margin: 0;
+}
+
+
 .twinkle-little-star {
   animation:
     starPulse 5s infinite alternate,
@@ -14,7 +20,7 @@
   30% {
     transform: scale3d(1.2, 1.6, 1.2);
   }
-  
+
   40% {
     transform: scale3d(1.5, 1.2, 1.4);
   }

@@ -54,10 +54,13 @@ const intervalAutoChange = setInterval(() => {
             direction = 1;
         }
     }
-    
+
 
     currentAngleStart = angleStart;
     currentAngle = angleEnd;
+
+    orbitAngleStartInput.value = angleStart;
+    orbitAngleInput.value = angleEnd;
     update();
 }, 250);
 

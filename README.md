@@ -2,9 +2,7 @@
 
 A talk about creating a twinkling night sky with CSS & SVG (and some JS for our comfort only).
 
-The presentaiton engine is [Reveal.js](https://github.com/hakimel/reveal.js)
-
-[Open Slides](https://georgiee.github.io/stargazers-twinkling-sky/)
+[View Slides](https://georgiee.github.io/stargazers-twinkling-sky/)
 ---
 
 ## ✨Facts collected✨
@@ -31,6 +29,8 @@ where I added some small & quick changes as needed. So the sources are only almo
 + [Teaching Kids](https://www.digitalwerkstatt.de/)
 
 ## Reveal Things
+
+The presentaiton engine is [Reveal.js](https://github.com/hakimel/reveal.js)
 
 This thing caused a leak that made the final score screen laggy (30-40fps).
 It seems reveal has problems removing such background iframe.

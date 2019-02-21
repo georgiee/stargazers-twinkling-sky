@@ -1,7 +1,7 @@
 import * as NightSky from './night-sky/night-sky';
 import { runExample01 } from './examples/example01';
 
-
+console.log('main')
 // const svgElement = document.getElementById('nightSkySVG');
 // NightSky.create(svgElement);
 

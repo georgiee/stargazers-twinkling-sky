@@ -1,10 +1,25 @@
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const path = require('path');
 
 const devPlugins = [
   new HTMLWebpackPlugin({
+    inject: true,
+    chunks: ['presentation'],
     template: 'src/index.html',
-  })
+  }),
+  new HTMLWebpackPlugin({
+    inject: true,
+    chunks: ['page1'],
+    filename: 'apps/page1/index.html',
+    template: 'src/codepens/example/index.html'
+  }),
+  new HTMLWebpackPlugin({
+    inject: true,
+    chunks: ['page2'],
+    filename: 'apps/page2/index.html',
+    template: 'src/codepens/example2/index.html'
+  }),
 ]
 
 const plugins = [
@@ -15,13 +30,21 @@ const plugins = [
 ];
 
 module.exports = {
-  entry: "./src/main.ts",
+  entry: {
+    'presentation': './src/main.ts',
+    'page1': './src/codepens/example/test.ts',
+    'page2': './src/codepens/example2/test.ts'
+  },
   mode: 'development',
   optimization: {
     minimize: true
   },
   devServer: {
     contentBase: './public'
+  },
+  output: {
+    filename: "apps/[name]/bundle.js",
+    publicPath: '/'
   },
   module: {
     rules: [
